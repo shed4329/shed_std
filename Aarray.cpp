@@ -1,7 +1,6 @@
 #include "Aarray.h"
 
 namespace shed_std{
-    // ------------------------------ basic_array 类实现 ------------------------------
     template <typename T>
     basic_array<T>::basic_array(int N){
         _array = (N > 0) ? new T[N] : nullptr;
@@ -73,7 +72,6 @@ namespace shed_std{
         return _length == 0;
     }
 
-    // ------------------------------ Aarray 类实现 ------------------------------
     template<typename E>
     Aarray<E>::Aarray(int N):basic_array<E>(N){
         if(N<0){
@@ -104,7 +102,12 @@ namespace shed_std{
         if(this==&other){
             return *this;
         }
+        if(this->_length<other._length){
+            throw Eexception("Eexception: the size of new Aarray is smaller than the original!");
+        }
+        // 删除当前数组
         delete[] this->_array;
+        // 赋值
         this->_length = other._length;
         if(this->_length == 0){
             this->_array = nullptr;
@@ -333,8 +336,7 @@ namespace shed_std{
     bool Aarray<E>::Aarray_const_iterator::operator!=(const Aarray_const_iterator& other) const{
         return !(*this == other);
     }
-
-    // ------------------------------ Aarray 其他成员函数实现 ------------------------------
+    
     template<typename E>
     typename Aarray<E>::Aarray_iterator Aarray<E>::begin() {
         if (this->empty()) {

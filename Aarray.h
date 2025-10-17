@@ -1,7 +1,6 @@
 #ifndef AARRAY_H
 #define AARRAY_H
 
-#include <iostream>
 #include "Eexception.h"
 
 namespace shed_std{
