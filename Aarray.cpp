@@ -102,9 +102,6 @@ namespace shed_std{
         if(this==&other){
             return *this;
         }
-        if(this->_length<other._length){
-            throw Eexception("Eexception: the size of new Aarray is smaller than the original!");
-        }
         // 删除当前数组
         delete[] this->_array;
         // 赋值

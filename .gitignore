@@ -10,3 +10,7 @@
 /nltk_data
 # 忽略测试用cpp
 test*.cpp
+# 忽略Clion文件
+.idea
+# 忽略cmake
+cmkae*
