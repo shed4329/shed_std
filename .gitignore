@@ -14,3 +14,5 @@ test*.cpp
 .idea
 # 忽略cmake
 cmkae*
+# 忽略文档生成器配置
+Doxyfile
