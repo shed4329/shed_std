@@ -1,0 +1,12 @@
+# 忽略python文件
+*.py
+# 忽略jupyter
+*.ipynb
+# 忽略生成的exe
+*.exe
+# 忽略json
+*.json
+# 忽略python产生的文件夹
+/nltk_data
+# 忽略测试用cpp
+test*.cpp
