@@ -1,0 +1,227 @@
+#include "Llist.h"
+#include <iostream>
+#include <cmath>
+
+struct Item{
+    int coefficient = 0;
+    int exponent = 0;  
+};
+
+class Polynomial{
+    public:
+        /**
+         * 链表需要按幂次的升次组织
+         */
+        shed_std::Llist<Item> list;
+        // 构造函数
+        Polynomial(){}
+        
+        /**
+         * 添加项到多项式
+         * @param coefficient 系数
+         * @param exponent 指数
+         */
+        void addItem(int coefficient,int exponent){
+            if (coefficient == 0) {
+                return;
+            }
+            
+            // 重置到哨兵节点
+            list.reset_to_head();
+            // 用于接收返回值的临时变量
+            Item tmp;
+            // 是否找到
+            bool found = false;
+            while(list.get_cur_value(tmp)){
+                // 存在节点的时候遍历
+                // 幂次相同时合并
+                if(tmp.exponent == exponent){
+                    tmp.coefficient += coefficient;
+                    list.set_cur_value(tmp);
+                    found = true;
+                    break;
+                } else if(tmp.exponent > exponent){
+                    // 找到第一个幂次大的也可以
+                    break;
+                }
+                list.move_to_next();
+            }
+
+            // 如果没有找到的话
+            if(!found){
+                Item newItem;
+                newItem.exponent = exponent;
+                newItem.coefficient = coefficient;
+                list.add(newItem);// 在后面插入
+            }
+        }
+
+        // 多项式运算符重载
+        Polynomial operator+(const Polynomial& other) const{
+            Polynomial result;
+            result.list = list; // Llist 支持深拷贝
+
+            for(auto it = other.list.begin();it!=other.list.end();++it){
+                result.addItem(it->coefficient,it->exponent);
+            }
+
+            return result;
+        }
+
+        Polynomial operator-(const Polynomial& other) const{
+            // 先把后面一个多项式转为负的，然后用加法
+            Polynomial temp;
+            temp.list = other.list;
+            for(auto it = temp.list.begin();it!=temp.list.end();++it){
+                it->coefficient = - it->coefficient;
+            }
+            return *this+temp;
+        }
+
+        Polynomial operator*(const Polynomial& other) const{
+            Polynomial result;
+            
+            // 两个循环模拟乘法
+            for(auto ia = list.begin();ia!=list.end();ia++){
+                for(auto ib = other.list.begin();ib!=other.list.end();++ib){
+                    result.addItem(ia->coefficient * ib->coefficient, ia->exponent + ib->exponent);
+                }
+            }
+
+            return result;
+        }
+
+        /**
+         * 对多项式求值
+         * @note 注意:该值可能溢出
+         * @param x的取值
+         * @return 多项式值
+         */
+        int eval(int value) const{
+            int result = 0;
+            for(auto it = list.begin();it != list.end();++it){
+                result += it->coefficient * std::pow(value,it->exponent);
+            }
+            return result;
+        }
+
+    /**
+     * 打印多项式（优化格式，符合数学表达式规范）
+     */
+    void print() const {
+        if (list.empty()) {  // 空多项式直接输出0
+            std::cout << "0" << std::endl;
+            return;
+        }
+
+        bool first = true;
+        for (auto it = list.begin(); it != list.end(); ++it) {
+            const Item& item = *it;
+            int coeff = item.coefficient;
+            int exp = item.exponent;
+
+            // 跳过系数为0的项（合并后可能产生）
+            if (coeff == 0) {
+                continue;
+            }
+
+            // 1. 处理符号（第一项特殊处理）
+            if (first) {
+                first = false;
+                if (coeff < 0) {  // 第一项为负数时显式输出负号
+                    std::cout << "-";
+                }
+            } else {
+                if (coeff > 0) {
+                    std::cout << "+";  // 正数前加"+"
+                } else {
+                    std::cout << "-";  // 负数前加"-"
+                }
+            }
+
+            // 2. 处理系数（取绝对值，避免重复输出符号）
+            int abs_coeff = std::abs(coeff);
+            // 系数不为1或指数为0时，必须显示系数（例如3x²、5）
+            if (abs_coeff != 1 || exp == 0) {
+                std::cout << abs_coeff;
+            }
+
+            // 3. 处理x和指数（指数为0时不显示x）
+            if (exp > 0) {
+                std::cout << "x";  // 指数>0时显示x
+                // 指数>1时才显示^和指数（例如x²，而非x^1）
+                if (exp > 1) {
+                    std::cout << "^" << exp;
+                }
+            }
+        }
+
+        // 特殊情况：所有项系数都为0（理论上不会发生，保险处理）
+        if (first) {
+            std::cout << "0";
+        }
+
+        std::cout << std::endl;
+    }
+            
+};
+
+
+int main() {
+    // 测试1：创建多项式并打印
+    std::cout << "===== 测试多项式创建与打印 =====" << std::endl;
+    Polynomial p1;
+    p1.addItem(3, 2);   // 3x²
+    p1.addItem(2, 1);   // 3x² + 2x
+    p1.addItem(5, 0);   // 3x² + 2x + 5
+    std::cout << "p1 = ";
+    p1.print();         // 预期输出：3x²+2x+5
+
+    Polynomial p2;
+    p2.addItem(1, 2);   // x²
+    p2.addItem(-4, 1);  // x² - 4x
+    p2.addItem(1, 0);   // x² - 4x + 1
+    std::cout << "p2 = ";
+    p2.print();         // 预期输出：x²-4x+1
+
+    // 测试2：多项式加法
+    std::cout << "\n===== 测试多项式加法 =====" << std::endl;
+    Polynomial sum = p1 + p2;
+    std::cout << "p1 + p2 = ";
+    sum.print();        // 预期输出：4x²-2x+6（(3+1)x² + (2-4)x + (5+1)）
+
+    // 测试3：多项式减法
+    std::cout << "\n===== 测试多项式减法 =====" << std::endl;
+    Polynomial diff = p1 - p2;
+    std::cout << "p1 - p2 = ";
+    diff.print();       // 预期输出：2x²+6x+4（(3-1)x² + (2+4)x + (5-1)）
+
+    // 测试4：多项式乘法
+    std::cout << "\n===== 测试多项式乘法 =====" << std::endl;
+    Polynomial product = p1 * p2;
+    std::cout << "p1 * p2 = ";
+    product.print();    // 预期输出：3x⁴-10x³+0x²+22x+5（简化后为3x⁴-10x³+22x+5）
+
+    // 测试5：多项式求值
+    std::cout << "\n===== 测试多项式求值 =====" << std::endl;
+    int x = 2;
+    std::cout << "p1(" << x << ") = " << p1.eval(x) << std::endl;  // 3*(2²)+2*2+5 = 12+4+5=21
+    std::cout << "p2(" << x << ") = " << p2.eval(x) << std::endl;  // (2²)-4*2+1 = 4-8+1=-3
+    std::cout << "sum(" << x << ") = " << sum.eval(x) << std::endl; // 4*(2²)-2*2+6 = 16-4+6=18（等价于p1(2)+p2(2)=21-3=18）
+    std::cout << "product(" << x << ") = " << product.eval(x) << std::endl; // 3*(2⁴)-10*(2³)+22*2+5 = 48-80+44+5=17（等价于p1(2)*p2(2)=21*(-3)=-63？注意：这里因中间项合并后系数为0，实际计算需按展开式）
+
+    // 测试6：特殊情况（空多项式、系数为0的项）
+    std::cout << "\n===== 测试特殊情况 =====" << std::endl;
+    Polynomial p3;  // 空多项式
+    std::cout << "空多项式p3 = ";
+    p3.print();      // 预期输出：0
+    Polynomial p4 = p3 + p1;
+    std::cout << "p3 + p1 = ";
+    p4.print();      // 预期输出：3x²+2x+5（空多项式加任何多项式等于原多项式）
+
+    p1.addItem(-3, 2);  // 3x² -3x² = 0x²（会被合并并在打印时跳过）
+    std::cout << "p1添加-3x^2后 = ";
+    p1.print();         // 预期输出：2x+5
+
+    return 0;
+}

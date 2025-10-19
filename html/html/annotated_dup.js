@@ -9,8 +9,12 @@ var annotated_dup =
       [ "FfunctionBase", "classshed__std_1_1_ffunction_base.html", null ],
       [ "FfunctionImpl", "classshed__std_1_1_ffunction_impl.html", null ],
       [ "FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ],
+      [ "IiostreamBase", "classshed__std_1_1_iiostream_base.html", null ],
+      [ "IiostreamBuf", "classshed__std_1_1_iiostream_buf.html", null ],
+      [ "IiostreamBufConsole", "classshed__std_1_1_iiostream_buf_console.html", null ],
       [ "Llist", "classshed__std_1_1_llist.html", "classshed__std_1_1_llist" ],
       [ "Node", "structshed__std_1_1_node.html", "structshed__std_1_1_node" ],
+      [ "Oostream", "classshed__std_1_1_oostream.html", null ],
       [ "Vvector", "classshed__std_1_1_vvector.html", "classshed__std_1_1_vvector" ]
     ] ]
 ];
