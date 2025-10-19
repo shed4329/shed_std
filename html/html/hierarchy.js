@@ -21,6 +21,7 @@ var hierarchy =
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ],
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ]
     ] ],
+    [ "shed_std::Iiomanipulator", "classshed__std_1_1_iiomanipulator.html", null ],
     [ "shed_std::IiostreamBase", "classshed__std_1_1_iiostream_base.html", [
       [ "shed_std::Oostream", "classshed__std_1_1_oostream.html", null ]
     ] ],

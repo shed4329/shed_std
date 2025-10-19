@@ -13,6 +13,6 @@ test*.cpp
 # 忽略Clion文件
 .idea
 # 忽略cmake
-cmkae*
+CMakeLists.txt
 # 忽略文档生成器配置
 Doxyfile

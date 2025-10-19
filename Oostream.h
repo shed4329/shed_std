@@ -7,6 +7,8 @@ namespace shed_std{
     class Oostream:public IiostreamBase{
         private:
             static const int  MAX_LEN = 65535;
+            static const int MAX_PRECISION = 12;
+            int _precision = 8;
             // 手动计算字符串,最大支持长度65535
             static int str_length(const char* str){
                 if(str == nullptr){
@@ -19,9 +21,21 @@ namespace shed_std{
                 }
                 return len;
             }
+
+            // 一般来说用户不会调用这个,由manipulator手动调用
+            Oostream& _set_precision_manipulator(int p){
+                if(p<1) _precision = 1;
+                else if(p>MAX_PRECISION)_precision=MAX_PRECISION;
+                else _precision = p;
+                return *this;
+            }
+            // 声明友元为控制符
+            friend class Iiomanipulator;
         public:
             // 构造函数,将缓冲区对象传给父类
-            explicit Oostream(IiostreamBuf* buf): IiostreamBase(buf){}
+            explicit Oostream(IiostreamBuf* buf): IiostreamBase(buf){};
+            
+            
 
             // 输出单个字符
             Oostream& put_char(char c){
@@ -106,10 +120,39 @@ namespace shed_std{
                 return *this;
             }
 
+            // 支持到小数点后12位输出,数字绝对值不能超过21亿
+            Oostream& operator<<(double val){
+                // 处理负数
+                if(val<0){
+                    put_char('-');
+                    val = -val;
+                }
+
+                // 截断
+                int int_part = val;
+                operator<<(int_part);// 直接复用
+
+                put_char('.');//小数点
+
+                // 处理小数部分（至多12位）
+                double frac_part = val-int_part;
+                for(int i=0;i<_precision;++i){
+                    frac_part *= 10;
+                    int digit = frac_part;
+                    put_char('0'+digit);
+                    frac_part -= digit;
+                }
+
+                return *this;
+                
+            }
+
             // 支持操作符，如end_line,参数为函数指针
             Oostream& operator<<(Oostream& (*manip)(Oostream&)){
                 return manip(*this);
             }
+
+            
 
            
     };

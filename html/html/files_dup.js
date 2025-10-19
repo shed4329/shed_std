@@ -5,6 +5,7 @@ var files_dup =
     [ "Cconsole_output.h", "_cconsole__output_8h_source.html", null ],
     [ "Eexception.h", "_eexception_8h_source.html", null ],
     [ "Ffunction.h", "_ffunction_8h_source.html", null ],
+    [ "Iiomanipulator.h", "_iiomanipulator_8h_source.html", null ],
     [ "IiostreamBase.h", "_iiostream_base_8h_source.html", null ],
     [ "IiostreamBuf.h", "_iiostream_buf_8h_source.html", null ],
     [ "IiostreamBufConsole.h", "_iiostream_buf_console_8h_source.html", null ],
