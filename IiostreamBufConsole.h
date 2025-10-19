@@ -1,3 +1,6 @@
+#ifndef IIOSTREAMBUFCONSOLE_H
+#define IIOSTREAMBUFCONSOLE_H
+
 #include "IiostreamBuf.h"
 
 #ifdef _WIN32
@@ -9,17 +12,17 @@ typedef unsigned long           DWORD;          // 32位无符号整数，双字
 
 typedef int BOOL;           //Windows定义的BOOL
 #define TRUE 1
-#define FALSe 0
+#define FALSE 0
 typedef DWORD* LPDWORD;     // LPDWORD 是 DWORD* 的别名
 typedef void* LPVOID;       // LPVOID  是 VOID*  的别名
 #define VOID void           // Microsoft在WinNT.h中的声明
 
 // 对应函数API在Windows的kernel32.dll里
 // 函数1:获取标准输出句柄
-extern "C" HANDLE __stdcall GetStdHandle(DWORD nstdHandle);
+extern "C" HANDLE __stdcall GetStdHandle(DWORD nStdHandle);
 // 函数2:向控制台写入字符(ANSI编码)
 extern "C" BOOL __stdcall WriteConsoleA(
-    HANDLE hConsleOutput,           // 控制台句柄
+    HANDLE hConsoleOutput,           // 控制台句柄
     const VOID*  lpBuffer,          // 要输出的字符缓冲区
     DWORD nNumberOfCharsToWrite,    // 要输出的字符个数
     LPDWORD lpNumberOfCharsWritten, // 实际输出的字符数量，用于接受实际写入的字符数
@@ -27,7 +30,9 @@ extern "C" BOOL __stdcall WriteConsoleA(
 );
 
 #else
-#define STDOUT_FILENO 1 // stdout 的文件描述符
+    #define STDOUT_FILENO 1 // stdout 的文件描述符
+    // 声明 write 系统调用：参数为文件描述符、缓冲区、长度，返回写入的字节数（int）
+    extern "C" int write(int fd, const void* buf, unsigned int count);
 #endif
 
 namespace shed_std{
@@ -61,7 +66,7 @@ namespace shed_std{
                     }
                 # else
                     // Linux/macOS: 调用write进行系统调用
-                    ssize_t written = write(STDOUT_FILENO,_inner_buf,_buf_pos);
+                    int written = write(STDOUT_FILENO,_inner_buf,_buf_pos);
                     if(written <0){
                         setState(Iiostream_state::IO_FAIL);
                     }
@@ -112,6 +117,4 @@ namespace shed_std{
     };
 }
 
-
-
-
+#endif // IIOSTREAMBUFCONSOLE_H
