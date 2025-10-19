@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_7ebasic_5farray_0',['~basic_array',['../classshed__std_1_1basic__array.html#ad6611000aa093fdc054ebe6201e8142c',1,'shed_std::basic_array::~basic_array()'],['../classshed__std_1_1basic__array.html#ad6611000aa093fdc054ebe6201e8142c',1,'shed_std::basic_array::~basic_array()']]],
-  ['_7ebasic_5flist_1',['~basic_list',['../classshed__std_1_1basic__list.html#a0fada6d24e8f852b65ce0bd12a0d8720',1,'shed_std::basic_list::~basic_list()'],['../classshed__std_1_1basic__list.html#a0fada6d24e8f852b65ce0bd12a0d8720',1,'shed_std::basic_list::~basic_list()']]]
+  ['vvector_0',['Vvector',['../classshed__std_1_1_vvector.html#a1df73caad3ea86020739e3b94966f64d',1,'shed_std::Vvector::Vvector()'],['../classshed__std_1_1_vvector.html#a7ded0433c63951b60e1f7e631e6266a6',1,'shed_std::Vvector::Vvector(int size)'],['../classshed__std_1_1_vvector.html#a28f39db5d9b1872bfa890646ed790c25',1,'shed_std::Vvector::Vvector(const Vvector &amp;other)'],['../classshed__std_1_1_vvector.html#a1df73caad3ea86020739e3b94966f64d',1,'shed_std::Vvector::Vvector()'],['../classshed__std_1_1_vvector.html#a7ded0433c63951b60e1f7e631e6266a6',1,'shed_std::Vvector::Vvector(int size)'],['../classshed__std_1_1_vvector.html#a28f39db5d9b1872bfa890646ed790c25',1,'shed_std::Vvector::Vvector(const Vvector &amp;other)']]],
+  ['vvector_5fconst_5fiterator_1',['Vvector_const_iterator',['../classshed__std_1_1_vvector_1_1_vvector__const__iterator.html#a552a6417709331fd00cfe8b5c8deb130',1,'shed_std::Vvector::Vvector_const_iterator']]],
+  ['vvector_5fiterator_2',['Vvector_iterator',['../classshed__std_1_1_vvector_1_1_vvector__iterator.html#a73b15966d35b42e769a611dba70d7de1',1,'shed_std::Vvector::Vvector_iterator']]]
 ];
