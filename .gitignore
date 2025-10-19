@@ -16,3 +16,5 @@ test*.cpp
 CMakeLists.txt
 # 忽略文档生成器配置
 Doxyfile
+# 忽略备份文件
+*.bak
