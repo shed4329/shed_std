@@ -14,6 +14,7 @@ var hierarchy =
       [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ],
       [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ]
     ] ],
+    [ "shed_std::Ddeque< T >", "classshed__std_1_1_ddeque.html", null ],
     [ "shed_std::Eexception", "classshed__std_1_1_eexception.html", null ],
     [ "shed_std::Ffunction< Ret, Arg >", "classshed__std_1_1_ffunction.html", null ],
     [ "shed_std::FfunctionBase< Ret, Arg >", "classshed__std_1_1_ffunction_base.html", [

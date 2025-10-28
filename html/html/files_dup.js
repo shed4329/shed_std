@@ -3,6 +3,7 @@ var files_dup =
     [ "Aarray.cpp", "_aarray_8cpp_source.html", null ],
     [ "Aarray.h", "_aarray_8h_source.html", null ],
     [ "Cconsole_output.h", "_cconsole__output_8h_source.html", null ],
+    [ "Ddeque.h", "_ddeque_8h_source.html", null ],
     [ "Eexception.h", "_eexception_8h_source.html", null ],
     [ "Ffunction.h", "_ffunction_8h_source.html", null ],
     [ "Iiomanipulator.h", "_iiomanipulator_8h_source.html", null ],

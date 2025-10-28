@@ -4,6 +4,7 @@ var annotated_dup =
       [ "Aarray", "classshed__std_1_1_aarray.html", "classshed__std_1_1_aarray" ],
       [ "basic_array", "classshed__std_1_1basic__array.html", "classshed__std_1_1basic__array" ],
       [ "basic_list", "classshed__std_1_1basic__list.html", "classshed__std_1_1basic__list" ],
+      [ "Ddeque", "classshed__std_1_1_ddeque.html", "classshed__std_1_1_ddeque" ],
       [ "Eexception", "classshed__std_1_1_eexception.html", "classshed__std_1_1_eexception" ],
       [ "Ffunction", "classshed__std_1_1_ffunction.html", null ],
       [ "FfunctionBase", "classshed__std_1_1_ffunction_base.html", null ],

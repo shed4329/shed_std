@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['node_0',['Node',['../structshed__std_1_1_node.html',1,'shed_std::Node&lt; T &gt;'],['../structshed__std_1_1_node.html#a9e36b7c37260b1299867f831c2239fa4',1,'shed_std::Node::Node()'],['../structshed__std_1_1_node.html#a98ba396693df16cdfd8cba47147fbfd5',1,'shed_std::Node::Node(Node *next, T value)'],['../structshed__std_1_1_node.html#a9e36b7c37260b1299867f831c2239fa4',1,'shed_std::Node::Node()'],['../structshed__std_1_1_node.html#a98ba396693df16cdfd8cba47147fbfd5',1,'shed_std::Node::Node(Node *next, T value)']]],
-  ['node_3c_20e_20_3e_1',['Node&lt; E &gt;',['../structshed__std_1_1_node.html',1,'shed_std']]]
+  ['max_5fsize_0',['max_size',['../classshed__std_1_1_vvector.html#a79fe730f0ad0c2d3fc0311dc8be2639f',1,'shed_std::Vvector::max_size() const'],['../classshed__std_1_1_vvector.html#a79fe730f0ad0c2d3fc0311dc8be2639f',1,'shed_std::Vvector::max_size() const']]],
+  ['move_5fto_5fnext_1',['move_to_next',['../classshed__std_1_1basic__list.html#a78baa8940c5f418715968d0fefaa3a76',1,'shed_std::basic_list::move_to_next()'],['../classshed__std_1_1basic__list.html#a78baa8940c5f418715968d0fefaa3a76',1,'shed_std::basic_list::move_to_next()']]]
 ];
