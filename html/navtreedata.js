@@ -24,14 +24,15 @@
 */
 var NAVTREE =
 [
-  [ "My Project", "index.html", [
+  [ "shed_std", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Typedefs", "functions_type.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -42,7 +43,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_aarray_8cpp_source.html"
+"_aarray_8cpp_source.html",
+"classshed__std_1_1_llist.html#a672685d314f75480331e62b420af3a1c",
+"classshed__std_1_1_vvector_1_1_vvector__const__iterator.html#a94381de049f2885a8e5795541d703f0b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7ebasic_5farray_0',['~basic_array',['../classshed__std_1_1basic__array.html#ad6611000aa093fdc054ebe6201e8142c',1,'shed_std::basic_array::~basic_array()'],['../classshed__std_1_1basic__array.html#ad6611000aa093fdc054ebe6201e8142c',1,'shed_std::basic_array::~basic_array()']]],
-  ['_7ebasic_5flist_1',['~basic_list',['../classshed__std_1_1basic__list.html#a0fada6d24e8f852b65ce0bd12a0d8720',1,'shed_std::basic_list::~basic_list()'],['../classshed__std_1_1basic__list.html#a0fada6d24e8f852b65ce0bd12a0d8720',1,'shed_std::basic_list::~basic_list()']]]
+  ['qqueue_0',['Qqueue',['../classshed__std_1_1_qqueue.html',1,'shed_std::Qqueue&lt; T &gt;'],['../classshed__std_1_1_qqueue.html#a656185855c84a6720b8d8e63455c3667',1,'shed_std::Qqueue::Qqueue()']]]
 ];
