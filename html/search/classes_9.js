@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qqueue_0',['Qqueue',['../classshed__std_1_1_qqueue.html',1,'shed_std']]]
+  ['pair_0',['pair',['../structshed__std_1_1pair.html',1,'shed_std']]]
 ];

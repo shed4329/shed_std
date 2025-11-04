@@ -13,10 +13,13 @@ var files_dup =
     [ "Llist.cpp", "_llist_8cpp_source.html", null ],
     [ "Llist.h", "_llist_8h_source.html", null ],
     [ "Oostream.h", "_oostream_8h_source.html", null ],
+    [ "pair.h", "pair_8h_source.html", null ],
     [ "Qqueue.cpp", "_qqueue_8cpp_source.html", null ],
     [ "Qqueue.h", "_qqueue_8h_source.html", null ],
+    [ "Rred_black_tree.h", "_rred__black__tree_8h_source.html", null ],
     [ "Sstack.h", "_sstack_8h_source.html", null ],
     [ "Sstring.h", "_sstring_8h_source.html", null ],
+    [ "Utility.h", "_utility_8h_source.html", null ],
     [ "Vvector.cpp", "_vvector_8cpp_source.html", null ],
     [ "Vvector.h", "_vvector_8h_source.html", null ]
 ];
