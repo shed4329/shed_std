@@ -3,7 +3,8 @@
 
 #include "Sstack.h"
 
-// 红黑树节点
+namespace shed_std{
+    // 红黑树节点
 template<typename T>
 struct Rred_black_tree_node
 {
@@ -343,7 +344,9 @@ class Rred_black_tree{
       
 };
 
-// 包含模板函数的定义
-#include "Rred_black_tree.tpp"
+    // 包含模板函数的定义
+    #include "Rred_black_tree.tpp"
+}
+
 
 #endif //RRED_BALCK_TREE_H
