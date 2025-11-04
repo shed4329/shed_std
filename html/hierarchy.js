@@ -36,12 +36,11 @@ var hierarchy =
     [ "shed_std::Node< T >", "structshed__std_1_1_node.html", null ],
     [ "shed_std::pair< T1, T2 >", "structshed__std_1_1pair.html", null ],
     [ "shed_std::Qqueue< T >", "classshed__std_1_1_qqueue.html", null ],
-    [ "Rred_black_tree< E >", "class_rred__black__tree.html", null ],
-    [ "Rred_black_tree< E >::Rred_black_tree_const_iterator", "class_rred__black__tree_1_1_rred__black__tree__const__iterator.html", [
-      [ "Rred_black_tree< E >::Rred_black_tree_iterator", "class_rred__black__tree_1_1_rred__black__tree__iterator.html", null ],
-      [ "Rred_black_tree< E >::Rred_black_tree_iterator", "class_rred__black__tree_1_1_rred__black__tree__iterator.html", null ]
+    [ "shed_std::Rred_black_tree< E >", "classshed__std_1_1_rred__black__tree.html", null ],
+    [ "shed_std::Rred_black_tree< E >::Rred_black_tree_const_iterator", "classshed__std_1_1_rred__black__tree_1_1_rred__black__tree__const__iterator.html", [
+      [ "shed_std::Rred_black_tree< E >::Rred_black_tree_iterator", "classshed__std_1_1_rred__black__tree_1_1_rred__black__tree__iterator.html", null ]
     ] ],
-    [ "Rred_black_tree_node< T >", "struct_rred__black__tree__node.html", null ],
+    [ "shed_std::Rred_black_tree_node< T >", "structshed__std_1_1_rred__black__tree__node.html", null ],
     [ "shed_std::Sstack< T >", "classshed__std_1_1_sstack.html", null ],
     [ "shed_std::Sstring", "classshed__std_1_1_sstring.html", null ],
     [ "shed_std::Sstring::Sstring_const_iterator", "classshed__std_1_1_sstring_1_1_sstring__const__iterator.html", null ],

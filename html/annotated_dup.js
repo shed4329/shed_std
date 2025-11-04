@@ -19,10 +19,10 @@ var annotated_dup =
       [ "Oostream", "classshed__std_1_1_oostream.html", null ],
       [ "pair", "structshed__std_1_1pair.html", null ],
       [ "Qqueue", "classshed__std_1_1_qqueue.html", "classshed__std_1_1_qqueue" ],
+      [ "Rred_black_tree", "classshed__std_1_1_rred__black__tree.html", "classshed__std_1_1_rred__black__tree" ],
+      [ "Rred_black_tree_node", "structshed__std_1_1_rred__black__tree__node.html", "structshed__std_1_1_rred__black__tree__node" ],
       [ "Sstack", "classshed__std_1_1_sstack.html", "classshed__std_1_1_sstack" ],
       [ "Sstring", "classshed__std_1_1_sstring.html", "classshed__std_1_1_sstring" ],
       [ "Vvector", "classshed__std_1_1_vvector.html", "classshed__std_1_1_vvector" ]
-    ] ],
-    [ "Rred_black_tree", "class_rred__black__tree.html", "class_rred__black__tree" ],
-    [ "Rred_black_tree_node", "struct_rred__black__tree__node.html", "struct_rred__black__tree__node" ]
+    ] ]
 ];
