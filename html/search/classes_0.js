@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['aarray_0',['Aarray',['../classshed__std_1_1_aarray.html',1,'shed_std']]],
-  ['aarray_3c_20t_20_3e_1',['Aarray&lt; T &gt;',['../classshed__std_1_1_aarray.html',1,'shed_std']]],
-  ['aarray_5fconst_5fiterator_2',['Aarray_const_iterator',['../classshed__std_1_1_aarray_1_1_aarray__const__iterator.html',1,'shed_std::Aarray']]],
-  ['aarray_5fiterator_3',['Aarray_iterator',['../classshed__std_1_1_aarray_1_1_aarray__iterator.html',1,'shed_std::Aarray']]]
+  ['_5ftest_5fequality_0',['_test_equality',['../structshed__std_1_1__test__equality.html',1,'shed_std']]],
+  ['_5ftest_5fgreater_5fequal_1',['_test_greater_equal',['../structshed__std_1_1__test__greater__equal.html',1,'shed_std']]],
+  ['_5ftest_5fgreater_5fthan_2',['_test_greater_than',['../structshed__std_1_1__test__greater__than.html',1,'shed_std']]],
+  ['_5ftest_5fless_5fequal_3',['_test_less_equal',['../structshed__std_1_1__test__less__equal.html',1,'shed_std']]],
+  ['_5ftest_5fless_5fthan_4',['_test_less_than',['../structshed__std_1_1__test__less__than.html',1,'shed_std']]],
+  ['_5ftest_5funequality_5',['_test_unequality',['../structshed__std_1_1__test__unequality.html',1,'shed_std']]]
 ];

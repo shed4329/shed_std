@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['ffunction_0',['Ffunction',['../classshed__std_1_1_ffunction.html',1,'shed_std']]],
-  ['ffunctionbase_1',['FfunctionBase',['../classshed__std_1_1_ffunction_base.html',1,'shed_std']]],
-  ['ffunctionimpl_2',['FfunctionImpl',['../classshed__std_1_1_ffunction_impl.html',1,'shed_std']]],
-  ['ffunctionimpl_3c_20ret_2c_20arg_2c_20ret_28arg_29_3e_3',['FfunctionImpl&lt; Ret, Arg, Ret(Arg)&gt;',['../classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html',1,'shed_std']]]
+  ['eexception_0',['Eexception',['../classshed__std_1_1_eexception.html',1,'shed_std']]],
+  ['enable_5fif_1',['enable_if',['../structshed__std_1_1enable__if.html',1,'shed_std']]],
+  ['enable_5fif_3c_20true_2c_20t_20_3e_2',['enable_if&lt; true, T &gt;',['../structshed__std_1_1enable__if_3_01true_00_01_t_01_4.html',1,'shed_std']]]
 ];

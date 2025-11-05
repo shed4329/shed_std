@@ -1,5 +1,11 @@
 var hierarchy =
 [
+    [ "shed_std::_test_equality< T >", "structshed__std_1_1__test__equality.html", null ],
+    [ "shed_std::_test_greater_equal< T >", "structshed__std_1_1__test__greater__equal.html", null ],
+    [ "shed_std::_test_greater_than< T >", "structshed__std_1_1__test__greater__than.html", null ],
+    [ "shed_std::_test_less_equal< T >", "structshed__std_1_1__test__less__equal.html", null ],
+    [ "shed_std::_test_less_than< T >", "structshed__std_1_1__test__less__than.html", null ],
+    [ "shed_std::_test_unequality< T >", "structshed__std_1_1__test__unequality.html", null ],
     [ "shed_std::Aarray< E >::Aarray_const_iterator", "classshed__std_1_1_aarray_1_1_aarray__const__iterator.html", null ],
     [ "shed_std::Aarray< E >::Aarray_iterator", "classshed__std_1_1_aarray_1_1_aarray__iterator.html", null ],
     [ "shed_std::basic_array< T >", "classshed__std_1_1basic__array.html", [
@@ -14,8 +20,104 @@ var hierarchy =
       [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ],
       [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ]
     ] ],
+    [ "shed_std::bool_constant< V >", "structshed__std_1_1bool__constant.html", null ],
+    [ "shed_std::bool_constant< _test_equality< T >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::is_equality_comparable< T >", "structshed__std_1_1is__equality__comparable.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< _test_greater_than< T >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::is_greater_than_comparable< T >", "structshed__std_1_1is__greater__than__comparable.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< _test_less_equal< T >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::is_less_equal_comparable< T >", "structshed__std_1_1is__less__equal__comparable.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< _test_less_than< T >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::is_less_than_comparable< T >", "structshed__std_1_1is__less__than__comparable.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< _test_unequality< T >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::is_unequality_comparable< T >", "structshed__std_1_1is__unequality__comparable.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< false >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::is_array< T[N]>", "structshed__std_1_1is__array_3_01_t_0f_n_0e_4.html", null ],
+      [ "shed_std::is_array< T[]>", "structshed__std_1_1is__array_3_01_t_0f_0e_4.html", null ],
+      [ "shed_std::is_const< const T >", "structshed__std_1_1is__const_3_01const_01_t_01_4.html", null ],
+      [ "shed_std::is_floating_point< double >", "structshed__std_1_1is__floating__point_3_01double_01_4.html", null ],
+      [ "shed_std::is_floating_point< float >", "structshed__std_1_1is__floating__point_3_01float_01_4.html", null ],
+      [ "shed_std::is_floating_point< long double >", "structshed__std_1_1is__floating__point_3_01long_01double_01_4.html", null ],
+      [ "shed_std::is_integral< bool >", "structshed__std_1_1is__integral_3_01bool_01_4.html", null ],
+      [ "shed_std::is_integral< char >", "structshed__std_1_1is__integral_3_01char_01_4.html", null ],
+      [ "shed_std::is_integral< int >", "structshed__std_1_1is__integral_3_01int_01_4.html", null ],
+      [ "shed_std::is_integral< long >", "structshed__std_1_1is__integral_3_01long_01_4.html", null ],
+      [ "shed_std::is_integral< short >", "structshed__std_1_1is__integral_3_01short_01_4.html", null ],
+      [ "shed_std::is_integral< signed char >", "structshed__std_1_1is__integral_3_01signed_01char_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned char >", "structshed__std_1_1is__integral_3_01unsigned_01char_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned int >", "structshed__std_1_1is__integral_3_01unsigned_01int_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned long >", "structshed__std_1_1is__integral_3_01unsigned_01long_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned short >", "structshed__std_1_1is__integral_3_01unsigned_01short_01_4.html", null ],
+      [ "shed_std::is_pointer< T * >", "structshed__std_1_1is__pointer_3_01_t_01_5_01_4.html", null ],
+      [ "shed_std::is_reference< T & >", "structshed__std_1_1is__reference_3_01_t_01_6_01_4.html", null ],
+      [ "shed_std::is_reference< T && >", "structshed__std_1_1is__reference_3_01_t_01_6_6_01_4.html", null ],
+      [ "shed_std::is_same< T, T >", "structshed__std_1_1is__same_3_01_t_00_01_t_01_4.html", null ],
+      [ "shed_std::is_void< void >", "structshed__std_1_1is__void_3_01void_01_4.html", null ],
+      [ "shed_std::or_operation< is_integral< T >, is_floating_point< T > >", "structshed__std_1_1or__operation.html", [
+        [ "shed_std::is_arithmetic< T >", "structshed__std_1_1is__arithmetic.html", null ]
+      ] ],
+      [ "shed_std::or_operation< T1 >", "structshed__std_1_1or__operation_3_01_t1_01_4.html", null ],
+      [ "shed_std::or_operation< T1, T2, Rest... >", "structshed__std_1_1or__operation_3_01_t1_00_01_t2_00_01_rest_8_8_8_01_4.html", null ],
+      [ "shed_std::is_array< T >", "structshed__std_1_1is__array.html", null ],
+      [ "shed_std::is_const< T >", "structshed__std_1_1is__const.html", null ],
+      [ "shed_std::is_floating_point< T >", "structshed__std_1_1is__floating__point.html", null ],
+      [ "shed_std::is_integral< T >", "structshed__std_1_1is__integral.html", null ],
+      [ "shed_std::is_pointer< T >", "structshed__std_1_1is__pointer.html", null ],
+      [ "shed_std::is_reference< T >", "structshed__std_1_1is__reference.html", null ],
+      [ "shed_std::is_same< T1, T2 >", "structshed__std_1_1is__same.html", null ],
+      [ "shed_std::is_void< T >", "structshed__std_1_1is__void.html", null ],
+      [ "shed_std::or_operation<... >", "structshed__std_1_1or__operation.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< T1::value &&and_operation< T2, Rest... >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::and_operation< T1, T2, Rest... >", "structshed__std_1_1and__operation_3_01_t1_00_01_t2_00_01_rest_8_8_8_01_4.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< T1::value||or_operation< T2, Rest... >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::or_operation< T1, T2, Rest... >", "structshed__std_1_1or__operation_3_01_t1_00_01_t2_00_01_rest_8_8_8_01_4.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< true >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::and_operation< is_equality_comparable< T >, is_unequality_comparable< T > >", "structshed__std_1_1and__operation.html", [
+        [ "shed_std::is_equality_comparable_full< T >", "structshed__std_1_1is__equality__comparable__full.html", null ]
+      ] ],
+      [ "shed_std::and_operation< is_less_than_comparable< T >, is_greater_than_comparable< T >, is_less_equal_comparable< T >, is_greater_than_comparable< T > >", "structshed__std_1_1and__operation.html", [
+        [ "shed_std::is_totally_ordered< T >", "structshed__std_1_1is__totally__ordered.html", null ]
+      ] ],
+      [ "shed_std::and_operation< T1 >", "structshed__std_1_1and__operation_3_01_t1_01_4.html", null ],
+      [ "shed_std::and_operation< T1, T2, Rest... >", "structshed__std_1_1and__operation_3_01_t1_00_01_t2_00_01_rest_8_8_8_01_4.html", null ],
+      [ "shed_std::and_operation<... >", "structshed__std_1_1and__operation.html", null ],
+      [ "shed_std::is_array< T[N]>", "structshed__std_1_1is__array_3_01_t_0f_n_0e_4.html", null ],
+      [ "shed_std::is_array< T[]>", "structshed__std_1_1is__array_3_01_t_0f_0e_4.html", null ],
+      [ "shed_std::is_const< const T >", "structshed__std_1_1is__const_3_01const_01_t_01_4.html", null ],
+      [ "shed_std::is_floating_point< double >", "structshed__std_1_1is__floating__point_3_01double_01_4.html", null ],
+      [ "shed_std::is_floating_point< float >", "structshed__std_1_1is__floating__point_3_01float_01_4.html", null ],
+      [ "shed_std::is_floating_point< long double >", "structshed__std_1_1is__floating__point_3_01long_01double_01_4.html", null ],
+      [ "shed_std::is_integral< bool >", "structshed__std_1_1is__integral_3_01bool_01_4.html", null ],
+      [ "shed_std::is_integral< char >", "structshed__std_1_1is__integral_3_01char_01_4.html", null ],
+      [ "shed_std::is_integral< int >", "structshed__std_1_1is__integral_3_01int_01_4.html", null ],
+      [ "shed_std::is_integral< long >", "structshed__std_1_1is__integral_3_01long_01_4.html", null ],
+      [ "shed_std::is_integral< short >", "structshed__std_1_1is__integral_3_01short_01_4.html", null ],
+      [ "shed_std::is_integral< signed char >", "structshed__std_1_1is__integral_3_01signed_01char_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned char >", "structshed__std_1_1is__integral_3_01unsigned_01char_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned int >", "structshed__std_1_1is__integral_3_01unsigned_01int_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned long >", "structshed__std_1_1is__integral_3_01unsigned_01long_01_4.html", null ],
+      [ "shed_std::is_integral< unsigned short >", "structshed__std_1_1is__integral_3_01unsigned_01short_01_4.html", null ],
+      [ "shed_std::is_pointer< T * >", "structshed__std_1_1is__pointer_3_01_t_01_5_01_4.html", null ],
+      [ "shed_std::is_reference< T & >", "structshed__std_1_1is__reference_3_01_t_01_6_01_4.html", null ],
+      [ "shed_std::is_reference< T && >", "structshed__std_1_1is__reference_3_01_t_01_6_6_01_4.html", null ],
+      [ "shed_std::is_same< T, T >", "structshed__std_1_1is__same_3_01_t_00_01_t_01_4.html", null ],
+      [ "shed_std::is_void< void >", "structshed__std_1_1is__void_3_01void_01_4.html", null ]
+    ] ],
+    [ "shed_std::bool_constant<!T::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::not_operation< T >", "structshed__std_1_1not__operation.html", null ]
+    ] ],
     [ "shed_std::Ddeque< T >", "classshed__std_1_1_ddeque.html", null ],
     [ "shed_std::Eexception", "classshed__std_1_1_eexception.html", null ],
+    [ "shed_std::enable_if< Cond, T >", "structshed__std_1_1enable__if.html", null ],
+    [ "shed_std::enable_if< true, T >", "structshed__std_1_1enable__if_3_01true_00_01_t_01_4.html", null ],
     [ "shed_std::Ffunction< Ret, Arg >", "classshed__std_1_1_ffunction.html", null ],
     [ "shed_std::FfunctionBase< Ret, Arg >", "classshed__std_1_1_ffunction_base.html", [
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ],
@@ -36,6 +138,13 @@ var hierarchy =
     [ "shed_std::Node< T >", "structshed__std_1_1_node.html", null ],
     [ "shed_std::pair< T1, T2 >", "structshed__std_1_1pair.html", null ],
     [ "shed_std::Qqueue< T >", "classshed__std_1_1_qqueue.html", null ],
+    [ "shed_std::remove_const< T >", "structshed__std_1_1remove__const.html", null ],
+    [ "shed_std::remove_const< const T >", "structshed__std_1_1remove__const_3_01const_01_t_01_4.html", null ],
+    [ "shed_std::remove_pointer< T >", "structshed__std_1_1remove__pointer.html", null ],
+    [ "shed_std::remove_pointer< T * >", "structshed__std_1_1remove__pointer_3_01_t_01_5_01_4.html", null ],
+    [ "shed_std::remove_reference< T >", "structshed__std_1_1remove__reference.html", null ],
+    [ "shed_std::remove_reference< T & >", "structshed__std_1_1remove__reference_3_01_t_01_6_01_4.html", null ],
+    [ "shed_std::remove_reference< T && >", "structshed__std_1_1remove__reference_3_01_t_01_6_6_01_4.html", null ],
     [ "shed_std::Rred_black_tree< E >", "classshed__std_1_1_rred__black__tree.html", null ],
     [ "shed_std::Rred_black_tree< E >::Rred_black_tree_const_iterator", "classshed__std_1_1_rred__black__tree_1_1_rred__black__tree__const__iterator.html", [
       [ "shed_std::Rred_black_tree< E >::Rred_black_tree_iterator", "classshed__std_1_1_rred__black__tree_1_1_rred__black__tree__iterator.html", null ]
@@ -45,6 +154,10 @@ var hierarchy =
     [ "shed_std::Sstring", "classshed__std_1_1_sstring.html", null ],
     [ "shed_std::Sstring::Sstring_const_iterator", "classshed__std_1_1_sstring_1_1_sstring__const__iterator.html", null ],
     [ "shed_std::Sstring::Sstring_iterator", "classshed__std_1_1_sstring_1_1_sstring__iterator.html", null ],
+    [ "T1", null, [
+      [ "shed_std::and_operation< T1 >", "structshed__std_1_1and__operation_3_01_t1_01_4.html", null ],
+      [ "shed_std::or_operation< T1 >", "structshed__std_1_1or__operation_3_01_t1_01_4.html", null ]
+    ] ],
     [ "shed_std::Vvector< E >", "classshed__std_1_1_vvector.html", null ],
     [ "shed_std::Vvector< E >::Vvector_const_iterator", "classshed__std_1_1_vvector_1_1_vvector__const__iterator.html", null ],
     [ "shed_std::Vvector< E >::Vvector_iterator", "classshed__std_1_1_vvector_1_1_vvector__iterator.html", null ]

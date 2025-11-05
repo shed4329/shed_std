@@ -19,6 +19,7 @@ var files_dup =
     [ "Rred_black_tree.h", "_rred__black__tree_8h_source.html", null ],
     [ "Sstack.h", "_sstack_8h_source.html", null ],
     [ "Sstring.h", "_sstring_8h_source.html", null ],
+    [ "type_traits.h", "type__traits_8h_source.html", null ],
     [ "Utility.h", "_utility_8h_source.html", null ],
     [ "Vvector.cpp", "_vvector_8cpp_source.html", null ],
     [ "Vvector.h", "_vvector_8h_source.html", null ]
