@@ -451,6 +451,14 @@ namespace shed_std{
             * @throw Eexception 当范围无效（越界或start >= end）时抛出异常
             */
            Aarray subArr(int start_index,int end_index);
+
+           /**
+            * 返回大小
+            * @return 数组的大小
+            */
+           int size() const{
+            return this->_length;
+           }
     };
 }
 

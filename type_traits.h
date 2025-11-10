@@ -263,6 +263,9 @@ namespace shed_std{
     template <typename T>
     struct is_less_equal_comparable : bool_constant<_test_less_equal<T>::value>{};
 
+    template <typename T>
+    struct is_greater_equal_comparable : bool_constant<_test_greater_equal<T>::value>{};
+
     // 检查是否支持 operator== (相等性比较)
     template <typename T>
     struct _test_equality{
@@ -310,7 +313,7 @@ namespace shed_std{
                 is_less_than_comparable<T>,         // 检查 <
                 is_greater_than_comparable<T>,       // 检查 >
                 is_less_equal_comparable<T>,        // 检查 <=
-                is_greater_than_comparable<T>     // 检查 >=
+                is_greater_equal_comparable<T>     // 检查 >=
     > {};
 
     // 17.逻辑非

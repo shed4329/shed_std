@@ -1,6 +1,10 @@
 #ifndef PAIR_H
 #define PAIR_H
+
+#include "type_traits.h"
+
 namespace shed_std{
+    // 当T2可比较时会提供operator< ,> , <= ,>=
     template<typename T1,typename T2>
     struct pair
     {   
@@ -35,6 +39,34 @@ namespace shed_std{
         // 是否不等
         bool operator!=(const pair& other) const{
             return !(*this == other);
+        }
+
+        // 小于操作符 - 仅在T2可比较时提供
+        template<typename U1 = T1, typename U2 = T2>
+        enable_if_type<is_totally_ordered<U2>::value, bool> 
+        operator<(const pair& other) const {
+            return second < other.second;
+        }
+
+        // 大于操作符 - 仅在T2可比较时提供
+        template<typename U1 = T1, typename U2 = T2>
+        enable_if_type<is_totally_ordered<U2>::value, bool> 
+        operator>(const pair& other) const {
+            return other < *this;
+        }
+
+        // 小于等于操作符 - 仅在T2可比较时提供
+        template<typename U1 = T1, typename U2 = T2>
+        enable_if_type<is_totally_ordered<U2>::value, bool> 
+        operator<=(const pair& other) const {
+            return !(other < *this);
+        }
+
+        // 大于等于操作符 - 仅在T2可比较时提供
+        template<typename U1 = T1, typename U2 = T2>
+        enable_if_type<is_totally_ordered<U2>::value, bool> 
+        operator>=(const pair& other) const {
+            return !(*this < other);
         }
     };
 
