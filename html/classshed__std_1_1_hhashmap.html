@@ -92,13 +92,64 @@ $(function(){initNavTree('classshed__std_1_1_hhashmap.html','','classshed__std_1
   <div class="headertitle"><div class="title">shed_std::Hhashmap&lt; K, V, Hash, Enable &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>哈希表容器，使用链表解决哈希冲突  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_hhashmap_8h_source.html">Hhashmap.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Hhashmap_5Fiterator" id="r_Hhashmap_5Fiterator"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html">Hhashmap_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">迭代器类，用于遍历哈希表元素  <a href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a44f016c97afd02e3825aa5dc0d60f7bb" id="r_a44f016c97afd02e3825aa5dc0d60f7bb"><td class="memItemLeft" align="right" valign="top"><a id="a44f016c97afd02e3825aa5dc0d60f7bb" name="a44f016c97afd02e3825aa5dc0d60f7bb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Hhashmap</b> ()</td></tr>
+<tr class="memdesc:a44f016c97afd02e3825aa5dc0d60f7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">无参构造函数，初始化默认容量 <br /></td></tr>
+<tr class="memitem:a271dfc9c3c22356fcdfa9cacc5fc335a" id="r_a271dfc9c3c22356fcdfa9cacc5fc335a"><td class="memItemLeft" align="right" valign="top"><a id="a271dfc9c3c22356fcdfa9cacc5fc335a" name="a271dfc9c3c22356fcdfa9cacc5fc335a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~Hhashmap</b> ()=default</td></tr>
+<tr class="memdesc:a271dfc9c3c22356fcdfa9cacc5fc335a"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="memitem:accd34bd0f1d02b70055784c37321c854" id="r_accd34bd0f1d02b70055784c37321c854"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accd34bd0f1d02b70055784c37321c854">Hhashmap</a> (const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a> &amp;other)</td></tr>
+<tr class="memdesc:accd34bd0f1d02b70055784c37321c854"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝构造函数  <br /></td></tr>
+<tr class="memitem:ad3a3171e55c621909a5184f92c9fd1bc" id="r_ad3a3171e55c621909a5184f92c9fd1bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3a3171e55c621909a5184f92c9fd1bc">operator=</a> (const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a> &amp;other)</td></tr>
+<tr class="memdesc:ad3a3171e55c621909a5184f92c9fd1bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝赋值运算符  <br /></td></tr>
+<tr class="memitem:a2e7fe54eb7e1b076df5e38647e981ebf" id="r_a2e7fe54eb7e1b076df5e38647e981ebf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e7fe54eb7e1b076df5e38647e981ebf">operator==</a> (const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a> &amp;other) const</td></tr>
+<tr class="memdesc:a2e7fe54eb7e1b076df5e38647e981ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">相等比较运算符  <br /></td></tr>
+<tr class="memitem:aea03a5244fc946a82b9b206df6f7fe1c" id="r_aea03a5244fc946a82b9b206df6f7fe1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea03a5244fc946a82b9b206df6f7fe1c">operator!=</a> (const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a> &amp;other) const</td></tr>
+<tr class="memdesc:aea03a5244fc946a82b9b206df6f7fe1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">不等比较运算符  <br /></td></tr>
+<tr class="memitem:a539c3c9a3058ab0b80672d4c0c95de4e" id="r_a539c3c9a3058ab0b80672d4c0c95de4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a539c3c9a3058ab0b80672d4c0c95de4e">get_index</a> (const K &amp;key) const</td></tr>
+<tr class="memdesc:a539c3c9a3058ab0b80672d4c0c95de4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算键对应的桶索引  <br /></td></tr>
+<tr class="memitem:acdaaf96fa41d4b1de055f730dd96044c" id="r_acdaaf96fa41d4b1de055f730dd96044c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshed__std_1_1_llist.html">Llist</a>&lt; <a class="el" href="structshed__std_1_1pair.html">pair</a>&lt; K, V &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdaaf96fa41d4b1de055f730dd96044c">get_list</a> (int index)</td></tr>
+<tr class="memdesc:acdaaf96fa41d4b1de055f730dd96044c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定索引的桶（链表）  <br /></td></tr>
+<tr class="memitem:a8f990c06617cfdc8361b904c225f0318" id="r_a8f990c06617cfdc8361b904c225f0318"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classshed__std_1_1_llist.html">Llist</a>&lt; <a class="el" href="structshed__std_1_1pair.html">pair</a>&lt; K, V &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f990c06617cfdc8361b904c225f0318">get_list</a> (int index) const</td></tr>
+<tr class="memdesc:a8f990c06617cfdc8361b904c225f0318"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定索引的桶（链表）（const版本）  <br /></td></tr>
+<tr class="memitem:a4cd3456f5180b87f0542389962966a50" id="r_a4cd3456f5180b87f0542389962966a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd3456f5180b87f0542389962966a50">insert</a> (const K &amp;key, const V &amp;value)</td></tr>
+<tr class="memdesc:a4cd3456f5180b87f0542389962966a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入或更新键值对  <br /></td></tr>
+<tr class="memitem:a52270872c0c916e362af8f8f0383f87d" id="r_a52270872c0c916e362af8f8f0383f87d"><td class="memItemLeft" align="right" valign="top">V *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52270872c0c916e362af8f8f0383f87d">get</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:a52270872c0c916e362af8f8f0383f87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找键对应的值  <br /></td></tr>
+<tr class="memitem:aac5fe683440880a815d6ffb8af796036" id="r_aac5fe683440880a815d6ffb8af796036"><td class="memItemLeft" align="right" valign="top">const V *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac5fe683440880a815d6ffb8af796036">get</a> (const K &amp;key) const</td></tr>
+<tr class="memdesc:aac5fe683440880a815d6ffb8af796036"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找键对应的值（const版本）  <br /></td></tr>
+<tr class="memitem:a7af0dc08dbaed4f5291d89840a357ef3" id="r_a7af0dc08dbaed4f5291d89840a357ef3"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7af0dc08dbaed4f5291d89840a357ef3">operator[]</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:a7af0dc08dbaed4f5291d89840a357ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">下标访问运算符（未找到则抛异常）  <br /></td></tr>
+<tr class="memitem:af86aadeb65ddf66a780260caf4e7a393" id="r_af86aadeb65ddf66a780260caf4e7a393"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af86aadeb65ddf66a780260caf4e7a393">size</a> () const</td></tr>
+<tr class="memdesc:af86aadeb65ddf66a780260caf4e7a393"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取元素数量  <br /></td></tr>
+<tr class="memitem:ae4a181f3d9a1c975ed921d2af0fdcdb1" id="r_ae4a181f3d9a1c975ed921d2af0fdcdb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a181f3d9a1c975ed921d2af0fdcdb1">empty</a> () const</td></tr>
+<tr class="memdesc:ae4a181f3d9a1c975ed921d2af0fdcdb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查哈希表是否为空  <br /></td></tr>
+<tr class="memitem:a734c6282946b1bcf89f88d723f131a18" id="r_a734c6282946b1bcf89f88d723f131a18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html">Hhashmap_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a734c6282946b1bcf89f88d723f131a18">begin</a> ()</td></tr>
+<tr class="memdesc:a734c6282946b1bcf89f88d723f131a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取起始迭代器  <br /></td></tr>
+<tr class="memitem:a90653406fd982a3d820e928517e94caa" id="r_a90653406fd982a3d820e928517e94caa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html">Hhashmap_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90653406fd982a3d820e928517e94caa">end</a> ()</td></tr>
+<tr class="memdesc:a90653406fd982a3d820e928517e94caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取结束迭代器  <br /></td></tr>
+<tr class="memitem:af441d41374b2081637712f1bd9350432" id="r_af441d41374b2081637712f1bd9350432"><td class="memItemLeft" align="right" valign="top"><a id="af441d41374b2081637712f1bd9350432" name="af441d41374b2081637712f1bd9350432"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memdesc:af441d41374b2081637712f1bd9350432"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空哈希表所有元素 <br /></td></tr>
+<tr class="memitem:a70467d966e9f9197a11862edc20dd631" id="r_a70467d966e9f9197a11862edc20dd631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70467d966e9f9197a11862edc20dd631">erase</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:a70467d966e9f9197a11862edc20dd631"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定键的元素  <br /></td></tr>
+<tr class="memitem:a0a079eb7d2e9d0d95af00ae5f6a0ca80" id="r_a0a079eb7d2e9d0d95af00ae5f6a0ca80"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a079eb7d2e9d0d95af00ae5f6a0ca80">at</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:a0a079eb7d2e9d0d95af00ae5f6a0ca80"><td class="mdescLeft">&#160;</td><td class="mdescRight">访问指定键的元素（未找到则抛异常）  <br /></td></tr>
+<tr class="memitem:a02a3c3b5fbc8ad6fe79951e265e90714" id="r_a02a3c3b5fbc8ad6fe79951e265e90714"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a3c3b5fbc8ad6fe79951e265e90714">bucket_size</a> ()</td></tr>
+<tr class="memdesc:a02a3c3b5fbc8ad6fe79951e265e90714"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前桶数量  <br /></td></tr>
 <tr class="memitem:accd34bd0f1d02b70055784c37321c854" id="r_accd34bd0f1d02b70055784c37321c854"><td class="memItemLeft" align="right" valign="top"><a id="accd34bd0f1d02b70055784c37321c854" name="accd34bd0f1d02b70055784c37321c854"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Hhashmap</b> (const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a> &amp;other)</td></tr>
 <tr class="memitem:ad3a3171e55c621909a5184f92c9fd1bc" id="r_ad3a3171e55c621909a5184f92c9fd1bc"><td class="memItemLeft" align="right" valign="top"><a id="ad3a3171e55c621909a5184f92c9fd1bc" name="ad3a3171e55c621909a5184f92c9fd1bc"></a>
@@ -142,9 +193,83 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const</td
 <tr class="memitem:a02a3c3b5fbc8ad6fe79951e265e90714" id="r_a02a3c3b5fbc8ad6fe79951e265e90714"><td class="memItemLeft" align="right" valign="top"><a id="a02a3c3b5fbc8ad6fe79951e265e90714" name="a02a3c3b5fbc8ad6fe79951e265e90714"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bucket_size</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt;<br />
+class shed_std::Hhashmap&lt; K, V, Hash, Enable &gt;</div><p>哈希表容器，使用链表解决哈希冲突 </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">K</td><td>键类型 </td></tr>
+    <tr><td class="paramname">V</td><td>值类型 </td></tr>
+    <tr><td class="paramname">Hash</td><td>哈希函数类型（默认使用DefaultHash） </td></tr>
+    <tr><td class="paramname">Enable</td><td>用于SFINAE的占位符 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="accd34bd0f1d02b70055784c37321c854" name="accd34bd0f1d02b70055784c37321c854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd34bd0f1d02b70055784c37321c854">&#9670;&#160;</a></span>Hhashmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::Hhashmap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a>&lt; K, V, Hash, Enable &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拷贝构造函数 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>被拷贝的哈希表 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a0a079eb7d2e9d0d95af00ae5f6a0ca80" name="a0a079eb7d2e9d0d95af00ae5f6a0ca80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a079eb7d2e9d0d95af00ae5f6a0ca80">&#9670;&#160;</a></span>at()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a079eb7d2e9d0d95af00ae5f6a0ca80">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">V &amp; <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>访问指定键的元素（未找到则抛异常） </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>目标键 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>值的引用 </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classshed__std_1_1_eexception.html">Eexception</a></td><td>当键不存在时 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a079eb7d2e9d0d95af00ae5f6a0ca80" name="a0a079eb7d2e9d0d95af00ae5f6a0ca80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a079eb7d2e9d0d95af00ae5f6a0ca80">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,6 +293,50 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
 </table>
 </div><div class="memdoc">
 <p>根据key返回value的引用 </p>
+
+</div>
+</div>
+<a id="a734c6282946b1bcf89f88d723f131a18" name="a734c6282946b1bcf89f88d723f131a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a734c6282946b1bcf89f88d723f131a18">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html">Hhashmap_iterator</a> <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取起始迭代器 </p>
+<dl class="section return"><dt>Returns</dt><dd>指向第一个元素的迭代器 </dd></dl>
+
+</div>
+</div>
+<a id="a02a3c3b5fbc8ad6fe79951e265e90714" name="a02a3c3b5fbc8ad6fe79951e265e90714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a3c3b5fbc8ad6fe79951e265e90714">&#9670;&#160;</a></span>bucket_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::bucket_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前桶数量 </p>
+<dl class="section return"><dt>Returns</dt><dd>桶数量 </dd></dl>
 
 </div>
 </div>
@@ -199,8 +368,79 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
 
 </div>
 </div>
+<a id="ae4a181f3d9a1c975ed921d2af0fdcdb1" name="ae4a181f3d9a1c975ed921d2af0fdcdb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a181f3d9a1c975ed921d2af0fdcdb1">&#9670;&#160;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查哈希表是否为空 </p>
+<dl class="section return"><dt>Returns</dt><dd>若为空则返回true </dd></dl>
+
+</div>
+</div>
+<a id="a90653406fd982a3d820e928517e94caa" name="a90653406fd982a3d820e928517e94caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90653406fd982a3d820e928517e94caa">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html">Hhashmap_iterator</a> <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取结束迭代器 </p>
+<dl class="section return"><dt>Returns</dt><dd>指向末尾的迭代器 </dd></dl>
+
+</div>
+</div>
 <a id="a70467d966e9f9197a11862edc20dd631" name="a70467d966e9f9197a11862edc20dd631"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70467d966e9f9197a11862edc20dd631">&#9670;&#160;</a></span>erase()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a70467d966e9f9197a11862edc20dd631">&#9670;&#160;</a></span>erase() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除指定键的元素 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>目标键 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a70467d966e9f9197a11862edc20dd631" name="a70467d966e9f9197a11862edc20dd631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70467d966e9f9197a11862edc20dd631">&#9670;&#160;</a></span>erase() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,8 +467,321 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><b>Hhashmap.cpp</b></li>
+<a id="a52270872c0c916e362af8f8f0383f87d" name="a52270872c0c916e362af8f8f0383f87d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52270872c0c916e362af8f8f0383f87d">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">V * <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查找键对应的值 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>目标键 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>指向值的指针（若未找到则返回nullptr） </dd></dl>
+
+</div>
+</div>
+<a id="aac5fe683440880a815d6ffb8af796036" name="aac5fe683440880a815d6ffb8af796036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5fe683440880a815d6ffb8af796036">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const V * <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查找键对应的值（const版本） </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>目标键 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>指向常量值的指针（若未找到则返回nullptr） </dd></dl>
+
+</div>
+</div>
+<a id="a539c3c9a3058ab0b80672d4c0c95de4e" name="a539c3c9a3058ab0b80672d4c0c95de4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539c3c9a3058ab0b80672d4c0c95de4e">&#9670;&#160;</a></span>get_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::get_index </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算键对应的桶索引 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>目标键 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>桶索引 </dd></dl>
+
+</div>
+</div>
+<a id="acdaaf96fa41d4b1de055f730dd96044c" name="acdaaf96fa41d4b1de055f730dd96044c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdaaf96fa41d4b1de055f730dd96044c">&#9670;&#160;</a></span>get_list() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classshed__std_1_1_llist.html">Llist</a>&lt; <a class="el" href="structshed__std_1_1pair.html">pair</a>&lt; K, V &gt; &gt; * <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::get_list </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定索引的桶（链表） </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>桶索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>链表指针 </dd></dl>
+
+</div>
+</div>
+<a id="a8f990c06617cfdc8361b904c225f0318" name="a8f990c06617cfdc8361b904c225f0318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f990c06617cfdc8361b904c225f0318">&#9670;&#160;</a></span>get_list() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classshed__std_1_1_llist.html">Llist</a>&lt; <a class="el" href="structshed__std_1_1pair.html">pair</a>&lt; K, V &gt; &gt; * <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::get_list </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定索引的桶（链表）（const版本） </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>桶索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>常量链表指针 </dd></dl>
+
+</div>
+</div>
+<a id="a4cd3456f5180b87f0542389962966a50" name="a4cd3456f5180b87f0542389962966a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd3456f5180b87f0542389962966a50">&#9670;&#160;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插入或更新键值对 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键 </td></tr>
+    <tr><td class="paramname">value</td><td>值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea03a5244fc946a82b9b206df6f7fe1c" name="aea03a5244fc946a82b9b206df6f7fe1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea03a5244fc946a82b9b206df6f7fe1c">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a>&lt; K, V, Hash, Enable &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>不等比较运算符 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>另一个哈希表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>若不等则返回true </dd></dl>
+
+</div>
+</div>
+<a id="ad3a3171e55c621909a5184f92c9fd1bc" name="ad3a3171e55c621909a5184f92c9fd1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a3171e55c621909a5184f92c9fd1bc">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a> &amp; <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a>&lt; K, V, Hash, Enable &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拷贝赋值运算符 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>被赋值的哈希表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>自身引用 </dd></dl>
+
+</div>
+</div>
+<a id="a2e7fe54eb7e1b076df5e38647e981ebf" name="a2e7fe54eb7e1b076df5e38647e981ebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7fe54eb7e1b076df5e38647e981ebf">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classshed__std_1_1_hhashmap.html">Hhashmap</a>&lt; K, V, Hash, Enable &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相等比较运算符 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>另一个哈希表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>若相等则返回true </dd></dl>
+
+</div>
+</div>
+<a id="a7af0dc08dbaed4f5291d89840a357ef3" name="a7af0dc08dbaed4f5291d89840a357ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af0dc08dbaed4f5291d89840a357ef3">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">V &amp; <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>下标访问运算符（未找到则抛异常） </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>目标键 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>值的引用 </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classshed__std_1_1_eexception.html">Eexception</a></td><td>当键不存在时 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af86aadeb65ddf66a780260caf4e7a393" name="af86aadeb65ddf66a780260caf4e7a393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af86aadeb65ddf66a780260caf4e7a393">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取元素数量 </p>
+<dl class="section return"><dt>Returns</dt><dd>元素数量 </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_hhashmap_8h_source.html">Hhashmap.h</a></li>
+<li><b>Hhashmap1.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

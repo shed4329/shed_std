@@ -93,29 +93,70 @@ $(function(){initNavTree('structshed__std_1_1_default_hash_3_01_sstring_01_4.htm
 </div><!--header-->
 <div class="contents">
 
-<p>针对字符串的特化(java 的 String hash实现)  
+<p>字符串类型的哈希函数特化，采用Java String哈希实现  
  <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_hhashmap_8h_source.html">Hhashmap.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:afb914c9b820a260e66279d508600708b" id="r_afb914c9b820a260e66279d508600708b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb914c9b820a260e66279d508600708b">operator()</a> (const <a class="el" href="classshed__std_1_1_sstring.html">Sstring</a> &amp;key) const</td></tr>
+<tr class="memdesc:afb914c9b820a260e66279d508600708b"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算字符串的哈希值  <br /></td></tr>
 <tr class="memitem:afb914c9b820a260e66279d508600708b" id="r_afb914c9b820a260e66279d508600708b"><td class="memItemLeft" align="right" valign="top"><a id="afb914c9b820a260e66279d508600708b" name="afb914c9b820a260e66279d508600708b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="classshed__std_1_1_sstring.html">Sstring</a> &amp;key) const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a1606bd5c1716994518c98f7651fc5f02" id="r_a1606bd5c1716994518c98f7651fc5f02"><td class="memItemLeft" align="right" valign="top"><a id="a1606bd5c1716994518c98f7651fc5f02" name="a1606bd5c1716994518c98f7651fc5f02"></a>
+<tr class="memitem:a1783d5f39b7e86858f77758182a83589" id="r_a1783d5f39b7e86858f77758182a83589"><td class="memItemLeft" align="right" valign="top"><a id="a1783d5f39b7e86858f77758182a83589" name="a1783d5f39b7e86858f77758182a83589"></a>
 static const int&#160;</td><td class="memItemRight" valign="bottom"><b>PRIME</b> = 31</td></tr>
-<tr class="memitem:afa9750d3e7eac0e52deea6dc22e12711" id="r_afa9750d3e7eac0e52deea6dc22e12711"><td class="memItemLeft" align="right" valign="top"><a id="afa9750d3e7eac0e52deea6dc22e12711" name="afa9750d3e7eac0e52deea6dc22e12711"></a>
+<tr class="memitem:a49b5ef3324f95cd2999a06977aefb7c1" id="r_a49b5ef3324f95cd2999a06977aefb7c1"><td class="memItemLeft" align="right" valign="top"><a id="a49b5ef3324f95cd2999a06977aefb7c1" name="a49b5ef3324f95cd2999a06977aefb7c1"></a>
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>C1</b></td></tr>
-<tr class="memitem:aef5cf14e11bde2ccf4415462bf9c3714" id="r_aef5cf14e11bde2ccf4415462bf9c3714"><td class="memItemLeft" align="right" valign="top"><a id="aef5cf14e11bde2ccf4415462bf9c3714" name="aef5cf14e11bde2ccf4415462bf9c3714"></a>
+<tr class="memitem:a34b246464a658171e069fbb91e5d01fe" id="r_a34b246464a658171e069fbb91e5d01fe"><td class="memItemLeft" align="right" valign="top"><a id="a34b246464a658171e069fbb91e5d01fe" name="a34b246464a658171e069fbb91e5d01fe"></a>
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>C2</b></td></tr>
-<tr class="memitem:a90730dc3107011946bdc825ae6ec8f83" id="r_a90730dc3107011946bdc825ae6ec8f83"><td class="memItemLeft" align="right" valign="top"><a id="a90730dc3107011946bdc825ae6ec8f83" name="a90730dc3107011946bdc825ae6ec8f83"></a>
+<tr class="memitem:a69a5f30a5f0e8a4ae8b116484cab8706" id="r_a69a5f30a5f0e8a4ae8b116484cab8706"><td class="memItemLeft" align="right" valign="top"><a id="a69a5f30a5f0e8a4ae8b116484cab8706" name="a69a5f30a5f0e8a4ae8b116484cab8706"></a>
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>R1</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>针对字符串的特化(java 的 String hash实现) </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><b>Hhashmap.cpp</b></li>
+<div class="textblock"><p>字符串类型的哈希函数特化，采用Java String哈希实现 </p>
+<p>针对字符串的特化(java 的 String hash实现) </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="afb914c9b820a260e66279d508600708b" name="afb914c9b820a260e66279d508600708b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb914c9b820a260e66279d508600708b">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="structshed__std_1_1_default_hash.html">shed_std::DefaultHash</a>&lt; <a class="el" href="classshed__std_1_1_sstring.html">Sstring</a> &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classshed__std_1_1_sstring.html">Sstring</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算字符串的哈希值 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>待哈希的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>哈希值 </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li><a class="el" href="_hhashmap_8h_source.html">Hhashmap.h</a></li>
+<li><b>Hhashmap1.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
