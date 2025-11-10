@@ -16,13 +16,26 @@ var hierarchy =
       [ "shed_std::Aarray< E >", "classshed__std_1_1_aarray.html", null ],
       [ "shed_std::Aarray< E >", "classshed__std_1_1_aarray.html", null ]
     ] ],
+    [ "shed_std::basic_array< shed_std::Llist< shed_std::pair< K, V > > >", "classshed__std_1_1basic__array.html", [
+      [ "shed_std::Aarray< shed_std::Llist< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ],
+      [ "shed_std::Aarray< shed_std::Llist< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ]
+    ] ],
+    [ "shed_std::basic_array< shed_std::Rred_black_tree< shed_std::pair< K, V > > >", "classshed__std_1_1basic__array.html", [
+      [ "shed_std::Aarray< shed_std::Rred_black_tree< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ],
+      [ "shed_std::Aarray< shed_std::Rred_black_tree< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ]
+    ] ],
     [ "shed_std::basic_list< E >", "classshed__std_1_1basic__list.html", [
+      [ "shed_std::Llist< shed_std::pair< K, V > >", "classshed__std_1_1_llist.html", null ],
+      [ "shed_std::Llist< shed_std::pair< K, V > >", "classshed__std_1_1_llist.html", null ],
       [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ],
       [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ]
     ] ],
     [ "shed_std::bool_constant< V >", "structshed__std_1_1bool__constant.html", null ],
     [ "shed_std::bool_constant< _test_equality< T >::value >", "structshed__std_1_1bool__constant.html", [
       [ "shed_std::is_equality_comparable< T >", "structshed__std_1_1is__equality__comparable.html", null ]
+    ] ],
+    [ "shed_std::bool_constant< _test_greater_equal< T >::value >", "structshed__std_1_1bool__constant.html", [
+      [ "shed_std::is_greater_equal_comparable< T >", "structshed__std_1_1is__greater__equal__comparable.html", null ]
     ] ],
     [ "shed_std::bool_constant< _test_greater_than< T >::value >", "structshed__std_1_1bool__constant.html", [
       [ "shed_std::is_greater_than_comparable< T >", "structshed__std_1_1is__greater__than__comparable.html", null ]
@@ -83,7 +96,7 @@ var hierarchy =
       [ "shed_std::and_operation< is_equality_comparable< T >, is_unequality_comparable< T > >", "structshed__std_1_1and__operation.html", [
         [ "shed_std::is_equality_comparable_full< T >", "structshed__std_1_1is__equality__comparable__full.html", null ]
       ] ],
-      [ "shed_std::and_operation< is_less_than_comparable< T >, is_greater_than_comparable< T >, is_less_equal_comparable< T >, is_greater_than_comparable< T > >", "structshed__std_1_1and__operation.html", [
+      [ "shed_std::and_operation< is_less_than_comparable< T >, is_greater_than_comparable< T >, is_less_equal_comparable< T >, is_greater_equal_comparable< T > >", "structshed__std_1_1and__operation.html", [
         [ "shed_std::is_totally_ordered< T >", "structshed__std_1_1is__totally__ordered.html", null ]
       ] ],
       [ "shed_std::and_operation< T1 >", "structshed__std_1_1and__operation_3_01_t1_01_4.html", null ],
@@ -115,6 +128,8 @@ var hierarchy =
       [ "shed_std::not_operation< T >", "structshed__std_1_1not__operation.html", null ]
     ] ],
     [ "shed_std::Ddeque< T >", "classshed__std_1_1_ddeque.html", null ],
+    [ "shed_std::DefaultHash< K >", "structshed__std_1_1_default_hash.html", null ],
+    [ "shed_std::DefaultHash< Sstring >", "structshed__std_1_1_default_hash_3_01_sstring_01_4.html", null ],
     [ "shed_std::Eexception", "classshed__std_1_1_eexception.html", null ],
     [ "shed_std::enable_if< Cond, T >", "structshed__std_1_1enable__if.html", null ],
     [ "shed_std::enable_if< true, T >", "structshed__std_1_1enable__if_3_01true_00_01_t_01_4.html", null ],
@@ -127,6 +142,11 @@ var hierarchy =
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ],
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ]
     ] ],
+    [ "shed_std::Hhashmap< K, V, Hash, Enable >", "classshed__std_1_1_hhashmap.html", null ],
+    [ "shed_std::Hhashmap< K, V, Hash, enable_if_type< is_totally_ordered< V >::value > >", "classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__ord6edb7ae36a511d4755e9e967dc889952.html", null ],
+    [ "shed_std::Hhashmap< K, V, Hash, enable_if_type< is_totally_ordered< V >::value > >::Hhashmap_const_iterator", "classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__ord9679359537cc1ebba2dbd708b60af33b.html", null ],
+    [ "shed_std::Hhashmap< K, V, Hash, Enable >::Hhashmap_iterator", "classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html", null ],
+    [ "shed_std::Hhashmap< K, V, Hash, enable_if_type< is_totally_ordered< V >::value > >::Hhashmap_iterator", "classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__ord5d5a56dc2252063548f33d33559f2417.html", null ],
     [ "shed_std::Iiomanipulator", "classshed__std_1_1_iiomanipulator.html", null ],
     [ "shed_std::IiostreamBase", "classshed__std_1_1_iiostream_base.html", [
       [ "shed_std::Oostream", "classshed__std_1_1_oostream.html", null ]

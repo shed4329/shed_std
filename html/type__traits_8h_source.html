@@ -28,7 +28,7 @@
   <td id="projectalign">
    <div id="projectname">shed_std
    </div>
-   <div id="projectbrief">0.10</div>
+   <div id="projectbrief">0.11</div>
   </td>
  </tr>
  </tbody>
@@ -387,85 +387,89 @@ $(function(){initNavTree('type__traits_8h_source.html','',''); });
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__less__equal__comparable.html">  264</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__less__equal__comparable.html">is_less_equal_comparable</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;_test_less_equal&lt;T&gt;::value&gt;{};</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="comment">// 检查是否支持 operator== (相等性比较)</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00268" data-start="{" data-end="};">
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="structshed__std_1_1__test__equality.html">  268</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1__test__equality.html">_test_equality</a>{</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keyword">static</span> true_type test(<span class="keyword">decltype</span>(declare_value&lt;const U&amp;&gt;() == declare_value&lt;const U&amp;&gt;(), <span class="keywordtype">int</span>()));</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__greater__equal__comparable.html">  267</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__greater__equal__comparable.html">is_greater_equal_comparable</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;_test_greater_equal&lt;T&gt;::value&gt;{};</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">// 检查是否支持 operator== (相等性比较)</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00271" data-start="{" data-end="};">
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="structshed__std_1_1__test__equality.html">  271</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1__test__equality.html">_test_equality</a>{</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keyword">static</span> false_type test(...);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = <a class="code hl_struct" href="structshed__std_1_1is__same.html">is_same&lt;true_type, decltype(test&lt;T&gt;</a>(0)) &gt;::value;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    };</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keyword">static</span> true_type test(<span class="keyword">decltype</span>(declare_value&lt;const U&amp;&gt;() == declare_value&lt;const U&amp;&gt;(), <span class="keywordtype">int</span>()));</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keyword">static</span> false_type test(...);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = <a class="code hl_struct" href="structshed__std_1_1is__same.html">is_same&lt;true_type, decltype(test&lt;T&gt;</a>(0)) &gt;::value;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    };</div>
 </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__equality__comparable.html">  280</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__equality__comparable.html">is_equality_comparable</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;_test_equality&lt;T&gt;::value&gt;{};</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="comment">// 检查是否支持 operator!= (不等性比较)</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00284" data-start="{" data-end="};">
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="structshed__std_1_1__test__unequality.html">  284</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1__test__unequality.html">_test_unequality</a>{</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keyword">static</span> true_type test(<span class="keyword">decltype</span>(declare_value&lt;const U&amp;&gt;() != declare_value&lt;const U&amp;&gt;(), <span class="keywordtype">int</span>()));</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__equality__comparable.html">  283</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__equality__comparable.html">is_equality_comparable</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;_test_equality&lt;T&gt;::value&gt;{};</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="comment">// 检查是否支持 operator!= (不等性比较)</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00287" data-start="{" data-end="};">
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="structshed__std_1_1__test__unequality.html">  287</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1__test__unequality.html">_test_unequality</a>{</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keyword">static</span> false_type test(...);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = <a class="code hl_struct" href="structshed__std_1_1is__same.html">is_same&lt;true_type, decltype(test&lt;T&gt;</a>(0)) &gt;::value;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    };</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keyword">static</span> true_type test(<span class="keyword">decltype</span>(declare_value&lt;const U&amp;&gt;() != declare_value&lt;const U&amp;&gt;(), <span class="keywordtype">int</span>()));</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keyword">static</span> false_type test(...);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = <a class="code hl_struct" href="structshed__std_1_1is__same.html">is_same&lt;true_type, decltype(test&lt;T&gt;</a>(0)) &gt;::value;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    };</div>
 </div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__unequality__comparable.html">  296</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__unequality__comparable.html">is_unequality_comparable</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;_test_unequality&lt;T&gt;::value&gt;{};</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="comment">// 复合特性：检查是否支持 == 和 !=</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00300" data-start="{" data-end="};">
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__equality__comparable__full.html">  300</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__equality__comparable__full.html">is_equality_comparable_full</a></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        : <a class="code hl_struct" href="structshed__std_1_1and__operation.html">and_operation</a>&lt;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            is_equality_comparable&lt;T&gt;,  <span class="comment">// 检查 operator==</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            is_unequality_comparable&lt;T&gt; <span class="comment">// 检查 operator!=</span></div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    &gt; {};</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__unequality__comparable.html">  299</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__unequality__comparable.html">is_unequality_comparable</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;_test_unequality&lt;T&gt;::value&gt;{};</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="comment">// 复合特性：检查是否支持 == 和 !=</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00303" data-start="{" data-end="};">
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__equality__comparable__full.html">  303</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__equality__comparable__full.html">is_equality_comparable_full</a></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        : <a class="code hl_struct" href="structshed__std_1_1and__operation.html">and_operation</a>&lt;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            is_equality_comparable&lt;T&gt;,  <span class="comment">// 检查 operator==</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            is_unequality_comparable&lt;T&gt; <span class="comment">// 检查 operator!=</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    &gt; {};</div>
 </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="comment">// 复合特性：检查是否支持 &lt;, &gt;, &lt;=, &gt;= 四个关系操作符</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00308" data-start="{" data-end="};">
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__totally__ordered.html">  308</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__totally__ordered.html">is_totally_ordered</a></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        : <a class="code hl_struct" href="structshed__std_1_1and__operation.html">and_operation</a>&lt;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                is_less_than_comparable&lt;T&gt;,         <span class="comment">// 检查 &lt;</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                is_greater_than_comparable&lt;T&gt;,       <span class="comment">// 检查 &gt;</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                is_less_equal_comparable&lt;T&gt;,        <span class="comment">// 检查 &lt;=</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                is_greater_than_comparable&lt;T&gt;     <span class="comment">// 检查 &gt;=</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    &gt; {};</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="comment">// 复合特性：检查是否支持 &lt;, &gt;, &lt;=, &gt;= 四个关系操作符</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00311" data-start="{" data-end="};">
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="structshed__std_1_1is__totally__ordered.html">  311</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1is__totally__ordered.html">is_totally_ordered</a></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        : <a class="code hl_struct" href="structshed__std_1_1and__operation.html">and_operation</a>&lt;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                is_less_than_comparable&lt;T&gt;,         <span class="comment">// 检查 &lt;</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                is_greater_than_comparable&lt;T&gt;,       <span class="comment">// 检查 &gt;</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                is_less_equal_comparable&lt;T&gt;,        <span class="comment">// 检查 &lt;=</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                is_greater_equal_comparable&lt;T&gt;     <span class="comment">// 检查 &gt;=</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    &gt; {};</div>
 </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="comment">// 17.逻辑非</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno"><a class="line" href="structshed__std_1_1not__operation.html">  318</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1not__operation.html">not_operation</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;!T::value&gt; {};</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>}</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="preprocessor">#endif </span><span class="comment">// TYPE_TRAITS_H</span></div>
-<div class="ttc" id="astructshed__std_1_1__test__equality_html"><div class="ttname"><a href="structshed__std_1_1__test__equality.html">shed_std::_test_equality</a></div><div class="ttdef"><b>Definition</b> type_traits.h:268</div></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="comment">// 17.逻辑非</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno"><a class="line" href="structshed__std_1_1not__operation.html">  321</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structshed__std_1_1not__operation.html">not_operation</a> : <a class="code hl_struct" href="structshed__std_1_1bool__constant.html">bool_constant</a>&lt;!T::value&gt; {};</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">#endif </span><span class="comment">// TYPE_TRAITS_H</span></div>
+<div class="ttc" id="astructshed__std_1_1__test__equality_html"><div class="ttname"><a href="structshed__std_1_1__test__equality.html">shed_std::_test_equality</a></div><div class="ttdef"><b>Definition</b> type_traits.h:271</div></div>
 <div class="ttc" id="astructshed__std_1_1__test__greater__equal_html"><div class="ttname"><a href="structshed__std_1_1__test__greater__equal.html">shed_std::_test_greater_equal</a></div><div class="ttdef"><b>Definition</b> type_traits.h:239</div></div>
 <div class="ttc" id="astructshed__std_1_1__test__greater__than_html"><div class="ttname"><a href="structshed__std_1_1__test__greater__than.html">shed_std::_test_greater_than</a></div><div class="ttdef"><b>Definition</b> type_traits.h:223</div></div>
 <div class="ttc" id="astructshed__std_1_1__test__less__equal_html"><div class="ttname"><a href="structshed__std_1_1__test__less__equal.html">shed_std::_test_less_equal</a></div><div class="ttdef"><b>Definition</b> type_traits.h:252</div></div>
 <div class="ttc" id="astructshed__std_1_1__test__less__than_html"><div class="ttname"><a href="structshed__std_1_1__test__less__than.html">shed_std::_test_less_than</a></div><div class="ttdef"><b>Definition</b> type_traits.h:199</div></div>
-<div class="ttc" id="astructshed__std_1_1__test__unequality_html"><div class="ttname"><a href="structshed__std_1_1__test__unequality.html">shed_std::_test_unequality</a></div><div class="ttdef"><b>Definition</b> type_traits.h:284</div></div>
+<div class="ttc" id="astructshed__std_1_1__test__unequality_html"><div class="ttname"><a href="structshed__std_1_1__test__unequality.html">shed_std::_test_unequality</a></div><div class="ttdef"><b>Definition</b> type_traits.h:287</div></div>
 <div class="ttc" id="astructshed__std_1_1and__operation_html"><div class="ttname"><a href="structshed__std_1_1and__operation.html">shed_std::and_operation</a></div><div class="ttdef"><b>Definition</b> type_traits.h:114</div></div>
 <div class="ttc" id="astructshed__std_1_1bool__constant_html"><div class="ttname"><a href="structshed__std_1_1bool__constant.html">shed_std::bool_constant</a></div><div class="ttdef"><b>Definition</b> type_traits.h:8</div></div>
 <div class="ttc" id="astructshed__std_1_1enable__if_html"><div class="ttname"><a href="structshed__std_1_1enable__if.html">shed_std::enable_if</a></div><div class="ttdef"><b>Definition</b> type_traits.h:18</div></div>
 <div class="ttc" id="astructshed__std_1_1is__arithmetic_html"><div class="ttname"><a href="structshed__std_1_1is__arithmetic.html">shed_std::is_arithmetic</a></div><div class="ttdef"><b>Definition</b> type_traits.h:127</div></div>
 <div class="ttc" id="astructshed__std_1_1is__array_html"><div class="ttname"><a href="structshed__std_1_1is__array.html">shed_std::is_array</a></div><div class="ttdef"><b>Definition</b> type_traits.h:151</div></div>
 <div class="ttc" id="astructshed__std_1_1is__const_html"><div class="ttname"><a href="structshed__std_1_1is__const.html">shed_std::is_const</a></div><div class="ttdef"><b>Definition</b> type_traits.h:143</div></div>
-<div class="ttc" id="astructshed__std_1_1is__equality__comparable__full_html"><div class="ttname"><a href="structshed__std_1_1is__equality__comparable__full.html">shed_std::is_equality_comparable_full</a></div><div class="ttdef"><b>Definition</b> type_traits.h:304</div></div>
-<div class="ttc" id="astructshed__std_1_1is__equality__comparable_html"><div class="ttname"><a href="structshed__std_1_1is__equality__comparable.html">shed_std::is_equality_comparable</a></div><div class="ttdef"><b>Definition</b> type_traits.h:280</div></div>
+<div class="ttc" id="astructshed__std_1_1is__equality__comparable__full_html"><div class="ttname"><a href="structshed__std_1_1is__equality__comparable__full.html">shed_std::is_equality_comparable_full</a></div><div class="ttdef"><b>Definition</b> type_traits.h:307</div></div>
+<div class="ttc" id="astructshed__std_1_1is__equality__comparable_html"><div class="ttname"><a href="structshed__std_1_1is__equality__comparable.html">shed_std::is_equality_comparable</a></div><div class="ttdef"><b>Definition</b> type_traits.h:283</div></div>
 <div class="ttc" id="astructshed__std_1_1is__floating__point_html"><div class="ttname"><a href="structshed__std_1_1is__floating__point.html">shed_std::is_floating_point</a></div><div class="ttdef"><b>Definition</b> type_traits.h:67</div></div>
+<div class="ttc" id="astructshed__std_1_1is__greater__equal__comparable_html"><div class="ttname"><a href="structshed__std_1_1is__greater__equal__comparable.html">shed_std::is_greater_equal_comparable</a></div><div class="ttdef"><b>Definition</b> type_traits.h:267</div></div>
 <div class="ttc" id="astructshed__std_1_1is__greater__than__comparable_html"><div class="ttname"><a href="structshed__std_1_1is__greater__than__comparable.html">shed_std::is_greater_than_comparable</a></div><div class="ttdef"><b>Definition</b> type_traits.h:235</div></div>
 <div class="ttc" id="astructshed__std_1_1is__integral_html"><div class="ttname"><a href="structshed__std_1_1is__integral.html">shed_std::is_integral</a></div><div class="ttdef"><b>Definition</b> type_traits.h:49</div></div>
 <div class="ttc" id="astructshed__std_1_1is__less__equal__comparable_html"><div class="ttname"><a href="structshed__std_1_1is__less__equal__comparable.html">shed_std::is_less_equal_comparable</a></div><div class="ttdef"><b>Definition</b> type_traits.h:264</div></div>
@@ -473,10 +477,10 @@ $(function(){initNavTree('type__traits_8h_source.html','',''); });
 <div class="ttc" id="astructshed__std_1_1is__pointer_html"><div class="ttname"><a href="structshed__std_1_1is__pointer.html">shed_std::is_pointer</a></div><div class="ttdef"><b>Definition</b> type_traits.h:40</div></div>
 <div class="ttc" id="astructshed__std_1_1is__reference_html"><div class="ttname"><a href="structshed__std_1_1is__reference.html">shed_std::is_reference</a></div><div class="ttdef"><b>Definition</b> type_traits.h:131</div></div>
 <div class="ttc" id="astructshed__std_1_1is__same_html"><div class="ttname"><a href="structshed__std_1_1is__same.html">shed_std::is_same</a></div><div class="ttdef"><b>Definition</b> type_traits.h:76</div></div>
-<div class="ttc" id="astructshed__std_1_1is__totally__ordered_html"><div class="ttname"><a href="structshed__std_1_1is__totally__ordered.html">shed_std::is_totally_ordered</a></div><div class="ttdef"><b>Definition</b> type_traits.h:314</div></div>
-<div class="ttc" id="astructshed__std_1_1is__unequality__comparable_html"><div class="ttname"><a href="structshed__std_1_1is__unequality__comparable.html">shed_std::is_unequality_comparable</a></div><div class="ttdef"><b>Definition</b> type_traits.h:296</div></div>
+<div class="ttc" id="astructshed__std_1_1is__totally__ordered_html"><div class="ttname"><a href="structshed__std_1_1is__totally__ordered.html">shed_std::is_totally_ordered</a></div><div class="ttdef"><b>Definition</b> type_traits.h:317</div></div>
+<div class="ttc" id="astructshed__std_1_1is__unequality__comparable_html"><div class="ttname"><a href="structshed__std_1_1is__unequality__comparable.html">shed_std::is_unequality_comparable</a></div><div class="ttdef"><b>Definition</b> type_traits.h:299</div></div>
 <div class="ttc" id="astructshed__std_1_1is__void_html"><div class="ttname"><a href="structshed__std_1_1is__void.html">shed_std::is_void</a></div><div class="ttdef"><b>Definition</b> type_traits.h:32</div></div>
-<div class="ttc" id="astructshed__std_1_1not__operation_html"><div class="ttname"><a href="structshed__std_1_1not__operation.html">shed_std::not_operation</a></div><div class="ttdef"><b>Definition</b> type_traits.h:318</div></div>
+<div class="ttc" id="astructshed__std_1_1not__operation_html"><div class="ttname"><a href="structshed__std_1_1not__operation.html">shed_std::not_operation</a></div><div class="ttdef"><b>Definition</b> type_traits.h:321</div></div>
 <div class="ttc" id="astructshed__std_1_1or__operation_html"><div class="ttname"><a href="structshed__std_1_1or__operation.html">shed_std::or_operation</a></div><div class="ttdef"><b>Definition</b> type_traits.h:100</div></div>
 <div class="ttc" id="astructshed__std_1_1remove__const_html"><div class="ttname"><a href="structshed__std_1_1remove__const.html">shed_std::remove_const</a></div><div class="ttdef"><b>Definition</b> type_traits.h:87</div></div>
 <div class="ttc" id="astructshed__std_1_1remove__pointer_html"><div class="ttname"><a href="structshed__std_1_1remove__pointer.html">shed_std::remove_pointer</a></div><div class="ttdef"><b>Definition</b> type_traits.h:181</div></div>
