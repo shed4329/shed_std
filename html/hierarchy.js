@@ -9,25 +9,19 @@ var hierarchy =
     [ "shed_std::Aarray< E >::Aarray_const_iterator", "classshed__std_1_1_aarray_1_1_aarray__const__iterator.html", null ],
     [ "shed_std::Aarray< E >::Aarray_iterator", "classshed__std_1_1_aarray_1_1_aarray__iterator.html", null ],
     [ "shed_std::basic_array< T >", "classshed__std_1_1basic__array.html", [
-      [ "shed_std::Aarray< T >", "classshed__std_1_1_aarray.html", null ],
       [ "shed_std::Aarray< T >", "classshed__std_1_1_aarray.html", null ]
     ] ],
     [ "shed_std::basic_array< E >", "classshed__std_1_1basic__array.html", [
-      [ "shed_std::Aarray< E >", "classshed__std_1_1_aarray.html", null ],
       [ "shed_std::Aarray< E >", "classshed__std_1_1_aarray.html", null ]
     ] ],
     [ "shed_std::basic_array< shed_std::Llist< shed_std::pair< K, V > > >", "classshed__std_1_1basic__array.html", [
-      [ "shed_std::Aarray< shed_std::Llist< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ],
       [ "shed_std::Aarray< shed_std::Llist< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ]
     ] ],
     [ "shed_std::basic_array< shed_std::Rred_black_tree< shed_std::pair< K, V > > >", "classshed__std_1_1basic__array.html", [
-      [ "shed_std::Aarray< shed_std::Rred_black_tree< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ],
       [ "shed_std::Aarray< shed_std::Rred_black_tree< shed_std::pair< K, V > > >", "classshed__std_1_1_aarray.html", null ]
     ] ],
     [ "shed_std::basic_list< E >", "classshed__std_1_1basic__list.html", [
       [ "shed_std::Llist< shed_std::pair< K, V > >", "classshed__std_1_1_llist.html", null ],
-      [ "shed_std::Llist< shed_std::pair< K, V > >", "classshed__std_1_1_llist.html", null ],
-      [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ],
       [ "shed_std::Llist< E >", "classshed__std_1_1_llist.html", null ]
     ] ],
     [ "shed_std::bool_constant< V >", "structshed__std_1_1bool__constant.html", null ],
@@ -136,10 +130,7 @@ var hierarchy =
     [ "shed_std::Ffunction< Ret, Arg >", "classshed__std_1_1_ffunction.html", null ],
     [ "shed_std::FfunctionBase< Ret, Arg >", "classshed__std_1_1_ffunction_base.html", [
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ],
-      [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ],
       [ "shed_std::FfunctionImpl< Ret, Arg, T >", "classshed__std_1_1_ffunction_impl.html", null ],
-      [ "shed_std::FfunctionImpl< Ret, Arg, T >", "classshed__std_1_1_ffunction_impl.html", null ],
-      [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ],
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ]
     ] ],
     [ "shed_std::Hhashmap< K, V, Hash, Enable >", "classshed__std_1_1_hhashmap.html", null ],
@@ -149,10 +140,18 @@ var hierarchy =
     [ "shed_std::Hhashmap< K, V, Hash, enable_if_type< is_totally_ordered< V >::value > >::Hhashmap_iterator", "classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__ord5d5a56dc2252063548f33d33559f2417.html", null ],
     [ "shed_std::Iiomanipulator", "classshed__std_1_1_iiomanipulator.html", null ],
     [ "shed_std::IiostreamBase", "classshed__std_1_1_iiostream_base.html", [
-      [ "shed_std::Oostream", "classshed__std_1_1_oostream.html", null ]
+      [ "shed_std::Iistream", "classshed__std_1_1_iistream.html", [
+        [ "shed_std::Ffile_input", "classshed__std_1_1_ffile__input.html", null ]
+      ] ],
+      [ "shed_std::Oostream", "classshed__std_1_1_oostream.html", [
+        [ "shed_std::Ffile_output", "classshed__std_1_1_ffile__output.html", null ]
+      ] ]
     ] ],
     [ "shed_std::IiostreamBuf", "classshed__std_1_1_iiostream_buf.html", [
-      [ "shed_std::IiostreamBufConsole", "classshed__std_1_1_iiostream_buf_console.html", null ]
+      [ "shed_std::IiostreamBufConsoleInput", "classshed__std_1_1_iiostream_buf_console_input.html", null ],
+      [ "shed_std::IiostreamBufConsoleOutput", "classshed__std_1_1_iiostream_buf_console_output.html", null ],
+      [ "shed_std::IiostreamBufFileInput", "classshed__std_1_1_iiostream_buf_file_input.html", null ],
+      [ "shed_std::IiostreamBufFileOutput", "classshed__std_1_1_iiostream_buf_file_output.html", null ]
     ] ],
     [ "shed_std::Llist< E >::Llist_iterator", "classshed__std_1_1_llist_1_1_llist__iterator.html", null ],
     [ "shed_std::Node< T >", "structshed__std_1_1_node.html", null ],

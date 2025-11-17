@@ -12,10 +12,6 @@
 test*.cpp
 # 忽略Clion文件
 .idea
-# 忽略cmake
-CMakeLists.txt
-# 忽略备份文件
-*.bak
 # 忽略我用这个库做的作业
 homework*.cpp
 # 忽略我的bat批量编译
