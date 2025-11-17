@@ -39,6 +39,7 @@ extern "C" BOOL __stdcall ReadConsoleA(
 );
 #else
     #define STDOUT_FILENO 1 // stdout 的文件描述符
+    #define STDIN_FILENO 0  // stdin 的文件描述符
     // 声明 write 系统调用：参数为文件描述符、缓冲区、长度，返回写入的字节数（int）
     extern "C" int write(int fd, const void* buf, unsigned int count);
     // 声明 read 系统调用

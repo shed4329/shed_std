@@ -33,7 +33,11 @@ namespace shed_std{
             // 构造函数，接受缓冲区指针
             explicit Iistream(IiostreamBuf* buf):IiostreamBase(buf){}
 
-            static constexpr int MAX_READING_LENGTH = 65535;
+            explicit operator bool() const{
+                return is_good();
+            }
+
+            static constexpr int MAX_READING_LENGTH = 1024;
 
             // 读取单个字符
             int get_char(){
@@ -117,6 +121,7 @@ namespace shed_std{
                 if(!is_good() || !str) {
                     return *this;
                 }
+            
 
                 int character;
                 // 跳过空白字符
