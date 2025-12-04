@@ -8,7 +8,7 @@
  * 4. 覆盖红黑树版（int作为key，满足全序约束）的核心逻辑
  */
 
-#include "Hhashmap.h"  // 引入你的Hhashmap头文件
+#include "../Hhashmap.h"  // 引入你的Hhashmap头文件
 #include <iostream>    // 用于输出测试结果
 #include <string>      // 测试string类型的value
 #include <cassert>     // 断言辅助测试
@@ -103,12 +103,12 @@ void test_at_function() {
     assert(exception_thrown);
     std::cout << "成功" << std::endl;
 
-    // 测试点4：const版本的at()（只读访问）
-    // std::cout << "[测试4] const版本的at() 只读访问...";
-    // const Hhashmap<int, int>& const_map = map;
-    // //assert(const_map.at(1) == 1000);  // const版只能读，不能写
-    // assert(const_map.at(2) == 200);
-    // std::cout << "成功" << std::endl;
+    //测试点4：const版本的at()（只读访问）
+    std::cout << "[测试4] const版本的at() 只读访问...";
+    const Hhashmap<int, int>& const_map = map;
+    //assert(const_map.at(1) == 1000);  // const版只能读，不能写
+    assert(const_map.at(2) == 200);
+    std::cout << "成功" << std::endl;
 
     std::cout << "at() 所有测试通过！\n" << std::endl;
 }

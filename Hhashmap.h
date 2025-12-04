@@ -242,12 +242,6 @@ public:
      */
     V* get(const K& key);
 
-    /**
-     * @brief 查找键对应的值（const版本）
-     * @param key 目标键
-     * @return 指向常量值的指针（若未找到则返回nullptr）
-     */
-    const V* get(const K& key) const;
 
     /**
      * @brief 下标访问运算符（未找到时插入空值）
@@ -608,6 +602,13 @@ public:
      * @return 值的引用
      */
     V& at(const K& key);
+
+    /**
+     * @brief 访问指定键的元素，未找到时抛出异常
+     * @param key 目标键
+     * @return 值的常量引用
+     */
+    const V& at(const K& key) const;
 
     /**
      * @brief 获取当前桶数量
