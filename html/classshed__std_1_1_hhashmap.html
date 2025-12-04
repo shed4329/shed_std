@@ -28,7 +28,7 @@
   <td id="projectalign">
    <div id="projectname">shed_std
    </div>
-   <div id="projectbrief">0.12</div>
+   <div id="projectbrief">0.13</div>
   </td>
  </tr>
  </tbody>
@@ -129,10 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4cd3456f5180b87f0542389962966a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入或更新键值对  <br /></td></tr>
 <tr class="memitem:a52270872c0c916e362af8f8f0383f87d" id="r_a52270872c0c916e362af8f8f0383f87d"><td class="memItemLeft" align="right" valign="top">V *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52270872c0c916e362af8f8f0383f87d">get</a> (const K &amp;key)</td></tr>
 <tr class="memdesc:a52270872c0c916e362af8f8f0383f87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找键对应的值  <br /></td></tr>
-<tr class="memitem:aac5fe683440880a815d6ffb8af796036" id="r_aac5fe683440880a815d6ffb8af796036"><td class="memItemLeft" align="right" valign="top">const V *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac5fe683440880a815d6ffb8af796036">get</a> (const K &amp;key) const</td></tr>
-<tr class="memdesc:aac5fe683440880a815d6ffb8af796036"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找键对应的值（const版本）  <br /></td></tr>
 <tr class="memitem:a7af0dc08dbaed4f5291d89840a357ef3" id="r_a7af0dc08dbaed4f5291d89840a357ef3"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7af0dc08dbaed4f5291d89840a357ef3">operator[]</a> (const K &amp;key)</td></tr>
-<tr class="memdesc:a7af0dc08dbaed4f5291d89840a357ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">下标访问运算符（未找到则抛异常）  <br /></td></tr>
+<tr class="memdesc:a7af0dc08dbaed4f5291d89840a357ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">下标访问运算符（未找到时插入空值）  <br /></td></tr>
 <tr class="memitem:af86aadeb65ddf66a780260caf4e7a393" id="r_af86aadeb65ddf66a780260caf4e7a393"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af86aadeb65ddf66a780260caf4e7a393">size</a> () const</td></tr>
 <tr class="memdesc:af86aadeb65ddf66a780260caf4e7a393"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取元素数量  <br /></td></tr>
 <tr class="memitem:ae4a181f3d9a1c975ed921d2af0fdcdb1" id="r_ae4a181f3d9a1c975ed921d2af0fdcdb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a181f3d9a1c975ed921d2af0fdcdb1">empty</a> () const</td></tr>
@@ -147,9 +145,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 <tr class="memitem:a70467d966e9f9197a11862edc20dd631" id="r_a70467d966e9f9197a11862edc20dd631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70467d966e9f9197a11862edc20dd631">erase</a> (const K &amp;key)</td></tr>
 <tr class="memdesc:a70467d966e9f9197a11862edc20dd631"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定键的元素  <br /></td></tr>
 <tr class="memitem:a0a079eb7d2e9d0d95af00ae5f6a0ca80" id="r_a0a079eb7d2e9d0d95af00ae5f6a0ca80"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a079eb7d2e9d0d95af00ae5f6a0ca80">at</a> (const K &amp;key)</td></tr>
-<tr class="memdesc:a0a079eb7d2e9d0d95af00ae5f6a0ca80"><td class="mdescLeft">&#160;</td><td class="mdescRight">访问指定键的元素（未找到则抛异常）  <br /></td></tr>
+<tr class="memdesc:a0a079eb7d2e9d0d95af00ae5f6a0ca80"><td class="mdescLeft">&#160;</td><td class="mdescRight">访问指定键的元素,未找到时抛出异常  <br /></td></tr>
 <tr class="memitem:a02a3c3b5fbc8ad6fe79951e265e90714" id="r_a02a3c3b5fbc8ad6fe79951e265e90714"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a3c3b5fbc8ad6fe79951e265e90714">bucket_size</a> ()</td></tr>
 <tr class="memdesc:a02a3c3b5fbc8ad6fe79951e265e90714"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前桶数量  <br /></td></tr>
+<tr class="memitem:a8a20bcb638d453e9885a565b1b27a8f4" id="r_a8a20bcb638d453e9885a565b1b27a8f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html">Hhashmap_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a20bcb638d453e9885a565b1b27a8f4">find</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:a8a20bcb638d453e9885a565b1b27a8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找key对应的迭代器，找不到返回end  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt;<br />
@@ -209,7 +209,7 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
       </table>
 </div><div class="memdoc">
 
-<p>访问指定键的元素（未找到则抛异常） </p>
+<p>访问指定键的元素,未找到时抛出异常 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>目标键 </td></tr>
@@ -217,12 +217,6 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>值的引用 </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classshed__std_1_1_eexception.html">Eexception</a></td><td>当键不存在时 </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -341,8 +335,36 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
 
 </div>
 </div>
+<a id="a8a20bcb638d453e9885a565b1b27a8f4" name="a8a20bcb638d453e9885a565b1b27a8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a20bcb638d453e9885a565b1b27a8f4">&#9670;&#160;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html">Hhashmap_iterator</a> <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查找key对应的迭代器，找不到返回end </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">键的值</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>迭代器 </dd></dl>
+
+</div>
+</div>
 <a id="a52270872c0c916e362af8f8f0383f87d" name="a52270872c0c916e362af8f8f0383f87d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52270872c0c916e362af8f8f0383f87d">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52270872c0c916e362af8f8f0383f87d">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,34 +388,6 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>指向值的指针（若未找到则返回nullptr） </dd></dl>
-
-</div>
-</div>
-<a id="aac5fe683440880a815d6ffb8af796036" name="aac5fe683440880a815d6ffb8af796036"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac5fe683440880a815d6ffb8af796036">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typename Enable = void&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const V * <a class="el" href="classshed__std_1_1_hhashmap.html">shed_std::Hhashmap</a>&lt; K, V, Hash, Enable &gt;::get </td>
-          <td>(</td>
-          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>查找键对应的值（const版本） </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>目标键 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>指向常量值的指针（若未找到则返回nullptr） </dd></dl>
 
 </div>
 </div>
@@ -614,7 +608,7 @@ template&lt;typename K, typename V, typename Hash = DefaultHash&lt;K&gt;, typena
       </table>
 </div><div class="memdoc">
 
-<p>下标访问运算符（未找到则抛异常） </p>
+<p>下标访问运算符（未找到时插入空值） </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>目标键 </td></tr>

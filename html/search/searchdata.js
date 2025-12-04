@@ -1,9 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghilmnopqrstvw~",
+  0: "_abcdefghilmnopqrstvw~主待文版项",
   1: "_abdefhilnopqrsv",
   2: "abcdefghilmnopqrstvw~",
-  3: "d"
+  3: "d",
+  4: "s主待文版项"
 };
 
 var indexSectionNames =
@@ -11,7 +12,8 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "functions",
-  3: "typedefs"
+  3: "typedefs",
+  4: "pages"
 };
 
 var indexSectionLabels =
@@ -19,6 +21,7 @@ var indexSectionLabels =
   0: "All",
   1: "Classes",
   2: "Functions",
-  3: "Typedefs"
+  3: "Typedefs",
+  4: "Pages"
 };
 
