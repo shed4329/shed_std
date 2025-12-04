@@ -250,7 +250,7 @@ public:
     const V* get(const K& key) const;
 
     /**
-     * @brief 下标访问运算符（未找到则抛异常）
+     * @brief 下标访问运算符（未找到时插入空值）
      * @param key 目标键
      * @return 值的引用
      * @throw Eexception 当键不存在时
@@ -293,10 +293,9 @@ public:
     void erase(const K& key);
 
     /**
-     * @brief 访问指定键的元素（未找到则抛异常）
+     * @brief 访问指定键的元素,未找到时抛出异常
      * @param key 目标键
      * @return 值的引用
-     * @throw Eexception 当键不存在时
      */
     V& at(const K& key);
 
@@ -573,7 +572,7 @@ public:
     const V* get(const K& key) const;
 
     /**
-     * @brief 下标访问运算符（未找到则抛异常）
+     * @brief 下标访问运算符（未找到插入空值）
      * @param key 目标键
      * @return 值的引用
      * @throw Eexception 当键不存在时
@@ -604,10 +603,9 @@ public:
     void erase(const K& key);
 
     /**
-     * @brief 访问指定键的元素（未找到则抛异常）
+     * @brief 访问指定键的元素，未找到时抛出异常
      * @param key 目标键
      * @return 值的引用
-     * @throw Eexception 当键不存在时
      */
     V& at(const K& key);
 

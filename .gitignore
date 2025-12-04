@@ -8,8 +8,6 @@
 *.json
 # 忽略python产生的文件夹
 /nltk_data
-# 忽略测试用cpp
-test*.cpp
 # 忽略Clion文件
 .idea
 # 忽略我用这个库做的作业
