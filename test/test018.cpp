@@ -1,7 +1,7 @@
-#include "Ffile_input.h"
-#include "Cconsole_output.h"  // 控制台输出流（支持 operator<<）
+#include "../Ffile_input.h"
+#include "../Cconsole_output.h"  // 控制台输出流（支持 operator<<）
 #include <cstring>
-#include "Eexception.h"
+#include "../Eexception.h"
 
 using namespace shed_std;
 
