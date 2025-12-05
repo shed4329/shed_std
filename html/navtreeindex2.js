@@ -8,6 +8,7 @@ var NAVTREEINDEX2 =
 "functions_~.html":[1,3,0,20],
 "hierarchy.html":[1,2],
 "index.html":[],
+"iostream_8h_source.html":[2,0,17],
 "md_readme.html":[0],
 "md_readme.html#autotoc_md1":[0,0],
 "md_readme.html#autotoc_md2":[0,1],
@@ -15,7 +16,7 @@ var NAVTREEINDEX2 =
 "md_readme.html#autotoc_md4":[0,3],
 "md_readme.html#autotoc_md5":[0,4],
 "pages.html":[],
-"pair_8h_source.html":[2,0,20],
+"pair_8h_source.html":[2,0,21],
 "structshed__std_1_1__test__equality.html":[1,0,0,0],
 "structshed__std_1_1__test__greater__equal.html":[1,0,0,1],
 "structshed__std_1_1__test__greater__than.html":[1,0,0,2],
@@ -89,5 +90,5 @@ var NAVTREEINDEX2 =
 "structshed__std_1_1remove__reference.html":[1,0,0,86],
 "structshed__std_1_1remove__reference_3_01_t_01_6_01_4.html":[1,0,0,87],
 "structshed__std_1_1remove__reference_3_01_t_01_6_6_01_4.html":[1,0,0,88],
-"type__traits_8h_source.html":[2,0,26]
+"type__traits_8h_source.html":[2,0,27]
 };

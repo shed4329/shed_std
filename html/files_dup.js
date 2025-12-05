@@ -17,6 +17,7 @@ var files_dup =
     [ "IiostreamBufFileInput.h", "_iiostream_buf_file_input_8h_source.html", null ],
     [ "IiostreamBufFileOutput.h", "_iiostream_buf_file_output_8h_source.html", null ],
     [ "Iistream.h", "_iistream_8h_source.html", null ],
+    [ "iostream.h", "iostream_8h_source.html", null ],
     [ "Llist.cpp", "_llist_8cpp_source.html", null ],
     [ "Llist.h", "_llist_8h_source.html", null ],
     [ "Oostream.h", "_oostream_8h_source.html", null ],
