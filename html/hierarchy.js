@@ -133,11 +133,13 @@ var hierarchy =
       [ "shed_std::FfunctionImpl< Ret, Arg, T >", "classshed__std_1_1_ffunction_impl.html", null ],
       [ "shed_std::FfunctionImpl< Ret, Arg, Ret(Arg)>", "classshed__std_1_1_ffunction_impl_3_01_ret_00_01_arg_00_01_ret_07_arg_08_4.html", null ]
     ] ],
+    [ "shed_std::greater< T >", "structshed__std_1_1greater.html", null ],
     [ "shed_std::Hhashmap< K, V, Hash, Enable >", "classshed__std_1_1_hhashmap.html", null ],
     [ "shed_std::Hhashmap< K, V, Hash, enable_if_type< is_totally_ordered< K >::value > >", "classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__orda04669605c3d8f877ded9197ad9f664c.html", null ],
     [ "shed_std::Hhashmap< K, V, Hash, enable_if_type< is_totally_ordered< K >::value > >::Hhashmap_const_iterator", "classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__ordb478e0d5f7fe69eff3bbdfb17a2dac44.html", null ],
     [ "shed_std::Hhashmap< K, V, Hash, Enable >::Hhashmap_iterator", "classshed__std_1_1_hhashmap_1_1_hhashmap__iterator.html", null ],
     [ "shed_std::Hhashmap< K, V, Hash, enable_if_type< is_totally_ordered< K >::value > >::Hhashmap_iterator", "classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__ord9eb03b2178e6f7087282b0aa45f96319.html", null ],
+    [ "shed_std::Hheap< T, Comparator >", "classshed__std_1_1_hheap.html", null ],
     [ "shed_std::Iiomanipulator", "classshed__std_1_1_iiomanipulator.html", null ],
     [ "shed_std::IiostreamBase", "classshed__std_1_1_iiostream_base.html", [
       [ "shed_std::Iistream", "classshed__std_1_1_iistream.html", [
@@ -153,6 +155,7 @@ var hierarchy =
       [ "shed_std::IiostreamBufFileInput", "classshed__std_1_1_iiostream_buf_file_input.html", null ],
       [ "shed_std::IiostreamBufFileOutput", "classshed__std_1_1_iiostream_buf_file_output.html", null ]
     ] ],
+    [ "shed_std::less< T >", "structshed__std_1_1less.html", null ],
     [ "shed_std::Llist< E >::Llist_iterator", "classshed__std_1_1_llist_1_1_llist__iterator.html", null ],
     [ "shed_std::Node< T >", "structshed__std_1_1_node.html", null ],
     [ "shed_std::pair< T1, T2 >", "structshed__std_1_1pair.html", null ],

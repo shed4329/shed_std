@@ -1,7 +1,8 @@
 var searchData=
 [
   ['length_0',['length',['../classshed__std_1_1basic__array.html#a39ba391e20ef45a94eca4026e7451c1b',1,'shed_std::basic_array::length()'],['../classshed__std_1_1basic__list.html#a5058895291959ed0b9abb642118af224',1,'shed_std::basic_list::length()'],['../classshed__std_1_1_sstring.html#a4103d399c48792cd83dbb8e3c0e1d286',1,'shed_std::Sstring::length()'],['../classshed__std_1_1_vvector.html#ab9bb04adafdc30099a2f15631412a298',1,'shed_std::Vvector::length()']]],
-  ['llist_1',['Llist',['../classshed__std_1_1_llist.html',1,'shed_std::Llist&lt; E &gt;'],['../classshed__std_1_1_llist.html#ae6f79f368338087a905d7a25f254d709',1,'shed_std::Llist::Llist()'],['../classshed__std_1_1_llist.html#a1d394e22d677b6725f4d33bbc0f5a442',1,'shed_std::Llist::Llist(const Llist&lt; E &gt; &amp;other)']]],
-  ['llist_3c_20shed_5fstd_3a_3apair_3c_20k_2c_20v_20_3e_20_3e_2',['Llist&lt; shed_std::pair&lt; K, V &gt; &gt;',['../classshed__std_1_1_llist.html',1,'shed_std']]],
-  ['llist_5fiterator_3',['Llist_iterator',['../classshed__std_1_1_llist_1_1_llist__iterator.html',1,'shed_std::Llist&lt; E &gt;::Llist_iterator'],['../classshed__std_1_1_llist_1_1_llist__iterator.html#aa13d9ee12df0e21e3874df98ea35b824',1,'shed_std::Llist::Llist_iterator::Llist_iterator()']]]
+  ['less_1',['less',['../structshed__std_1_1less.html',1,'shed_std']]],
+  ['llist_2',['Llist',['../classshed__std_1_1_llist.html',1,'shed_std::Llist&lt; E &gt;'],['../classshed__std_1_1_llist.html#ae6f79f368338087a905d7a25f254d709',1,'shed_std::Llist::Llist()'],['../classshed__std_1_1_llist.html#a1d394e22d677b6725f4d33bbc0f5a442',1,'shed_std::Llist::Llist(const Llist&lt; E &gt; &amp;other)']]],
+  ['llist_3c_20shed_5fstd_3a_3apair_3c_20k_2c_20v_20_3e_20_3e_3',['Llist&lt; shed_std::pair&lt; K, V &gt; &gt;',['../classshed__std_1_1_llist.html',1,'shed_std']]],
+  ['llist_5fiterator_4',['Llist_iterator',['../classshed__std_1_1_llist_1_1_llist__iterator.html',1,'shed_std::Llist&lt; E &gt;::Llist_iterator'],['../classshed__std_1_1_llist_1_1_llist__iterator.html#aa13d9ee12df0e21e3874df98ea35b824',1,'shed_std::Llist::Llist_iterator::Llist_iterator()']]]
 ];

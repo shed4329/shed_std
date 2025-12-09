@@ -2,6 +2,7 @@ var files_dup =
 [
     [ "Aarray.cpp", "_aarray_8cpp_source.html", null ],
     [ "Aarray.h", "_aarray_8h_source.html", null ],
+    [ "Ccomparator.h", "_ccomparator_8h_source.html", null ],
     [ "Cconsole_input.h", "_cconsole__input_8h_source.html", null ],
     [ "Cconsole_output.h", "_cconsole__output_8h_source.html", null ],
     [ "Ddeque.h", "_ddeque_8h_source.html", null ],
@@ -10,6 +11,7 @@ var files_dup =
     [ "Ffile_output.h", "_ffile__output_8h_source.html", null ],
     [ "Ffunction.h", "_ffunction_8h_source.html", null ],
     [ "Hhashmap.h", "_hhashmap_8h_source.html", null ],
+    [ "Hheap.h", "_hheap_8h_source.html", null ],
     [ "Iiomanipulator.h", "_iiomanipulator_8h_source.html", null ],
     [ "IiostreamBase.h", "_iiostream_base_8h_source.html", null ],
     [ "IiostreamBuf.h", "_iiostream_buf_8h_source.html", null ],
