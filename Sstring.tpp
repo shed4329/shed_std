@@ -642,6 +642,13 @@ namespace shed_std{
         output_stream << str.c_string();
         return output_stream;
     }
+
+    inline Iistream& operator>>(Iistream& input_stream,Sstring& str){
+        char s[shed_std::Iistream::MAX_READING_LENGTH] = {0};
+        input_stream >> s;
+        str = Sstring(s);
+        return input_stream;
+    }
     
 }
 
