@@ -75,6 +75,7 @@ namespace shed_std{
     template<typename E>
     Aarray<E>::Aarray(int N):basic_array<E>(N){
         if(N<0){
+            // 非越界异常：保持不变
             throw Eexception("Exception: Illegal Size for the size of Aarray could not be less than 0!");
         }
     }
@@ -125,7 +126,8 @@ namespace shed_std{
     template<typename E>
     E& Aarray<E>::at(int index){
         if(index<0||index>=this->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(index, this->_length, "Aarray::at: Index out of range");
         }
         return this->_array[index];
     }
@@ -133,7 +135,8 @@ namespace shed_std{
     template<typename E>
     const E& Aarray<E>::at(int index) const{
         if(index<0||index>=this->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(index, this->_length, "Aarray::at const: Index out of range");
         }
         return this->_array[index];
     }
@@ -141,6 +144,7 @@ namespace shed_std{
     template<typename E>
     E& Aarray<E>::front(){
         if(this->empty()){
+            // 非越界异常：保持不变
             throw Eexception("Exception: Null Pointer Reference for the Aarray's size is 0!");
         }
         return this->_array[0];
@@ -149,6 +153,7 @@ namespace shed_std{
     template<typename E>
     const E& Aarray<E>::front() const{
         if(this->empty()){
+            // 非越界异常：保持不变
             throw Eexception("Exception: Null Pointer Reference for the Aarray's size is 0!");
         }
         return this->_array[0];
@@ -157,6 +162,7 @@ namespace shed_std{
     template<typename E>
     E& Aarray<E>::back(){
         if(this->empty()){
+            // 非越界异常：保持不变
             throw Eexception("Exception: Null Pointer Reference for the Aarray's size is 0!");
         }
         return this->_array[this->_length - 1];
@@ -165,6 +171,7 @@ namespace shed_std{
     template<typename E>
     const E& Aarray<E>::back() const{
         if(this->empty()){
+            // 非越界异常：保持不变
             throw Eexception("Exception: Null Pointer Reference for the Aarray's size is 0!");
         }
         return this->_array[this->_length - 1];
@@ -174,7 +181,8 @@ namespace shed_std{
     template<typename E>
     Aarray<E>::Aarray_iterator::Aarray_iterator(int index,Aarray* array):_index(index),_array(array){
         if(_index < 0 ||_index > _array->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(index, _array->_length, "Aarray_iterator::constructor: Index out of range");
         }
     }
 
@@ -191,7 +199,8 @@ namespace shed_std{
     template<typename E>
     typename Aarray<E>::Aarray_iterator& Aarray<E>::Aarray_iterator::operator++(){
         if(_index+1 > _array->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(_index+1, _array->_length, "Aarray_iterator::operator++: Index out of range");
         }
         _index++;
         return *this;
@@ -207,7 +216,8 @@ namespace shed_std{
     template<typename E>
     typename Aarray<E>::Aarray_iterator& Aarray<E>::Aarray_iterator::operator--(){
         if(_index-1 <0){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(_index-1, _array->_length, "Aarray_iterator::operator--: Index out of range");
         }
         _index--;
         return *this;
@@ -224,7 +234,8 @@ namespace shed_std{
     typename Aarray<E>::Aarray_iterator Aarray<E>::Aarray_iterator::operator+(int n) const{
         int new_index = _index + n;
         if(new_index <0 || new_index > _array->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(new_index, _array->_length, "Aarray_iterator::operator+: Index out of range");
         }
         return Aarray_iterator(new_index,_array);
     }
@@ -237,6 +248,7 @@ namespace shed_std{
     template<typename E>
     int Aarray<E>::Aarray_iterator::operator-(const Aarray_iterator& other) const{
         if(_array != other._array){
+            // 非越界异常：保持不变
             throw Eexception("Exception: substract operator cannot be carried on different Aarray");
         }
         return _index - other._index;
@@ -256,7 +268,8 @@ namespace shed_std{
     template<typename E>
     Aarray<E>::Aarray_const_iterator::Aarray_const_iterator(int index,const Aarray* array):_index(index),_array(array){
         if(_index < 0 ||_index > _array->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(index, _array->_length, "Aarray_const_iterator::constructor: Index out of range");
         }
     }
 
@@ -273,7 +286,8 @@ namespace shed_std{
     template<typename E>
     typename Aarray<E>::Aarray_const_iterator& Aarray<E>::Aarray_const_iterator::operator++(){
         if(_index+1 > _array->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(_index+1, _array->_length, "Aarray_const_iterator::operator++: Index out of range");
         }
         _index++;
         return *this;
@@ -289,7 +303,8 @@ namespace shed_std{
     template<typename E>
     typename Aarray<E>::Aarray_const_iterator& Aarray<E>::Aarray_const_iterator::operator--(){
         if(_index-1 <0){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(_index-1, _array->_length, "Aarray_const_iterator::operator--: Index out of range");
         }
         _index--;
         return *this;
@@ -306,7 +321,8 @@ namespace shed_std{
     typename Aarray<E>::Aarray_const_iterator Aarray<E>::Aarray_const_iterator::operator+(int n) const{
         int new_index = _index + n;
         if(new_index <0 || new_index > _array->_length){
-            throw Eexception("Exception: Index of out Aarray's range!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(new_index, _array->_length, "Aarray_const_iterator::operator+: Index out of range");
         }
         return Aarray_const_iterator(new_index,_array);
     }
@@ -319,6 +335,7 @@ namespace shed_std{
     template<typename E>
     int Aarray<E>::Aarray_const_iterator::operator-(const Aarray_const_iterator& other) const{
         if(_array != other._array){
+            // 非越界异常：保持不变
             throw Eexception("Exception: substract operator cannot be carried on different Aarray");
         }
         return _index - other._index;
@@ -337,6 +354,7 @@ namespace shed_std{
     template<typename E>
     typename Aarray<E>::Aarray_iterator Aarray<E>::begin() {
         if (this->empty()) {
+            // 非越界异常：保持不变
             throw Eexception("Exception: Aarray is empty, cannot get begin()!");
         }
         return Aarray_iterator(0,this);
@@ -350,6 +368,7 @@ namespace shed_std{
     template<typename E>
     typename Aarray<E>::Aarray_const_iterator Aarray<E>::begin() const{
         if(this->empty()){
+            // 非越界异常：保持不变
             throw Eexception("Exception: Aarray is empty, cannot get begin()!");
         }
         return Aarray_const_iterator(0,this);
@@ -436,7 +455,8 @@ namespace shed_std{
             }
             return;
         }
-        throw Eexception("Exception: Index out of range or the indexs are the same");
+        // 越界异常：替换为子类（补充双索引+合法长度）
+        throw EexceptionOutOfBoundary(index1, this->_length, "Aarray::swap: Index out of range (index1 or index2 invalid)");
     }
 
     template<typename E>
@@ -449,7 +469,8 @@ namespace shed_std{
     template<typename E>
     Aarray<E> Aarray<E>::subArr(int start_index,int end_index){
         if (start_index < 0 || end_index > this->_length || start_index >= end_index) {
-            throw Eexception("Exception: Invalid subarray range (out of bounds or start >= end)!");
+            // 越界异常：替换为子类
+            throw EexceptionOutOfBoundary(start_index, end_index, "Aarray::subArr: Invalid subarray range (out of bounds)");
         }
     
         Aarray ans(end_index - start_index);  
