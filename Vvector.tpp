@@ -25,7 +25,8 @@ E* shed_std::Vvector<E>::Vvector_iterator::operator->() {
 template <typename E>
 typename shed_std::Vvector<E>::Vvector_iterator& shed_std::Vvector<E>::Vvector_iterator::operator++() {
     if (_index + 1 > _vec->_size) {
-        throw EexceptionOutOfBoundary(_index+1,_vec->size,"shed::Vvector::Vvector_iterator operator++");
+        // 修复：_vec->size 是函数，改为 _vec->_size；命名空间拼写错误修正
+        throw shed_std::EexceptionOutOfBoundary(_index+1, _vec->_size, "shed_std::Vvector::Vvector_iterator::operator++");
     }
     _index++;
     return *this;
@@ -41,7 +42,8 @@ typename shed_std::Vvector<E>::Vvector_iterator shed_std::Vvector<E>::Vvector_it
 template <typename E>
 typename shed_std::Vvector<E>::Vvector_iterator& shed_std::Vvector<E>::Vvector_iterator::operator--() {
     if (_index - 1 < -1) {
-        throw EexceptionOutOfBoundary(_index-1,-1,"shed_std::Vvector::Vvector_iterator");
+        // 修复：补充完整位置描述
+        throw shed_std::EexceptionOutOfBoundary(_index-1, -1, "shed_std::Vvector::Vvector_iterator::operator--");
     }
     _index--;
     return *this;
@@ -68,7 +70,8 @@ template <typename E>
 typename shed_std::Vvector<E>::Vvector_iterator shed_std::Vvector<E>::Vvector_iterator::operator+(int n) const {
     int new_index = _index + n;
     if (new_index < -1 || new_index > _vec->_size) {
-        throw EexceptionOutOfBoundary(new_index,_vec->_size,"shed_std::Vvector::Vvector_iterator");
+        // 修复：补充命名空间前缀，完整位置描述
+        throw shed_std::EexceptionOutOfBoundary(new_index, _vec->_size, "shed_std::Vvector::Vvector_iterator::operator+");
     }
     return Vvector_iterator(_vec, new_index);
 }
@@ -148,7 +151,8 @@ template <typename E>
 typename shed_std::Vvector<E>::Vvector_const_iterator shed_std::Vvector<E>::Vvector_const_iterator::operator+(int n) const {
     int new_index = _index + n;
     if (new_index < -1 || new_index > _vec->_size) {
-        throw EexceptionOutOfBoundary(new_index,_vec->_size,"shed_std::Vvector::Vvector_const_iterator operator+");
+        // 修复：补充命名空间前缀，完整位置描述
+        throw shed_std::EexceptionOutOfBoundary(new_index, _vec->_size, "shed_std::Vvector::Vvector_const_iterator::operator+");
     }
     return Vvector_const_iterator(_vec, new_index);
 }
@@ -223,7 +227,7 @@ bool shed_std::Vvector<E>::empty() const {
 template <typename E>
 E& shed_std::Vvector<E>::at(int index) {
     if (index < 0 || index >= _size) {
-        throw EexceptionOutOfBoundary(index,_size,"shed_std::Vvector::at");
+        throw shed_std::EexceptionOutOfBoundary(index, _size, "shed_std::Vvector::at");
     }
     return _array[index];
 }
@@ -249,7 +253,8 @@ const E& shed_std::Vvector<E>::operator[](int index) const {
 template <typename E>
 void shed_std::Vvector<E>::push_back(const E& value) {
     if (_size == MAX_SIZE) {
-        throw Eexception("Eexception: Vvector reach max size limits!");
+        // 替换：容量超限 → EexceptionCapacityExceeded
+        throw shed_std::EexceptionCapacityExceeded(_size, MAX_SIZE, "shed_std::Vvector::push_back");
     }
     if (_size + 1 > _capacity) {
         _expand();
@@ -261,7 +266,8 @@ void shed_std::Vvector<E>::push_back(const E& value) {
 template <typename E>
 void shed_std::Vvector<E>::pop_back() {
     if (_size == 0) {
-        throw Eexception("Exception:empty Vvector could not pop!");
+        // 替换：空容器操作 → EexceptionEmptyContainer
+        throw shed_std::EexceptionEmptyContainer("pop_back on empty Vvector", "shed_std::Vvector::pop_back");
     }
     _size--;
 }
@@ -272,7 +278,8 @@ void shed_std::Vvector<E>::insert(int index, const E& value) {
         throw shed_std::EexceptionOutOfBoundary(index, _size, "shed_std::Vvector::insert");
     }
     if (_size == MAX_SIZE) {
-        throw Eexception("Eexception: Vvector reach max size limits!");
+        // 替换：容量超限 → EexceptionCapacityExceeded
+        throw shed_std::EexceptionCapacityExceeded(_size, MAX_SIZE, "shed_std::Vvector::insert");
     }
     if (_size + 1 > _capacity) {
         _expand();
@@ -298,7 +305,8 @@ void shed_std::Vvector<E>::erase(int index) {
 template <typename E>
 E& shed_std::Vvector<E>::front() {
     if (_size == 0) {
-        throw Eexception("Eexception: empty Vvector doesn't have front");
+        // 替换：空容器操作 → EexceptionEmptyContainer
+        throw shed_std::EexceptionEmptyContainer("access front on empty Vvector", "shed_std::Vvector::front");
     }
     return _array[0];
 }
@@ -306,7 +314,8 @@ E& shed_std::Vvector<E>::front() {
 template <typename E>
 const E& shed_std::Vvector<E>::front() const {
     if (_size == 0) {
-        throw Eexception("Eexception: empty Vvector doesn't have front");
+        // 替换：空容器操作 → EexceptionEmptyContainer
+        throw shed_std::EexceptionEmptyContainer("access front on empty Vvector", "shed_std::Vvector::front const");
     }
     return _array[0];
 }
@@ -314,7 +323,8 @@ const E& shed_std::Vvector<E>::front() const {
 template <typename E>
 E& shed_std::Vvector<E>::back() {
     if (_size == 0) {
-        throw Eexception("Eexception: empty Vvector doesn't have back");
+        // 替换：空容器操作 → EexceptionEmptyContainer
+        throw shed_std::EexceptionEmptyContainer("access back on empty Vvector", "shed_std::Vvector::back");
     }
     return _array[_size - 1];
 }
@@ -322,7 +332,8 @@ E& shed_std::Vvector<E>::back() {
 template <typename E>
 const E& shed_std::Vvector<E>::back() const {
     if (_size == 0) {
-        throw Eexception("Eexception: empty Vvector doesn't have back");
+        // 替换：空容器操作 → EexceptionEmptyContainer
+        throw shed_std::EexceptionEmptyContainer("access back on empty Vvector", "shed_std::Vvector::back const");
     }
     return _array[_size - 1];
 }
@@ -589,7 +600,8 @@ shed_std::Vvector<E> shed_std::Vvector<E>::subVec(int start_index, int end_index
 template <typename E>
 int shed_std::Vvector<E>::_get_fitting_capacity(int size) {
     if (size < 0 || size > MAX_CAPACITY) {
-        throw Eexception("Eexception:could not allocate a Vvector with Illegal size");
+        // 替换：无效参数 → EexceptionInvalidArgument
+        throw shed_std::EexceptionInvalidArgument("Vvector capacity size is negative or exceed max capacity", "shed_std::Vvector::_get_fitting_capacity");
     }
     if (size == 0) {
         return 1;
@@ -607,7 +619,8 @@ int shed_std::Vvector<E>::_get_fitting_capacity(int size) {
 template <typename E>
 void shed_std::Vvector<E>::_expand() {
     if (_capacity > (MAX_CAPACITY >> 1)) {
-        throw Eexception("Eexception:could not expand a Vvector for exceeding size limit");
+        // 替换：容量超限 → EexceptionCapacityExceeded
+        throw shed_std::EexceptionCapacityExceeded(_capacity, MAX_CAPACITY, "shed_std::Vvector::_expand");
     }
     int new_cap = _capacity << 1;
     Aarray<E> new_array(new_cap);
@@ -627,7 +640,8 @@ template <typename E>
 void shed_std::Vvector<E>::resize(int count) {
     // 1. 防御性检查：拦截负数
     if (count < 0) {
-        throw shed_std::Eexception("Eexception: Vvector resize() get a negative!");
+        // 替换：无效参数 → EexceptionInvalidArgument
+        throw shed_std::EexceptionInvalidArgument("Vvector resize() get negative count", "shed_std::Vvector::resize");
     }
 
     // 2. 缩小尺寸：析构多余元素（核心补充）
