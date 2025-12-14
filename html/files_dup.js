@@ -31,6 +31,5 @@ var files_dup =
     [ "Sstring.h", "_sstring_8h_source.html", null ],
     [ "type_traits.h", "type__traits_8h_source.html", null ],
     [ "Utility.h", "_utility_8h_source.html", null ],
-    [ "Vvector.cpp", "_vvector_8cpp_source.html", null ],
     [ "Vvector.h", "_vvector_8h_source.html", null ]
 ];

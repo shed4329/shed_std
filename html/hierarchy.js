@@ -124,7 +124,14 @@ var hierarchy =
     [ "shed_std::Ddeque< T >", "classshed__std_1_1_ddeque.html", null ],
     [ "shed_std::DefaultHash< K >", "structshed__std_1_1_default_hash.html", null ],
     [ "shed_std::DefaultHash< Sstring >", "structshed__std_1_1_default_hash_3_01_sstring_01_4.html", null ],
-    [ "shed_std::Eexception", "classshed__std_1_1_eexception.html", null ],
+    [ "shed_std::Eexception", "classshed__std_1_1_eexception.html", [
+      [ "shed_std::EexceptionExtended", "classshed__std_1_1_eexception_extended.html", [
+        [ "shed_std::EexceptionCapacityExceeded", "classshed__std_1_1_eexception_capacity_exceeded.html", null ],
+        [ "shed_std::EexceptionEmptyContainer", "classshed__std_1_1_eexception_empty_container.html", null ],
+        [ "shed_std::EexceptionInvalidArgument", "classshed__std_1_1_eexception_invalid_argument.html", null ],
+        [ "shed_std::EexceptionOutOfBoundary", "classshed__std_1_1_eexception_out_of_boundary.html", null ]
+      ] ]
+    ] ],
     [ "shed_std::enable_if< Cond, T >", "structshed__std_1_1enable__if.html", null ],
     [ "shed_std::enable_if< true, T >", "structshed__std_1_1enable__if_3_01true_00_01_t_01_4.html", null ],
     [ "shed_std::Ffunction< Ret, Arg >", "classshed__std_1_1_ffunction.html", null ],

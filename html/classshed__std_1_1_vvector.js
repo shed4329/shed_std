@@ -52,6 +52,7 @@ var classshed__std_1_1_vvector =
     [ "rend", "classshed__std_1_1_vvector.html#adac54fd5fa967030178615206333e5a7", null ],
     [ "rend", "classshed__std_1_1_vvector.html#a1adab36dc43676eee2cd06cf7f61a228", null ],
     [ "reserve", "classshed__std_1_1_vvector.html#ab16b792368b32dc9b41f5f6efbada191", null ],
+    [ "resize", "classshed__std_1_1_vvector.html#a9b987ea1e24980c701c25245ee076e7e", null ],
     [ "reverse", "classshed__std_1_1_vvector.html#a8c17874e92863564839ef8c7a1f51133", null ],
     [ "shrink_to_fit", "classshed__std_1_1_vvector.html#af6d96ae85b65a44713455b92d33ac523", null ],
     [ "size", "classshed__std_1_1_vvector.html#a160da0dcb165bd9d9ad55087475bf058", null ],
