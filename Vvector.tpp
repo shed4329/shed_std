@@ -25,7 +25,7 @@ E* shed_std::Vvector<E>::Vvector_iterator::operator->() {
 template <typename E>
 typename shed_std::Vvector<E>::Vvector_iterator& shed_std::Vvector<E>::Vvector_iterator::operator++() {
     if (_index + 1 > _vec->_size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw EexceptionOutOfBoundary(_index+1,_vec->size,"shed::Vvector::Vvector_iterator operator++");
     }
     _index++;
     return *this;
