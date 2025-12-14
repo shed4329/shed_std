@@ -111,7 +111,7 @@ void Ddeque<T>::shrink_to_fit() {
 template <typename T>
 T& Ddeque<T>::at(int index) {
     if (index < 0 || index >= size()) {
-        throw Eexception("Eexception: Ddque Index out of range!");
+        throw EexceptionOutOfBoundary(index, size(), "Ddeque::at");
     }
     return _data.at(index + _index_front);
 }
@@ -119,7 +119,7 @@ T& Ddeque<T>::at(int index) {
 template <typename T>
 const T& Ddeque<T>::at(int index) const {
     if (index < 0 || index >= size()) {
-        throw Eexception("Eexception: Ddque Index out of range!");
+        throw EexceptionOutOfBoundary(index, size(), "Ddeque::at const");
     }
     return _data.at(index + _index_front);
 }
@@ -180,7 +180,7 @@ void Ddeque<T>::clear() {
 template <typename T>
 void Ddeque<T>::insert(int index, T& value) {
     if (index < 0 || index > size()) {
-        throw Eexception("Eexception: Ddque Index out of range!");
+        throw EexceptionOutOfBoundary(index, size(), "Ddeque::insert");
     }
     int data_index = _index_front + index;
     _data.insert(data_index, value);
@@ -190,7 +190,7 @@ void Ddeque<T>::insert(int index, T& value) {
 template <typename T>
 void Ddeque<T>::erase(int index) {
     if (index < 0 || index >= size()) {
-        throw Eexception("Eexception: Ddque Index out of range!");
+        throw EexceptionOutOfBoundary(index, size(), "Ddeque::erase");
     }
     int data_index = _index_front + index;
     _data.erase(data_index);
@@ -234,7 +234,7 @@ void Ddeque<T>::swap(int index1, int index2) {
     if (index1 >= 0 && index1 < size() && index2 >= 0 && index2 < size() && index1 != index2) {
         _data.swap(index1 + _index_front, index2 + _index_front);
     } else {
-        throw Eexception("Eexception: Ddque swap index out of range!");
+        throw EexceptionOutOfBoundary(index1, size(), "Ddeque::swap (index out of range)");
     }
 }
 
@@ -435,7 +435,7 @@ void Ddeque<T>::reverse() {
 template <typename T>
 Ddeque<T> Ddeque<T>::subDeque(int start_index, int end_index) {
     if (start_index < 0 || end_index > size() || start_index >= end_index) {
-        throw Eexception("Exception: Invalid Interval (subVec)");
+        throw EexceptionOutOfBoundary(start_index, end_index, "Ddeque::subDeque: Invalid Interval");
     }
     int data_start = _index_front + start_index;
     int data_end = _index_front + end_index;
