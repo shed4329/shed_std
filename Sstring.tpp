@@ -179,14 +179,14 @@ namespace shed_std{
 
     char& Sstring::at(int index){
         if(index<0||index >= _size){
-            throw Eexception("Sstring: Index out of range!");
+            throw EexceptionOutOfBoundary(index, _size, "Sstring::at");
         }
         return _data[index];
     }
 
     const char& Sstring::at(int index) const{
         if(index<0||index >= _size){
-            throw Eexception("Sstring: Index out of range!");
+            throw EexceptionOutOfBoundary(index, _size, "Sstring::at const");
         }
         return _data[index];
     }
@@ -222,7 +222,7 @@ namespace shed_std{
     void Sstring::insert(int index,char c){
          // 检查插入位置合法性（pos可等于size()，表示插入到末尾）
         if (index < 0 || index > _size) {
-            throw Eexception("Sstring insert: invalid position");
+            throw EexceptionOutOfBoundary(index, _size, "Sstring insert: invalid position");
         }
         // 检查是否超出最大长度
         if (_size + 1 > STRING_MAX_LENGTH) {
@@ -248,7 +248,7 @@ namespace shed_std{
     void Sstring::insert(int index,const Sstring& str){
          // 检查插入位置合法性（pos可等于size()，表示插入到末尾）
         if (index < 0 || index > _size) {
-            throw Eexception("Sstring insert: invalid position");
+            throw EexceptionOutOfBoundary(index, _size, "Sstring insert: invalid position");
         }
         int len = str._size;
         // 检查是否超出最大长度
@@ -273,7 +273,7 @@ namespace shed_std{
     void Sstring::erease(int index){
         // 检查插入位置合法性（pos可等于size()，表示插入到末尾）
         if (index < 0 || index >= _size) {
-            throw Eexception("Sstring erease: invalid position");
+            throw EexceptionOutOfBoundary(index, _size, "Sstring erease: invalid position");
         }
         // 将后面的数据拷贝到前面来,不用管终止符
         for(int i = index;i<_size - 1;i++){
@@ -286,14 +286,14 @@ namespace shed_std{
     void Sstring::replace(int index,char c){
         // 检查插入位置合法性（pos可等于size()，表示插入到末尾）
         if (index < 0 || index >= _size) {
-            throw Eexception("Sstring replace: invalid position");
+            throw EexceptionOutOfBoundary(index, _size, "Sstring replace: invalid position");
         }
         _data[index] = c;
     }
 
     void Sstring::replace(int index,const Sstring& other){
          if (index < 0 || index >= _size) {
-            throw Eexception("Sstring replace: invalid position");
+            throw EexceptionOutOfBoundary(index, _size, "Sstring replace: invalid position");
         }
         if(other._size == 0) erease(index); // 等价于杀出
         else if(other._size == 1) replace(index,other.front());
@@ -553,7 +553,7 @@ namespace shed_std{
 
     Sstring Sstring::substr(int start,int end) const{
         if(start<0||end>=_size||end<start){
-            throw Eexception("Illegal index");
+            throw EexceptionOutOfBoundary(start, end, "Sstring::substr: Illegal index");
         }
 
         // 1.计算子串长度
@@ -584,7 +584,7 @@ namespace shed_std{
         }
         if (pos < 0 || pos > _size) {
             // 起始位置必须在 [0, _size] 范围内 (pos == _size 表示复制长度为 0)
-            throw Eexception("Sstring copy: Illegal starting position.");
+            throw EexceptionOutOfBoundary(pos, _size, "Sstring copy: Illegal starting position.");
         }
         if (count < 0) {
             // 复制长度不能为负
