@@ -6,7 +6,7 @@
 template <typename E>
 shed_std::Vvector<E>::Vvector_iterator::Vvector_iterator(Vvector<E>* vec, int index) {
     if (index < -1 || index > vec->_size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw shed_std::EexceptionOutOfBoundary(index, vec->_size, "shed_std::Vvector::Vvector_iterator::Vvector_iterator");
     }
     _vec = vec;
     _index = index;
@@ -41,7 +41,7 @@ typename shed_std::Vvector<E>::Vvector_iterator shed_std::Vvector<E>::Vvector_it
 template <typename E>
 typename shed_std::Vvector<E>::Vvector_iterator& shed_std::Vvector<E>::Vvector_iterator::operator--() {
     if (_index - 1 < -1) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw EexceptionOutOfBoundary(_index-1,-1,"shed_std::Vvector::Vvector_iterator");
     }
     _index--;
     return *this;
@@ -68,7 +68,7 @@ template <typename E>
 typename shed_std::Vvector<E>::Vvector_iterator shed_std::Vvector<E>::Vvector_iterator::operator+(int n) const {
     int new_index = _index + n;
     if (new_index < -1 || new_index > _vec->_size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw EexceptionOutOfBoundary(new_index,_vec->_size,"shed_std::Vvector::Vvector_iterator");
     }
     return Vvector_iterator(_vec, new_index);
 }
@@ -86,7 +86,7 @@ int shed_std::Vvector<E>::Vvector_iterator::operator-(const Vvector_iterator& ot
 template <typename E>
 shed_std::Vvector<E>::Vvector_const_iterator::Vvector_const_iterator(const Vvector<E>* vec, int index) {
     if (index < -1 || index > vec->_size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw shed_std::EexceptionOutOfBoundary(index, vec->_size, "shed_std::Vvector::Vvector_const_iterator::Vvector_const_iterator");
     }
     _vec = vec;
     _index = index;
@@ -105,7 +105,7 @@ const E* shed_std::Vvector<E>::Vvector_const_iterator::operator->() const {
 template <typename E>
 typename shed_std::Vvector<E>::Vvector_const_iterator& shed_std::Vvector<E>::Vvector_const_iterator::operator++() {
     if (_index + 1 > _vec->_size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw shed_std::EexceptionOutOfBoundary(_index+1, _vec->_size, "shed_std::Vvector::Vvector_const_iterator::operator++");
     }
     _index++;
     return *this;
@@ -121,7 +121,7 @@ typename shed_std::Vvector<E>::Vvector_const_iterator shed_std::Vvector<E>::Vvec
 template <typename E>
 typename shed_std::Vvector<E>::Vvector_const_iterator& shed_std::Vvector<E>::Vvector_const_iterator::operator--() {
     if (_index - 1 < -1) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw shed_std::EexceptionOutOfBoundary(_index-1, -1, "shed_std::Vvector::Vvector_const_iterator::operator--");
     }
     _index--;
     return *this;
@@ -148,7 +148,7 @@ template <typename E>
 typename shed_std::Vvector<E>::Vvector_const_iterator shed_std::Vvector<E>::Vvector_const_iterator::operator+(int n) const {
     int new_index = _index + n;
     if (new_index < -1 || new_index > _vec->_size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw EexceptionOutOfBoundary(new_index,_vec->_size,"shed_std::Vvector::Vvector_const_iterator operator+");
     }
     return Vvector_const_iterator(_vec, new_index);
 }
@@ -223,7 +223,7 @@ bool shed_std::Vvector<E>::empty() const {
 template <typename E>
 E& shed_std::Vvector<E>::at(int index) {
     if (index < 0 || index >= _size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw EexceptionOutOfBoundary(index,_size,"shed_std::Vvector::at");
     }
     return _array[index];
 }
@@ -231,7 +231,7 @@ E& shed_std::Vvector<E>::at(int index) {
 template <typename E>
 const E& shed_std::Vvector<E>::at(int index) const {
     if (index < 0 || index >= _size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw shed_std::EexceptionOutOfBoundary(index, _size, "shed_std::Vvector::at const");
     }
     return _array[index];
 }
@@ -269,7 +269,7 @@ void shed_std::Vvector<E>::pop_back() {
 template <typename E>
 void shed_std::Vvector<E>::insert(int index, const E& value) {
     if (index < 0 || index > _size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw shed_std::EexceptionOutOfBoundary(index, _size, "shed_std::Vvector::insert");
     }
     if (_size == MAX_SIZE) {
         throw Eexception("Eexception: Vvector reach max size limits!");
@@ -287,7 +287,7 @@ void shed_std::Vvector<E>::insert(int index, const E& value) {
 template <typename E>
 void shed_std::Vvector<E>::erase(int index) {
     if (index < 0 || index >= _size) {
-        throw Eexception("Eexception: Vvector index out of range");
+        throw shed_std::EexceptionOutOfBoundary(index, _size, "shed_std::Vvector::erase");
     }
     _size--;
     for (int i = index; i < _size; i++) {
@@ -576,7 +576,7 @@ void shed_std::Vvector<E>::reverse() {
 template <typename E>
 shed_std::Vvector<E> shed_std::Vvector<E>::subVec(int start_index, int end_index) {
     if (!_is_valid_range(start_index, end_index)) {
-        throw Eexception("Exception: Invalid Interval");
+        throw shed_std::EexceptionOutOfBoundary(start_index, end_index, "shed_std::Vvector::subVec");
     }
     int new_size = end_index - start_index;
     Vvector<E> new_Vvector(new_size);
