@@ -35,10 +35,11 @@
 
 ## 待办事项（Todo）
 
-1. Ddeque 等容器不支持右值
-2. 完善 pair 相关实现
-3. 优化 Ddeque 的头扩容机制
-4. 解决 Ffunction 的 int 隐式转换问题
+- [ ] Ddeque 等容器不支持右值
+- [ ] 完善 pair 相关实现
+- [ ] 优化 Ddeque 的头扩容机制
+- [ ] 解决 Ffunction 的 int 隐式转换问题
+- [ ] 容器大小不再使用int定义
 
 ## 文档查看
 

@@ -4,6 +4,7 @@
 #include "Aarray.h"
 #include "Eexception.h"
 #include "Ffunction.h"
+#include "IteratorBase.h"
 
 namespace shed_std {
     template <typename E>
@@ -22,6 +23,12 @@ namespace shed_std {
             int _index = 0;          // 当前迭代器指向的索引
             Vvector<E>* _vec;        // 指向关联的Vvector对象
         public:
+            // 定义标签，因为现在的std废弃了基类继承，使用标签的方法盘判定迭代器
+            using iterator_category = random_access_iterator_tag;
+            using value_type        = E;
+            using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+            using pointer           = E*;
+            using reference         = E&;
             /**
              * 迭代器构造函数
              * @param vec 关联的Vvector对象指针
@@ -118,6 +125,11 @@ namespace shed_std {
             int _index = 0;              // 当前迭代器指向的索引
             const Vvector<E>* _vec;      // 指向关联的常量Vvector对象
         public:
+            using iterator_category = random_access_iterator_tag;
+            using value_type        = E;
+            using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+            using pointer           = const E*;
+            using reference         = const E&;
             /**
              * 常量迭代器构造函数
              * @param vec 关联的常量Vvector对象指针

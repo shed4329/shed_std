@@ -1,6 +1,8 @@
 #ifndef LLIST_H  // 头文件保护符：防止重复包含
 #define LLIST_H
 
+#include "IteratorBase.h"
+
 namespace shed_std {
 
 /**
@@ -140,6 +142,11 @@ public:
         Node<E>* _cur;  // 当前指向的节点
 
     public:
+        using iterator_category = random_access_iterator_tag;
+        using value_type        = E;
+        using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+        using pointer           = E*;
+        using reference         = E&;
         /**
          * 迭代器构造函数
          * @param node 迭代器初始指向的节点

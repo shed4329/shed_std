@@ -2,6 +2,7 @@
 #define RRED_BLACK_TREE_H
 
 #include "Sstack.h"
+#include "IteratorBase.h"
 
 namespace shed_std{
     // 红黑树节点
@@ -235,6 +236,13 @@ namespace shed_std{
                 const Rred_black_tree_node<E>* _find_minimum(const Rred_black_tree_node<E>* x) const;
 
             public:
+                // 迭代器tag
+                using iterator_category = forward_itertor_tag;
+                using value_type        = E;
+                using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+                using pointer           = E*;
+                using reference         = E&;
+
                 /**
                  * @brief 构造函数。
                  * @param node 当前迭代器指向的节点。
@@ -284,6 +292,12 @@ namespace shed_std{
             // -----------------------------------------------------
             class Rred_black_tree_iterator : public Rred_black_tree_const_iterator {
             public:
+                // 迭代器tag
+                using iterator_category = forward_itertor_tag;
+                using value_type        = E;
+                using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+                using pointer           = const E*;
+                using reference         = const E&;
                 /**
                  * @brief 构造函数。
                  * @param node 当前迭代器指向的节点。

@@ -5,6 +5,7 @@
 #include "Vvector.h"
 #include "Oostream.h"
 #include "Iistream.h"
+#include "IteratorBase.h"
 
 namespace shed_std{
     constexpr int STRING_MAX_LENGTH = 65535;
@@ -272,6 +273,7 @@ namespace shed_std{
             class Sstring_iterator {
                 public:
                     // 迭代器所需类型定义
+                    using iterator_category = random_access_iterator_tag;
                     using value_type = char;
                     using difference_type = int;
                     using pointer = char*;
@@ -356,6 +358,7 @@ namespace shed_std{
             class Sstring_const_iterator {
                 public:
                     // 迭代器所需类型定义
+                    using iterator_category = random_access_iterator_tag;
                     using value_type = char;
                     using difference_type = int;
                     using pointer = const char*;

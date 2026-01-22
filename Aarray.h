@@ -2,6 +2,7 @@
 #define AARRAY_H
 
 #include "Eexception.h"
+#include "IteratorBase.h"
 
 namespace shed_std{
     template <typename T>
@@ -169,6 +170,12 @@ namespace shed_std{
                     int _index;       // 当前迭代器指向的下标
                     Aarray* _array;   // 指向所属的数组对象
                 public:
+                    // 迭代器tag
+                    using iterator_category = random_access_iterator_tag;
+                    using value_type        = E;
+                    using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+                    using pointer           = E*;
+                    using reference         = E&;
                     /**
                      * 迭代器构造函数
                      * @param index 初始下标位置
@@ -264,6 +271,13 @@ namespace shed_std{
                     int _index;           // 当前迭代器指向的下标
                     const Aarray* _array; // 指向所属的常量数组对象
                 public:
+                     // 迭代器tag
+                    using iterator_category = random_access_iterator_tag;
+                    using value_type        = E;
+                    using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+                    using pointer           = E*;
+                    using reference         = E&;
+                    
                     /**
                      * 常量迭代器构造函数
                      * @param index 初始下标位置

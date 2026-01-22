@@ -8,6 +8,7 @@
 #include "Sstring.h"
 #include "Aarray.h"
 #include "Eexception.h"
+#include "IteratorBase.h"
 
 namespace shed_std {
 
@@ -358,6 +359,12 @@ public:
         void find_next_valid_bucket();
 
     public:
+        // 定义标签，因为现在的std废弃了基类继承，使用标签的方法盘判定迭代器
+        using iterator_category = forward_itertor_tag;
+        using value_type        = pair<K,V>;
+        using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+        using pointer           = pair<K,V>*;
+        using reference         = pair<K,V>&;
         /**
          * @brief 构造函数
          * @param map 所属哈希表指针
@@ -428,6 +435,12 @@ public:
         void find_next_valid_bucket();
 
     public:
+        // 定义标签，因为现在的std废弃了基类继承，使用标签的方法盘判定迭代器
+        using iterator_category = forward_itertor_tag;
+        using value_type        = E;
+        using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
+        using pointer           = const pair<K,V>*;
+        using reference         = const pair<K,V>&;
         /**
          * @brief 构造函数
          * @param map 所属哈希表指针（常量）
