@@ -451,6 +451,16 @@ Ddeque<T> Ddeque<T>::subDeque(int start_index, int end_index) {
     return sub_ddeque;
 }
 
+template <typename T>
+T* Ddeque<T>::data(){
+    return _data.data()+_index_front;
+}
+
+template <typename T>
+const T* Ddeque<T>::data() const{
+    return _data.data()+_index_front;
+}
+
 }  // namespace shed_std
 
 #endif  // DDEQUE_TPP

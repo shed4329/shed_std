@@ -1,14 +1,8 @@
 #include "Qqueue.h"
 namespace shed_std{
-        // ------------------------------
-    // 类外：静态成员初始化
-    // ------------------------------
     template <typename T>
     const double Qqueue<T>::_trim_ratio = 0.5;
 
-    // ------------------------------
-    // 类外：私有成员函数实现 _trim
-    // ------------------------------
     template <typename T>
     void Qqueue<T>::_trim() {
         // 当偏移量占总容量比例超过整理阈值时，清理冗余元素
@@ -24,9 +18,6 @@ namespace shed_std{
         }
     }
 
-    // ------------------------------
-    // 类外：构造函数实现
-    // ------------------------------
     template <typename T>
     Qqueue<T>::Qqueue(const Qqueue& other) {
         // 仅复制 other 的有效元素（跳过 other._offset 前的冗余）
@@ -36,9 +27,6 @@ namespace shed_std{
         _offset = 0;  // 新队列无冗余元素，偏移量重置
     }
 
-    // ------------------------------
-    // 类外：赋值运算符实现
-    // ------------------------------
     template <typename T>
     Qqueue<T>& Qqueue<T>::operator=(const Qqueue& other) {
         if (this != &other) {  // 避免自赋值
@@ -52,9 +40,7 @@ namespace shed_std{
         return *this;
     }
 
-    // ------------------------------
-    // 类外：公有成员函数实现
-    // ------------------------------
+
     template <typename T>
     void Qqueue<T>::push(const T& value) {
         _data.push_back(value);
@@ -134,6 +120,16 @@ namespace shed_std{
     template <typename T>
     bool Qqueue<T>::operator!=(const Qqueue& other) const {
         return !(*this == other);
+    }
+
+    template <typename T>
+    T* Qqueue<T>::data(){
+        return _data.data()+_offset;
+    }
+
+    template <typename T>
+    const T* Qqueue<T>::data() const{
+        return _data.data()+_offset;
     }
 }
     

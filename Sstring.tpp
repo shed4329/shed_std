@@ -628,6 +628,14 @@ namespace shed_std{
         
         return actual_count;
     }
+
+    char* Sstring::data(){
+        return _data;
+    }
+
+    const char* Sstring::data() const{
+        return _data;
+    }
     
     // --- 非成员运算符重载实现 (保持内联) ---
 

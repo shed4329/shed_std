@@ -565,6 +565,18 @@ namespace shed_std{
              * @throw Eexception 如果目标缓冲区为空、起始位置或复制长度不合法时抛出异常。
              */
             int copy(char* dest, int count, int pos = 0) const;
+            
+            /**
+             * 返回指向開頭的char*指針
+             * @return 指向開頭的頭指針
+             */
+            char* data();
+            
+            /**
+             * 返回指向開頭的const char*指針
+             * @return 指向開通的const char*指針
+             */
+            const char* data() const;
 
     };
 

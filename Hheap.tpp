@@ -118,6 +118,16 @@ const Comparator& Hheap<T, Comparator>::get_comparator() const {
     return _comparator;
 }
 
+template <typename T,typename Comparator>
+T* Hheap<T,Comparator>::data(){
+    return _data.data();
+}
+
+template <typename T,typename Comparator>
+const T* Hheap<T,Comparator>::data() const{
+    return _data.data();
+}
+
 } // namespace shed_std
 
 #endif // HHEAP_TPP

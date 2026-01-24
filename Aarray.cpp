@@ -483,4 +483,14 @@ namespace shed_std{
 
         return ans;
     }
+
+    template <typename E>
+    E* Aarray<E>::data(){
+        return this->_array;
+    }
+
+    template <typename E>
+    const E* Aarray<E>::data() const{
+        return this->_array;
+    }
 }

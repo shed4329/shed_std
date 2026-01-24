@@ -666,4 +666,14 @@ void shed_std::Vvector<E>::resize(int count) {
     _size = count;
 }
 
+template <typename E>
+E* shed_std::Vvector<E>::data(){
+    return _array.data();
+}
+
+template <typename E>
+const E* shed_std::Vvector<E>::data() const{
+    return _array.data();
+}
+
 #endif // VVECTOR_TPP

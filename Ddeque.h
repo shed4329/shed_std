@@ -406,6 +406,20 @@ namespace shed_std {
          * @throw Eexception 当范围不合法时抛出异常
          */
         Ddeque subDeque(int start_index, int end_index);
+
+        /**
+         * 返回底部連續容器的指針，指向開頭
+         * @note 注意：這裏和標準庫不一致，標準庫的Deque采用的是鏈式塊存儲，而我們采用的是順序存儲，所以才支持Deque
+         * @return 指向開頭的指針
+         */
+        T* data();
+
+        /**
+         * 返回底部連續容器的const指針，指向開頭
+         * @note 注意：這裏和標準庫不一致，標準庫的Deque采用的是鏈式塊存儲，而我們采用的是順序存儲，所以才支持Deque
+         * @return 指向開頭的const指針
+         */
+        const T* data() const;
     };
 
 }  // namespace shed_std

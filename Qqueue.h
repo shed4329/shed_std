@@ -132,6 +132,18 @@ namespace shed_std {
          * @details 是 operator== 的取反，逻辑上与 !operator==(other) 一致
          */
         bool operator!=(const Qqueue& other) const;
+
+        /**
+         * 返回有限區間的指針
+         * @return 指向第一個位置的指針
+         */
+        T* data();
+
+        /**
+         * 返回指向有效區間的const指針
+         * @return 指向第一個位置的const指針
+         */
+        const T* data() const;
     };
 
    

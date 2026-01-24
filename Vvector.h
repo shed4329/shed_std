@@ -612,6 +612,18 @@ namespace shed_std {
          */
         void resize(int count);
 
+        /**
+         * 返回底層的連續存儲結構的指針
+         * @return 指向開頭的指針
+         */
+        E* data();
+
+         /**
+         * 返回底層的連續存儲結構的const指針
+         * @return 指向開頭的const指針
+         */
+        const E* data() const; 
+
     private:
         int _capacity;       // 容量（2的幂次）
         int _size = 0;       // 实际元素个数

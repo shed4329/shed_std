@@ -473,6 +473,18 @@ namespace shed_std{
            int size() const{
             return this->_length;
            }
+
+            /**
+             * 返回底層的連續存儲結構的指針
+             * @return 指向開頭的指針
+             */
+           E* data();
+
+           /**
+             * 返回底層的連續存儲結構的const指針
+             * @return 指向開頭的const指針
+             */
+           const E* data() const;
     };
 }
 

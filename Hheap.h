@@ -117,6 +117,18 @@ public:
      * @return 比较器的常量引用
      */
     const Comparator& get_comparator() const;
+
+    /**
+     * 返回底層連續存儲空間的指針
+     * @return 指向開頭的指針
+     */
+    T* data();
+
+     /**
+     * 返回底層連續存儲空間的const指針
+     * @return 指向開頭const的指針
+     */
+    const T* data() const;
 };
 
 } // namespace shed_std

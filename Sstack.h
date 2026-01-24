@@ -82,6 +82,22 @@ namespace shed_std{
             bool operator!= (const Sstack& other) const{
                 return _data!=other._data;
             }
+
+            /**
+             * 返回底層連續空間的指針
+             * @return 指向開頭的指針 
+             */
+            T* data(){
+                return _data.data();
+            }
+
+            /**
+             * 返回底層連續空間的const指針
+             * @return 指向開頭的const指針 
+             */
+            const T* data() const{
+                return _data.data();
+            }
     };
 }
 
