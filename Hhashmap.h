@@ -437,7 +437,7 @@ public:
     public:
         // 定义标签，因为现在的std废弃了基类继承，使用标签的方法盘判定迭代器
         using iterator_category = forward_itertor_tag;
-        using value_type        = E;
+        using value_type        = pair<K,V>;
         using difference_type   = int; //因为设计的时候只考虑了int大小，以后再改为更大的吧 
         using pointer           = const pair<K,V>*;
         using reference         = const pair<K,V>&;

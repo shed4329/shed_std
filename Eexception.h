@@ -306,6 +306,19 @@ namespace shed_std {
         using EexceptionExtended::operator=;
     };
 
+    // 算術錯誤
+    class EexceptionArithemetic:public EexceptionExtended {
+        protected:
+            const char* get_type() const override {
+                 return "Eexception: Arithemetic Error! ";
+            }
+        public:
+            EexceptionArithemetic(const char* desc,const char* location):EexceptionExtended(desc,location){}
+             // 复用父类拷贝/赋值
+            using EexceptionExtended::EexceptionExtended;
+            using EexceptionExtended::operator=;
+    };
+
 } // namespace shed_std
 
 #endif // EEXCEPTION_H
