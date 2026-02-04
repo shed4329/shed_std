@@ -1,5 +1,21 @@
 # 更新日志/Change Log
 
+## 0.17-beta.4(2026-02-04)
+
+### 優化/Refactored
+
+- 將數學庫`math.h`更名為`shed_math.h`,防止命名衝突
+
+### 修復/Bug Fixes
+
+- `Oostream.h`将double的输出整数部分从int32变为int64，但是仍然不能表示全部的范围
+
+### 新增/Features
+
+- 输出流`Oostream.h`支援了long long的输出
+- `shed_types.h`添加了INT64等类型的max和min值定义
+- 数学库`shed_math.h`添加了`floor`,`sqrt`等常用函数和常值`MATH_PI`,`MATH_E`
+
 ## 0.17-beta.3(2026-01-23)
 
 ### 修復/Bug Fixes

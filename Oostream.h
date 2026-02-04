@@ -2,6 +2,7 @@
 #define OOSTREAM_H
 
 #include "IiostreamBase.h"
+#include "shed_types.h"
 
 namespace shed_std{
     class Oostream:public IiostreamBase{
@@ -123,6 +124,44 @@ namespace shed_std{
                 return *this;
             }
 
+            Oostream& operator<<(int64 num){
+                char buf[21];//存储64位整数，包括符号
+                int index = 0;
+                bool is_negative = false;
+                // int最小的情况
+                if(num == INT64_MIN){
+                    return put_chars("-9223372036854775808", 20);
+                }
+
+                if(num<0){
+                    is_negative = true;
+                    num = -num;//转为正数
+                }
+
+                // 单独处理位0的情况
+                if(num == 0){
+                    return put_char('0');
+                }
+
+                // 从低位向高位提取
+                while(num>0){
+                    buf[index++] = '0' + (num%10);
+                    num /= 10;
+                }
+                
+                // 添加负号
+                if(is_negative){
+                    buf[index++] = '-';
+                }
+
+                // 逆序输出
+                for(int i=index-1;i>=0;--i){
+                    put_char(buf[i]);
+                }
+
+                return *this;
+            }
+
             // 支持到小数点后12位输出,数字绝对值不能超过21亿
             Oostream& operator<<(double val){
                 // 处理负数
@@ -132,7 +171,7 @@ namespace shed_std{
                 }
 
                 // 截断
-                int int_part = val;
+                int64 int_part = val;
                 operator<<(int_part);// 直接复用
 
                 put_char('.');//小数点
