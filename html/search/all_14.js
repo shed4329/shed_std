@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['_7ebasic_5farray_0',['~basic_array',['../classshed__std_1_1basic__array.html#ad6611000aa093fdc054ebe6201e8142c',1,'shed_std::basic_array']]],
-  ['_7ebasic_5flist_1',['~basic_list',['../classshed__std_1_1basic__list.html#a0fada6d24e8f852b65ce0bd12a0d8720',1,'shed_std::basic_list']]],
-  ['_7ehhashmap_2',['~Hhashmap',['../classshed__std_1_1_hhashmap.html#a271dfc9c3c22356fcdfa9cacc5fc335a',1,'shed_std::Hhashmap::~Hhashmap()'],['../classshed__std_1_1_hhashmap_3_01_k_00_01_v_00_01_hash_00_01enable__if__type_3_01is__totally__orda04669605c3d8f877ded9197ad9f664c.html#a17cb649896993f715659836a10909dd1',1,'shed_std::Hhashmap&lt; K, V, Hash, enable_if_type&lt; is_totally_ordered&lt; K &gt;::value &gt; &gt;::~Hhashmap()']]],
-  ['_7ehheap_3',['~Hheap',['../classshed__std_1_1_hheap.html#abfed510f5740f1c25f0af61d52528e8d',1,'shed_std::Hheap']]],
-  ['_7erred_5fblack_5ftree_4',['~Rred_black_tree',['../classshed__std_1_1_rred__black__tree.html#af3598c51fd0fad63b4590ac2725ba92b',1,'shed_std::Rred_black_tree']]],
-  ['_7esstring_5',['~Sstring',['../classshed__std_1_1_sstring.html#ac70f54da94869a3004abcaf5a0e0013b',1,'shed_std::Sstring']]]
+  ['pair_0',['pair',['../structshed__std_1_1pair.html',1,'shed_std']]],
+  ['pair_3c_20k_2c_20v_20_3e_1',['pair&lt; K, V &gt;',['../structshed__std_1_1pair.html',1,'shed_std']]],
+  ['pair_3c_20k_2c_20v_20_3e_20_26_2',['pair&lt; K, V &gt; &amp;',['../structshed__std_1_1pair.html',1,'shed_std']]],
+  ['pair_3c_20k_2c_20v_20_3e_20_2a_3',['pair&lt; K, V &gt; *',['../structshed__std_1_1pair.html',1,'shed_std']]],
+  ['pop_4',['pop',['../classshed__std_1_1_hheap.html#a76112a8e8e985d3ea7a9b788f701c8fb',1,'shed_std::Hheap::pop()'],['../classshed__std_1_1_qqueue.html#a68809a553caf69675f8eb49eea39635b',1,'shed_std::Qqueue::pop()'],['../classshed__std_1_1_sstack.html#ab91446e413b770945d473c2525f0f278',1,'shed_std::Sstack::pop()']]],
+  ['pop_5fback_5',['pop_back',['../classshed__std_1_1_ddeque.html#aff7568da5be80ed1cd2ff002c32c046f',1,'shed_std::Ddeque::pop_back()'],['../classshed__std_1_1_vvector.html#ad40c6b217d7b63432343d7fcbd681b5f',1,'shed_std::Vvector::pop_back()']]],
+  ['pop_5ffront_6',['pop_front',['../classshed__std_1_1_ddeque.html#abf219055de51cff9e8a4102c22005a8e',1,'shed_std::Ddeque']]],
+  ['push_7',['push',['../classshed__std_1_1_hheap.html#a560eea014a6fe0c48ec4ea5567cafd4a',1,'shed_std::Hheap::push()'],['../classshed__std_1_1_qqueue.html#ad024d749adc8593547ede71849f2a850',1,'shed_std::Qqueue::push()'],['../classshed__std_1_1_sstack.html#a01311c2efb096630ea812a3c862a15a0',1,'shed_std::Sstack::push()']]],
+  ['push_5fback_8',['push_back',['../classshed__std_1_1_ddeque.html#a8bfdf2da1a41ff6a6c5d42f169a8bc7d',1,'shed_std::Ddeque::push_back()'],['../classshed__std_1_1_sstring.html#a944b8e3c3f4929e27523912352f44261',1,'shed_std::Sstring::push_back()'],['../classshed__std_1_1_vvector.html#ace27eda10aa4ead8ee5165c2f6d4f274',1,'shed_std::Vvector::push_back()']]],
+  ['push_5ffront_9',['push_front',['../classshed__std_1_1_ddeque.html#a2b2c5354b860ba6771df04867b32dc00',1,'shed_std::Ddeque']]]
 ];

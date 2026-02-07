@@ -11,6 +11,8 @@ var classshed__std_1_1_aarray =
     [ "begin", "classshed__std_1_1_aarray.html#a01659305e422ecef67774b0bc7c13b41", null ],
     [ "begin", "classshed__std_1_1_aarray.html#a70537c0e0248adc2932735e34979b33a", null ],
     [ "contains", "classshed__std_1_1_aarray.html#a6ca70127302d3c1deddf941a289b4dd6", null ],
+    [ "data", "classshed__std_1_1_aarray.html#afb000f83887a72c150f44a67408375b4", null ],
+    [ "data", "classshed__std_1_1_aarray.html#afff25dde772bc9a00c83bfe03d772bdd", null ],
     [ "end", "classshed__std_1_1_aarray.html#a1ef4581cc7c749eff7c1e9c0b714d424", null ],
     [ "end", "classshed__std_1_1_aarray.html#aebbb7a00df33b0bef771060374a97197", null ],
     [ "fill", "classshed__std_1_1_aarray.html#aac65d9eca307b955b5fc49c7b5a61ecd", null ],

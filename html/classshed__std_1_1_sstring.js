@@ -20,6 +20,8 @@ var classshed__std_1_1_sstring =
     [ "copy", "classshed__std_1_1_sstring.html#a57c7d921d98d31b24b6e7bcab2564270", null ],
     [ "crbegin", "classshed__std_1_1_sstring.html#ad4a39ceac4f7f585b8e4b6d923e1ee8d", null ],
     [ "crend", "classshed__std_1_1_sstring.html#ade3734a1178285b584460cd6e26dec50", null ],
+    [ "data", "classshed__std_1_1_sstring.html#af21216a028f0cc1957394d8ac338de35", null ],
+    [ "data", "classshed__std_1_1_sstring.html#a8602329a2067b0b89bc54117c16ebbe3", null ],
     [ "empty", "classshed__std_1_1_sstring.html#af37bdf9e16cfdd4d9af05101ed47a943", null ],
     [ "end", "classshed__std_1_1_sstring.html#a8b075e95dc78b22972643a399bdfa108", null ],
     [ "end", "classshed__std_1_1_sstring.html#ae3f25e80ac277de392055b756f764a91", null ],

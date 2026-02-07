@@ -5,6 +5,9 @@
 #include "Eexception.h"
 
 namespace shed_std{
+     /**
+     * @brief 栈的容器类
+     */
     template <typename T>
     class Sstack{
         private:

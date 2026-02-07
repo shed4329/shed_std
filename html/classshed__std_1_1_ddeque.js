@@ -16,6 +16,8 @@ var classshed__std_1_1_ddeque =
     [ "contains", "classshed__std_1_1_ddeque.html#a74325e209059009f029d34740da94399", null ],
     [ "contains", "classshed__std_1_1_ddeque.html#af7347ebf429794bdbc757977887cfbb7", null ],
     [ "contains", "classshed__std_1_1_ddeque.html#ab188cb65fa689c2b87fb717e71c710cf", null ],
+    [ "data", "classshed__std_1_1_ddeque.html#a58743ae900d3bcd1b4691e74ab2fc5ad", null ],
+    [ "data", "classshed__std_1_1_ddeque.html#aa7d5b3bfdd81f67c9fbb3cb17c9b710d", null ],
     [ "empty", "classshed__std_1_1_ddeque.html#a13b24d566f7abd0b82c446c9d8b4121b", null ],
     [ "end", "classshed__std_1_1_ddeque.html#aa53ffc4e99a3fe8c5bed4e96679fccf9", null ],
     [ "end", "classshed__std_1_1_ddeque.html#a485a1ab85bcec0503d4444b738688f6d", null ],

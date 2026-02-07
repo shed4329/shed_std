@@ -17,6 +17,8 @@ var classshed__std_1_1_vvector =
     [ "contains", "classshed__std_1_1_vvector.html#a560f7f370ccd4b0b99663d05b8eead4d", null ],
     [ "contains", "classshed__std_1_1_vvector.html#a54bcb4e691d900888b4141e240783a61", null ],
     [ "contains", "classshed__std_1_1_vvector.html#a4976b416c5eff94b084674ffa3a6b17e", null ],
+    [ "data", "classshed__std_1_1_vvector.html#a65add06690b48760f3bdefb9aae4f693", null ],
+    [ "data", "classshed__std_1_1_vvector.html#ab35624afb3d8ee9ee4273cd144e5bea3", null ],
     [ "empty", "classshed__std_1_1_vvector.html#a9cbfff4c78733c9d8ed344d67ba05ff3", null ],
     [ "end", "classshed__std_1_1_vvector.html#a61e82007f2b989a80b9c5e11b92cd131", null ],
     [ "end", "classshed__std_1_1_vvector.html#a9c88a70fe8059053f9cbaad824d0d451", null ],

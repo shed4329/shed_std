@@ -60,8 +60,10 @@ namespace shed_std{
      */
     int string_compare_n(const char* a,const char* b,int n = STRING_MAX_LENGTH);
 
-    // --- Sstring 类定义 ---
-
+    
+     /**
+     * @brief 字符串类
+     */
     class Sstring{
         private:
             char* _data; // 存储字符串数据

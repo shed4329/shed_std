@@ -28,7 +28,7 @@
   <td id="projectalign">
    <div id="projectname">shed_std
    </div>
-   <div id="projectbrief">0.16</div>
+   <div id="projectbrief">0.17</div>
   </td>
  </tr>
  </tbody>
@@ -92,9 +92,9 @@ $(function(){initNavTree('md_readme.html','',''); });
   <div class="headertitle"><div class="title">shed_std </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md14"></a></p>
 <p><span class="tt">shed_std</span> 是一个shed4329在学校学习数据结构与算法课程时编写的一个C++标准库， 主要聚焦于容器实现，并在容器实现的过程中写了一些其他实用功能。由于知识水平有限，代码有很多问题，希望能够理解。</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
 项目结构</h1>
 <ul>
 <li>**核心代码**：包含各类数据结构（如 <span class="tt">Ddeque</span>、<span class="tt">pair</span> 等）、工具类（如 <span class="tt">Ffunction</span>、<span class="tt">Ffile_output</span> 等）的实现。</li>
@@ -102,7 +102,7 @@ $(function(){initNavTree('md_readme.html','',''); });
 <li>**忽略文件**：<span class="tt">.gitignore</span> 中定义了无需纳入版本控制的文件类型，包括 Python 相关文件（&lt;tt&gt;.py</li>
 </ul>
 <p>、&lt;tt&gt;.ipynb）、可执行文件（&lt;tt&gt;.exe）、JSON 文件、测试用 C++ 文件（<span class="tt">test*.cpp</span>）等。</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
 主要组件</h1>
 <ol type="1">
 <li><b>容器</b><ul>
@@ -134,20 +134,57 @@ $(function(){initNavTree('md_readme.html','',''); });
 </ul>
 </li>
 </ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
 待办事项（Todo）</h1>
-<ol type="1">
-<li>Ddeque 等容器不支持右值</li>
-<li>完善 pair 相关实现</li>
-<li>优化 Ddeque 的头扩容机制</li>
-<li>解决 Ffunction 的 int 隐式转换问题</li>
-</ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<ul class="check">
+<li class="unchecked">Ddeque 等容器不支持右值</li>
+</ul>
+<ul class="check">
+<li class="unchecked">完善 pair 相关实现</li>
+</ul>
+<ul class="check">
+<li class="unchecked">优化 Ddeque 的头扩容机制</li>
+</ul>
+<ul class="check">
+<li class="unchecked">解决 Ffunction 的 int 隐式转换问题</li>
+</ul>
+<ul class="check">
+<li class="unchecked">容器大小不再使用int定义</li>
+</ul>
+<ul class="check">
+<li class="unchecked">bitmap容器</li>
+</ul>
+<ul class="check">
+<li class="unchecked">數學庫，排序函數</li>
+</ul>
+<ul class="check">
+<li class="unchecked">處理math中<span class="tt">float_mod</span>溢出的情況</li>
+</ul>
+<ul class="check">
+<li class="checked"><span class="tt">size_t</span>等數據類型</li>
+</ul>
+<ul class="check">
+<li class="checked">為浮點數的math運算優化</li>
+<li class="unchecked">浮點數加速math版本在實作的時候沒有考慮大端序和小端序的 影響</li>
+</ul>
+<ul class="check">
+<li class="unchecked">部分功能不支援MSVC</li>
+</ul>
+<ul class="check">
+<li class="unchecked">超大浮点数无法显示</li>
+</ul>
+<ul class="check">
+<li class="unchecked">隨機數庫</li>
+</ul>
+<ul class="check">
+<li class="unchecked">智能指針 </li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 文档查看</h1>
 <p>可通过打开 <span class="tt">html/index.html</span> 文件查看由 Doxygen 生成的详细文档，了解各类和函数的具体用法、成员等信息。</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 版本</h1>
-<p>当前版本：0.16 </p>
+<p>当前版本：0.17 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

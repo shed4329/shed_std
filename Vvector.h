@@ -7,6 +7,9 @@
 #include "IteratorBase.h"
 
 namespace shed_std {
+    /**
+     * @brief 动态数组类
+     */
     template <typename E>
     class Vvector {
     public:

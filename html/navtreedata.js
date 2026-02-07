@@ -25,12 +25,32 @@
 var NAVTREE =
 [
   [ "shed_std", "index.html", [
+    [ "更新日志/Change Log", "md__c_h_a_n_g_e_l_o_g.html", [
+      [ "0.17-beta.5(2026-02-07)", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md1", [
+        [ "新增/Features", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md2", null ]
+      ] ],
+      [ "0.17-beta.4(2026-02-04)", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md3", [
+        [ "優化/Refactored", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md4", null ],
+        [ "修復/Bug Fixes", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md5", null ],
+        [ "新增/Features", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md6", null ]
+      ] ],
+      [ "0.17-beta.3(2026-01-23)", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md7", [
+        [ "修復/Bug Fixes", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md8", null ],
+        [ "新增/Features", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md9", null ]
+      ] ],
+      [ "0.17-beta.2(2026-01-22)", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md10", [
+        [ "新增/Features", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md11", null ]
+      ] ],
+      [ "0.17-beta.1(2026-01-22)", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md12", [
+        [ "優化/Refactored", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md13", null ]
+      ] ]
+    ] ],
     [ "shed_std", "md_readme.html", [
-      [ "项目结构", "md_readme.html#autotoc_md1", null ],
-      [ "主要组件", "md_readme.html#autotoc_md2", null ],
-      [ "待办事项（Todo）", "md_readme.html#autotoc_md3", null ],
-      [ "文档查看", "md_readme.html#autotoc_md4", null ],
-      [ "版本", "md_readme.html#autotoc_md5", null ]
+      [ "项目结构", "md_readme.html#autotoc_md15", null ],
+      [ "主要组件", "md_readme.html#autotoc_md16", null ],
+      [ "待办事项（Todo）", "md_readme.html#autotoc_md17", null ],
+      [ "文档查看", "md_readme.html#autotoc_md18", null ],
+      [ "版本", "md_readme.html#autotoc_md19", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -51,8 +71,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_aarray_8cpp_source.html",
-"classshed__std_1_1_iiostream_buf_file_output.html",
-"functions_func_n.html"
+"classshed__std_1_1_hheap.html#aa3e0512de108059be8c898e5559b5460",
+"files.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

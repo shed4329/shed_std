@@ -4,6 +4,8 @@ var classshed__std_1_1_qqueue =
     [ "back", "classshed__std_1_1_qqueue.html#a77505f00b9cecaed497e9058ac4d65a7", null ],
     [ "back", "classshed__std_1_1_qqueue.html#a75e13e996c91bc75723f2a378d0054f2", null ],
     [ "clear", "classshed__std_1_1_qqueue.html#a3a8b2466528659b25d6002f3794c3e0b", null ],
+    [ "data", "classshed__std_1_1_qqueue.html#af3e9c4db16df161ed4e12b5a01fb3746", null ],
+    [ "data", "classshed__std_1_1_qqueue.html#aa4034af9a2563067932256e5ab127e47", null ],
     [ "empty", "classshed__std_1_1_qqueue.html#a9f5e9f4f59cfbe361ec18e5ef30b57da", null ],
     [ "front", "classshed__std_1_1_qqueue.html#a6109081d94900541068d144638228885", null ],
     [ "front", "classshed__std_1_1_qqueue.html#a3a3fb16468640a536cbd176148be9c8b", null ],

@@ -51,6 +51,9 @@ namespace shed_std{
             }
     };
 
+    /**
+     * @brief 随机数类，负责管理随机数引擎，随机数生成
+     */
     class random{
         public:
             enum class engine_type{

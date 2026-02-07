@@ -5,6 +5,8 @@ var classshed__std_1_1_hheap =
     [ "Hheap", "classshed__std_1_1_hheap.html#ac4f61b362decb66ae4a2f12c4faffb66", null ],
     [ "~Hheap", "classshed__std_1_1_hheap.html#abfed510f5740f1c25f0af61d52528e8d", null ],
     [ "clear", "classshed__std_1_1_hheap.html#a0f914bbb20184ae0436f98091475fc99", null ],
+    [ "data", "classshed__std_1_1_hheap.html#a369d54499f181171df3c353217658965", null ],
+    [ "data", "classshed__std_1_1_hheap.html#a4943b2c282e4bc646ffeb85beb856e27", null ],
     [ "empty", "classshed__std_1_1_hheap.html#a8e0876880929163d5a3a31e0ce19f7f5", null ],
     [ "get_comparator", "classshed__std_1_1_hheap.html#aa3e0512de108059be8c898e5559b5460", null ],
     [ "operator!=", "classshed__std_1_1_hheap.html#a40125da86aca96aa7991ffe85c163206", null ],

@@ -2,7 +2,10 @@
 #define EEXCEPTION_H
 
 namespace shed_std {
-    // 基础异常类（仅保留核心接口，避免成员冗余）
+     /**
+     * @brief 自定义异常类
+     * @param msg 异常信息
+     */
     class Eexception {
     protected:
         const char* _msg = nullptr; // 初始化避免野指针
@@ -17,7 +20,11 @@ namespace shed_std {
 
     };
     
-    // 扩展异常类（核心：统一字符串处理 + 内存管理）
+    /**
+     * @brief 异常扩展类
+     * @param cause 异常原因
+     * @param source 异常位置
+     */
     class EexceptionExtended : public Eexception {
     protected:
         static constexpr int MAX_LEN = 65535;
@@ -162,7 +169,9 @@ namespace shed_std {
         }
     };
 
-    // 1. 越界异常类（最终版）
+    /**
+     * @brief 越界异常
+     */
     class EexceptionOutOfBoundary : public EexceptionExtended {
     protected:
         const char* get_type() const override {
@@ -220,7 +229,9 @@ namespace shed_std {
         using EexceptionExtended::operator=;
     };
 
-    // 2. 空容器操作异常
+    /**
+     * @brief 空容器操作异常
+     */
     class EexceptionEmptyContainer : public EexceptionExtended {
     protected:
         const char* get_type() const override {
@@ -238,7 +249,9 @@ namespace shed_std {
         using EexceptionExtended::operator=;
     };
 
-    // 3. 超出最大容量异常
+    /**
+     * @brief 超出最大容量异常
+     */
     class EexceptionCapacityExceeded : public EexceptionExtended {
     protected:
         const char* get_type() const override {
@@ -292,7 +305,9 @@ namespace shed_std {
         using EexceptionExtended::operator=;
     };
     
-    // 4. 无效参数异常
+    /**
+     * @brief 参数无效异常
+     */
     class EexceptionInvalidArgument : public EexceptionExtended {
     protected:
         const char* get_type() const override {
@@ -306,7 +321,9 @@ namespace shed_std {
         using EexceptionExtended::operator=;
     };
 
-    // 算術錯誤
+    /**
+     * @brief 算术错误异常
+     */
     class EexceptionArithemetic:public EexceptionExtended {
         protected:
             const char* get_type() const override {
