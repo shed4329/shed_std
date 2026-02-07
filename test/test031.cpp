@@ -133,10 +133,66 @@ int main() {
     } catch (const shed_std::EexceptionArithemetic& e) {
         shed_std::Cconsole_output << "[成功] 捕获异常：" << e.what() << shed_std::end_line;
     }
+     // ==================== 8. exp 函数测试（float64） ====================
+    shed_std::Cconsole_output << shed_std::end_line << "===== float64 exp 函数测试 =====" << shed_std::end_line;
+    try {
+        // 基础场景：e^0、e^1、e^-1、e^2（经典值，易验证）
+        shed_std::float64 e0 = shed_std::exp(0.0);
+        shed_std::Cconsole_output << "exp(0.0) = " << e0 << " (预期:1.0)" << shed_std::end_line;
+
+        shed_std::float64 e1 = shed_std::exp(1.0);
+        shed_std::Cconsole_output << "exp(1.0) = " << e1 << " (预期≈2.718281828459045)" << shed_std::end_line;
+
+        shed_std::float64 e_neg1 = shed_std::exp(-1.0);
+        shed_std::Cconsole_output << "exp(-1.0) = " << e_neg1 << " (预期≈0.36787944117144233)" << shed_std::end_line;
+
+        shed_std::float64 e2 = shed_std::exp(2.0);
+        shed_std::Cconsole_output << "exp(2.0) = " << e2 << " (预期≈7.38905609893065)" << shed_std::end_line;
+
+        // 常用场景：e^0.5（根号e）、e^3
+        shed_std::float64 e_05 = shed_std::exp(0.5);
+        shed_std::Cconsole_output << "exp(0.5) = " << e_05 << " (预期≈1.6487212707001281)" << shed_std::end_line;
+
+        shed_std::float64 e3 = shed_std::exp(3.0);
+        shed_std::Cconsole_output << "exp(3.0) = " << e3 << " (预期≈20.085536923187668)" << shed_std::end_line;
 
 
+    } catch (const shed_std::EexceptionArithemetic& e) {
+        shed_std::Cconsole_output << "[成功] exp 捕获算术异常：" << e.what() << shed_std::end_line;
+    } 
 
+     // ==================== 9. log 函数测试（float64） ====================
+    shed_std::Cconsole_output << shed_std::end_line << "===== float64 log 函数测试 =====" << shed_std::end_line;
+    try {
+        // 基础场景：ln(1)、ln(e)、ln(2)、ln(10)（经典值，易验证）
+        shed_std::float64 log1 = shed_std::log<shed_std::float64>(1.0);
+        shed_std::Cconsole_output << "log(1.0) = " << log1 << " (预期:0.0)" << shed_std::end_line;
 
+        shed_std::float64 loge = shed_std::log<shed_std::float64>(shed_std::MATH_E);
+        shed_std::Cconsole_output << "log(e) = " << loge << " (预期≈1.0)" << shed_std::end_line;
+
+        shed_std::float64 log2 = shed_std::log<shed_std::float64>(2.0);
+        shed_std::Cconsole_output << "log(2.0) = " << log2 << " (预期≈0.6931471805599453)" << shed_std::end_line;
+
+        shed_std::float64 log10 = shed_std::log<shed_std::float64>(10.0);
+        shed_std::Cconsole_output << "log(10.0) = " << log10 << " (预期≈2.302585092994046)" << shed_std::end_line;
+
+        // 边界/特殊场景：ln(√2)、大数、小数
+        shed_std::float64 log_sqrt2 = shed_std::log<shed_std::float64>(shed_std::MATH_SQRT2);
+        shed_std::Cconsole_output << "log(√2) = " << log_sqrt2 << " (预期≈0.34657359027997264)" << shed_std::end_line;
+
+        shed_std::float64 log_big = shed_std::log<shed_std::float64>(123456789.0);
+        shed_std::Cconsole_output << "log(123456789.0) = " << log_big << " (参考值≈18.63041358)" << shed_std::end_line;
+
+        shed_std::float64 log_small = shed_std::log<shed_std::float64>(0.00001);
+        shed_std::Cconsole_output << "log(0.00001) = " << log_small << " (预期≈-11.512925464970229)" << shed_std::end_line;
+
+        // 负数测试（抛异常）
+        shed_std::log<shed_std::float64>(-5.0);
+        shed_std::Cconsole_output << "[错误] log(-5.0) 未抛出异常" << shed_std::end_line;
+    } catch (const shed_std::EexceptionArithemetic& e) {
+        shed_std::Cconsole_output << "[成功] log 捕获算术异常：" << e.what() << shed_std::end_line;
+    } 
     // 测试完成
     shed_std::Cconsole_output << shed_std::end_line << "===== 所有 float64 测试完成 =====" << shed_std::end_line;
     return 0;

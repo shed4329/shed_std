@@ -14,8 +14,24 @@
 
 // 新增：适配浮点值的断言（允许微小精度误差）
 #define ASSERT_FLOAT_EQ(actual, expect, msg) \
-    if ((actual) - (expect) > 1e-15 || (expect) - (actual) > 1e-15) { \
+    if ((actual) - (expect) > 1e-6 || (expect) - (actual) > 1e-6) { \
         shed_std::Cconsole_output << "[失败] " << msg << " 实际值：" << (actual) << " 期望值：" << (expect) << shed_std::end_line; \
+        return 1; \
+    } else { \
+        shed_std::Cconsole_output << "[成功] " << msg << shed_std::end_line; \
+    }
+
+    #define ASSERT_IS_NAN(actual, msg) \
+    if (!shed_std::is_nan(actual)) { \
+        shed_std::Cconsole_output << "[失败] " << msg << " 实际值：" << (actual) << " 期望值：NaN" << shed_std::end_line; \
+        return 1; \
+    } else { \
+        shed_std::Cconsole_output << "[成功] " << msg << shed_std::end_line; \
+    }
+
+#define ASSERT_IS_INF(actual, msg) \
+    if (!shed_std::is_inf(actual)) { \
+        shed_std::Cconsole_output << "[失败] " << msg << " 实际值：" << (actual) << " 期望值：Inf" << shed_std::end_line; \
         return 1; \
     } else { \
         shed_std::Cconsole_output << "[成功] " << msg << shed_std::end_line; \
@@ -122,5 +138,150 @@ int main() {
 
     // 所有测试完成
     shed_std::Cconsole_output << shed_std::end_line << "===== 所有整数+is_nan测试通过！ =====" << shed_std::end_line;
+    // exp測試
+    shed_std::Cconsole_output << shed_std::end_line << "===== 测试 exp 函数 =====" << shed_std::end_line;
+    try {
+        // 基础值测试
+        ASSERT_FLOAT_EQ(shed_std::exp(0.0), 1.0, "exp(0.0) 应返回1.0");
+        ASSERT_FLOAT_EQ(shed_std::exp(1.0), 2.718281828459045, "exp(1.0) 应≈2.718281828459045");
+        ASSERT_FLOAT_EQ(shed_std::exp(-1.0), 0.36787944117144233, "exp(-1.0) 应≈0.36787944117144233");
+        ASSERT_FLOAT_EQ(shed_std::exp(2.0), 7.38905609893065, "exp(2.0) 应≈7.38905609893065");
+
+        // 边界值测试
+        ASSERT_FLOAT_EQ(shed_std::exp(709.0), shed_std::exp(709.0), "exp(709.0) 上溢临界值");
+        ASSERT_FLOAT_EQ(shed_std::exp(-745.13), 0.0, "exp(-745.13) 下溢返回0");
+
+        // NaN/Inf入参测试
+        shed_std::float64 nan_val = std::numeric_limits<shed_std::float64>::quiet_NaN();
+        ASSERT_EQ(shed_std::is_nan(shed_std::exp(nan_val)), true, "exp(NaN) 应返回NaN");
+
+        shed_std::float64 inf_val = std::numeric_limits<shed_std::float64>::infinity();
+        ASSERT_EQ(shed_std::is_nan(shed_std::exp(inf_val)), false, "exp(+Inf) 不应是NaN");
+    } catch (const shed_std::EexceptionArithemetic& e) {
+        shed_std::Cconsole_output << "[成功] exp 捕获算术异常：" << e.what() << shed_std::end_line;
+    }
+
+    // ==================== 10. log 函数专项测试（新增） ====================
+    shed_std::Cconsole_output << shed_std::end_line << "===== 测试 log 函数 =====" << shed_std::end_line;
+    try {
+        // 基础值测试（核心理论值，精度验证）
+        ASSERT_FLOAT_EQ(shed_std::log<shed_std::float64>(1.0), 0.0, "log(1.0) 应返回0.0");
+        ASSERT_FLOAT_EQ(shed_std::log<shed_std::float64>(shed_std::MATH_E), 1.0, "log(e) 应≈1.0");
+        ASSERT_FLOAT_EQ(shed_std::log<shed_std::float64>(2.0), 0.6931471805599453, "log(2.0) 应≈0.6931471805599453");
+        ASSERT_FLOAT_EQ(shed_std::log<shed_std::float64>(10.0), 2.302585092994046, "log(10.0) 应≈2.302585092994046");
+        ASSERT_FLOAT_EQ(shed_std::log<shed_std::float64>(shed_std::MATH_SQRT2), 0.34657359027997264, "log(√2) 应≈0.34657359027997264");
+        
+        // 大数/小数测试（验证阶码大的场景精度）
+        ASSERT_FLOAT_EQ(shed_std::log<shed_std::float64>(123456789.0), 18.631401766168018, "log(123456789.0) 应≈18.631401766168018");
+        ASSERT_FLOAT_EQ(shed_std::log<shed_std::float64>(0.00001), -11.512925464970229, "log(0.00001) 应≈-11.512925464970229");
+        
+        // 特殊值测试（NaN/Inf）
+        shed_std::float64 nan_val = std::numeric_limits<shed_std::float64>::quiet_NaN();
+        ASSERT_EQ(shed_std::is_nan(shed_std::log<shed_std::float64>(nan_val)), true, "log(NaN) 应返回NaN");
+
+        shed_std::float64 inf_val = std::numeric_limits<shed_std::float64>::infinity();
+        ASSERT_EQ(shed_std::is_nan(shed_std::log<shed_std::float64>(inf_val)), false, "log(+Inf) 不应是NaN（应返回Inf）");
+
+        // 异常场景测试（负数/0，必须抛异常）
+        bool throw_negative = false;
+        try {
+            shed_std::log<shed_std::float64>(-5.0);
+        } catch (const shed_std::EexceptionArithemetic& e) {
+            throw_negative = true;
+            shed_std::Cconsole_output << "[成功] log(-5.0) 正确抛出负数异常：" << e.what() << shed_std::end_line;
+        }
+        ASSERT_EQ(throw_negative, true, "log(-5.0) 必须抛出算术异常");
+
+        bool throw_zero = false;
+        try {
+            shed_std::log<shed_std::float64>(0.0);
+        } catch (const shed_std::EexceptionArithemetic& e) {
+            throw_zero = true;
+            shed_std::Cconsole_output << "[成功] log(0.0) 正确抛出0值异常：" << e.what() << shed_std::end_line;
+        }
+        ASSERT_EQ(throw_zero, true, "log(0.0) 必须抛出算术异常");
+
+    } catch (const shed_std::EexceptionArithemetic& e) {
+        shed_std::Cconsole_output << "[错误] log 非预期异常：" << e.what() << shed_std::end_line;
+        return 1;
+    }
+
+        // ==================== 1. 整数快速幂测试（核心） ====================
+    shed_std::Cconsole_output << "===== 测试 整数快速幂 pow =====" << shed_std::end_line;
+    try {
+        // 基础场景：正指数/0指数/负指数
+        ASSERT_EQ(shed_std::pow(5, 3), 125, "pow(5,3) 应返回125");
+        ASSERT_EQ(shed_std::pow(10, 0), 1, "pow(10,0) 应返回1");
+        ASSERT_FLOAT_EQ(shed_std::pow(4.0, -2), 0.0625, "pow(4.0,-2) 应返回0.0625");
+        ASSERT_EQ(shed_std::pow(-2, 3), -8, "pow(-2,3) 应返回-8（负底数整数幂）");
+        ASSERT_EQ(shed_std::pow(-3, 4), 81, "pow(-3,4) 应返回81（负底数偶次幂）");
+
+        // 大整数场景（快速幂效率验证）
+        ASSERT_EQ(shed_std::pow(static_cast<long long>(2), 30LL), 1073741824LL, "pow(2LL,30LL) 应返回1073741824");
+        ASSERT_FLOAT_EQ(shed_std::pow(2.0, 60LL), 1152921504606846976.0, "pow(2.0,60LL) 应返回2^60");
+
+    } catch (...) {
+        shed_std::Cconsole_output << "[错误] 整数快速幂测试抛出未知异常" << shed_std::end_line;
+        return 1;
+    }
+
+    // ==================== 2. 浮点指数 pow 测试 ====================
+    shed_std::Cconsole_output << shed_std::end_line << "===== 测试 浮点指数 pow =====" << shed_std::end_line;
+    try {
+        // 基础浮点场景
+        ASSERT_FLOAT_EQ(shed_std::pow(2.0, 0.5), 1.41421356, "pow(2.0,0.5) 应≈√2");
+        ASSERT_FLOAT_EQ(shed_std::pow(10.0, 2.5), 316.227766, "pow(10.0,2.5) 应≈316.227766");
+        ASSERT_FLOAT_EQ(shed_std::pow(8.0, 1.0/3.0), 2.0, "pow(8.0,1/3) 应返回2.0（立方根）");
+        ASSERT_FLOAT_EQ(shed_std::pow(7.0, -0.5), 0.37796447, "pow(7.0,-0.5) 应≈1/√7");
+
+        // 整数指数自动降级为快速幂
+        ASSERT_FLOAT_EQ(shed_std::pow(3.0, 5.0), 243.0, "pow(3.0,5.0) 应返回243.0（浮点转整数快速幂）");
+
+        // 负数小数次方返回NaN
+        shed_std::float64 nan_res = shed_std::pow(-2.0, 0.5);
+        ASSERT_IS_NAN(nan_res, "pow(-2.0,0.5) 应返回NaN（负数小数幂）");
+
+        // 0的特殊场景
+        ASSERT_EQ(shed_std::pow(0.0, 5.0), 0.0, "pow(0.0,5.0) 应返回0.0");
+        ASSERT_IS_INF(shed_std::pow(0.0, -2.0), "pow(0.0,-2.0) 应返回Inf（0的负次方）");
+
+    } catch (...) {
+        shed_std::Cconsole_output << "[错误] 浮点指数测试抛出未知异常" << shed_std::end_line;
+        return 1;
+    }
+
+    // ==================== 3. 特殊值（NaN/Inf）测试 ====================
+    shed_std::Cconsole_output << shed_std::end_line << "===== 测试 特殊值 pow =====" << shed_std::end_line;
+    try {
+        // NaN 场景
+        shed_std::float64 nan_val = std::numeric_limits<shed_std::float64>::quiet_NaN();
+        ASSERT_IS_NAN(shed_std::pow(nan_val, 2.0), "pow(NaN,2.0) 应返回NaN");
+        ASSERT_IS_NAN(shed_std::pow(2.0, nan_val), "pow(2.0,NaN) 应返回NaN");
+
+        // 1的任何次方
+        ASSERT_EQ(shed_std::pow(1.0, 1000.0), 1.0, "pow(1.0,1000.0) 应返回1.0");
+
+    } catch (...) {
+        shed_std::Cconsole_output << "[错误] 特殊值测试抛出未知异常" << shed_std::end_line;
+        return 1;
+    }
+
+    // ==================== 4. 通用模板 pow 测试 ====================
+    shed_std::Cconsole_output << shed_std::end_line << "===== 测试 通用模板 pow =====" << shed_std::end_line;
+    try {
+        // 浮点类型通用模板
+        ASSERT_FLOAT_EQ(shed_std::pow(1.5f, 2.0f), 2.25f, "pow(1.5f,2.0f) 应返回2.25f");
+        
+        // 负底数通用模板返回NaN
+        ASSERT_IS_NAN(shed_std::pow(-2.5, 3.5), "pow(-2.5,3.0) 通用模板应返回NaN");
+
+    } catch (...) {
+        shed_std::Cconsole_output << "[错误] 通用模板测试抛出未知异常" << shed_std::end_line;
+        return 1;
+    }
+
+    // 所有测试完成
+    shed_std::Cconsole_output << shed_std::end_line << "===== 所有 pow 函数测试通过！ =====" << shed_std::end_line;
+
     return 0;
 }

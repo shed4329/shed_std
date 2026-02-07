@@ -59,6 +59,8 @@ namespace shed_std{
     template <> struct is_integral<unsigned int> : true_type {};
     template <> struct is_integral<long> : true_type {};
     template <> struct is_integral<unsigned long> : true_type {};
+    template <> struct is_integral<long long> : true_type {};
+    template <> struct is_integral<unsigned long long> : true_type {};
 
     // 4.判断是否为浮点类型（手动列举常见浮点类型）
 

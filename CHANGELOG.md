@@ -1,5 +1,12 @@
 # 更新日志/Change Log
 
+## 0.17-beta.5(2026-02-07)
+
+### 新增/Features
+
+- 數學庫`shed_math.h`添加了指數函數`exp`,對數函數`log`，冪函數`pow`
+- 添加了隨機數庫`shed_random.h`
+
 ## 0.17-beta.4(2026-02-04)
 
 ### 優化/Refactored
